@@ -22,7 +22,7 @@ export function MatrixPreview({ rows, isLoading, isError }: MatrixPreviewProps) 
     <div>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="eyebrow mb-4">The scoreboard</p>
+          <p className="eyebrow-readout mb-4">Readout · 02 · The scoreboard</p>
           <h2 className="t-h2 max-w-[22ch]">
             Top apps by <mark className="hl">real usage</mark>.
           </h2>

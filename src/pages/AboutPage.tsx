@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About"
+        eyebrow="Readout · 07 · About"
         title={
           <>
             A <mark className="hl">meter</mark>, not a leaderboard.

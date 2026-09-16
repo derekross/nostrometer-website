@@ -44,7 +44,7 @@ export function MatrixTable({ rows, nips, className, caption, coverage, compact,
   const pad = compact ? 'px-px py-1' : 'px-1 py-2';
 
   return (
-    <div className={cn('rounded-md border bg-card', className)}>
+    <div className={cn('matrix-glow rounded-md border bg-card', className)}>
       <div className="max-h-[75vh] overflow-auto">
         <Table className="w-max min-w-full text-sm">
           {caption && <caption className="sr-only">{caption}</caption>}

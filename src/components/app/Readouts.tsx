@@ -5,9 +5,9 @@ import { cn } from '@/lib/utils';
 
 function Readout({ label, value, note, small }: { label: string; value: string; note: string; small?: boolean }) {
   return (
-    <div className="rounded-md border bg-card p-5">
-      <p className="eyebrow">{label}</p>
-      <p className={cn('mt-2 font-mono font-semibold tracking-tight whitespace-nowrap tabular-nums', small ? 'text-[32px] leading-[56px]' : 'text-[40px] leading-[56px] md:text-[48px]')}>
+    <div className="led p-5">
+      <p className="eyebrow text-[11px]">{label}</p>
+      <p className={cn('led-value mt-2 whitespace-nowrap', small ? 'text-[32px] leading-[52px]' : 'text-[40px] leading-[52px] md:text-[44px]')}>
         {value}
       </p>
       <p className="mt-1 text-sm leading-5 text-muted-foreground">{note}</p>

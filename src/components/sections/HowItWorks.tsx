@@ -26,7 +26,7 @@ const STEPS = [
 export function HowItWorks() {
   return (
     <div>
-      <p className="eyebrow mb-4">How it works</p>
+      <p className="eyebrow-readout mb-4">Readout · 04 · How it works</p>
       <h2 className="t-h2 max-w-[22ch]">
         Three read-only crawls, <mark className="hl">one rule</mark>, and a median.
       </h2>

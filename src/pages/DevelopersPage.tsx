@@ -58,7 +58,7 @@ export default function DevelopersPage() {
   return (
     <>
       <PageHeader
-        eyebrow="For developers"
+        eyebrow="Readout · 05 · For developers"
         title={
           <>
             Your fix list, <mark className="hl">sorted by impact</mark>.

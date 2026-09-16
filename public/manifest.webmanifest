@@ -4,8 +4,8 @@
   "description": "Nostr interoperability, measured. Every app discovered, ranked by real usage, rated NIP-by-NIP.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#faf9f7",
-  "theme_color": "#6a3fb8",
+  "background_color": "#0e0e13",
+  "theme_color": "#0e0e13",
   "icons": [
     { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
     { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },

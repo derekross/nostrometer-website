@@ -20,7 +20,7 @@ export default function UpdatesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Updates"
+        eyebrow="Readout · 06 · Updates"
         title={
           <>
             What <mark className="hl">changed</mark>.

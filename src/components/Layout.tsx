@@ -31,7 +31,7 @@ export function PageHeader({
 }) {
   return (
     <header className="mx-auto max-w-6xl px-4 pt-16 pb-10 sm:px-6 md:pt-24 md:pb-12">
-      {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
+      {eyebrow && <p className="eyebrow-readout mb-4">{eyebrow}</p>}
       <h1 className="t-h1 max-w-[20ch]">{title}</h1>
       {lede && <p className="mt-6 max-w-[65ch] text-xl leading-8 text-muted-foreground">{lede}</p>}
       {children}

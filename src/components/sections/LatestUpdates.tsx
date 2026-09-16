@@ -12,7 +12,7 @@ export function LatestUpdates() {
     <div>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="eyebrow mb-4">Updates</p>
+          <p className="eyebrow-readout mb-4">Readout · 06 · Updates</p>
           <h2 className="t-h2 max-w-[22ch]">What changed.</h2>
         </div>
         <Button asChild variant="outline">

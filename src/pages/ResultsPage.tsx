@@ -55,7 +55,7 @@ export default function ResultsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Results"
+        eyebrow="Readout · 02 · Results"
         title={
           <>
             The <mark className="hl">scoreboard</mark>.

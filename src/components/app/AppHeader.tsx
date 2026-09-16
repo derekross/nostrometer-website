@@ -25,7 +25,7 @@ export function AppHeader({ app, name, naddr }: AppHeaderProps) {
 
   return (
     <header className="flex flex-col gap-6 sm:flex-row sm:items-start">
-      <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-md border bg-card font-display text-3xl font-bold">
+      <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-md border bg-card font-display text-3xl font-bold ring-4 ring-primary/15">
         {picture ? (
           <img src={picture} alt="" width={96} height={96} loading="lazy" referrerPolicy="no-referrer" className="size-full object-cover" />
         ) : (
@@ -33,7 +33,7 @@ export function AppHeader({ app, name, naddr }: AppHeaderProps) {
         )}
       </div>
       <div className="min-w-0 flex-1">
-        <p className="eyebrow">App report</p>
+        <p className="eyebrow-readout">Readout · 03 · App report</p>
         <h1 className="t-h1 mt-1 break-words">{name}</h1>
         {app?.about && <p className="mt-3 max-w-[60ch] text-lg leading-7 text-muted-foreground">{app.about}</p>}
         <div className="mt-5 flex flex-wrap gap-3">

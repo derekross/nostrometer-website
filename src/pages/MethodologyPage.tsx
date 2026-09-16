@@ -33,7 +33,7 @@ export default function MethodologyPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Methodology"
+        eyebrow="Readout · 04 · Methodology"
         title={
           <>
             How the <mark className="hl">meter</mark> works.

@@ -152,7 +152,7 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
             <Gauge
               value={overall?.rating ?? 0}
               label={overall ? TIERS[overall.tier].label : reviews.isLoading ? 'Reading…' : 'Unrated'}
-              sub={overall ? `Median of ${new Set(reviews.reviews?.map((r) => r.nip)).size} per-NIP medians` : undefined}
+              caption={overall ? `median of ${new Set(reviews.reviews?.map((r) => r.nip)).size} per-NIP medians` : undefined}
               size={280}
               className="max-w-full"
             />

@@ -23,6 +23,12 @@
 >   compact 30-column table and a click-to-open column detail panel; app report rebuilt as a
 >   score card (readouts, 30-chip strip, collapsible per-NIP rows with filter, sticky rail).
 >   Design canvas: https://claude.ai/artifact/GMLszeSAPVpaTN7H64uNPw
+> - **Bench theme (2026-09-16):** Direction A of the UI overhaul canvas
+>   (https://claude.ai/artifact/8c92vGqfvix7x1Ctg6ZhKd). Dark graphite is now the default theme
+>   (paper stays as the light alternate); graph-paper grid; bench dial with fine tick ring, inner
+>   scale, tier letters on the rim and a glowing needle that sweeps from zero on load (CSS
+>   keyframe, off under prefers-reduced-motion); LED readouts; live-relay badge in the header;
+>   numbered violet "Readout · 0N" eyebrows; violet under-glow on the matrix.
 > - Remaining (manual, section 8): create GitHub repo `derekross/nostrometer-website` with
 >   Derek's go-ahead, add the `PROD_*` secrets, then DNS + `setup-site.sh` + certbot on nostr01
 >   via the `deploy-nostr01` skill; post-deploy checks in 9.6.
