@@ -39,7 +39,7 @@ export function AppHeader({ app, name, naddr }: AppHeaderProps) {
         <div className="mt-5 flex flex-wrap gap-3">
           <Button asChild>
             <a href={`${NOSTRHUB_URL}/${naddr}`} target="_blank" rel="noopener noreferrer">
-              Rate on nostrhub.io <ExternalLink className="size-4" />
+              Rate on NostrHub <ExternalLink className="size-4" />
             </a>
           </Button>
           <Button asChild variant="outline">

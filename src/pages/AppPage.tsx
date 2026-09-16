@@ -134,7 +134,7 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
 
             {reviews.reviews && !hasAny && (
               <div className="rounded-md border border-dashed bg-card px-8 py-12 text-center text-muted-foreground">
-                No ratings published for this listing yet. Be the first on nostrhub.io.
+                No ratings published for this listing yet. Be the first on NostrHub.
               </div>
             )}
 
