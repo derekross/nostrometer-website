@@ -7,12 +7,12 @@ import { DEFAULT_OG_IMAGE, NIPS_REPO_URL, REPO_URL } from '@/lib/site';
 
 const ext = { target: '_blank', rel: 'noopener noreferrer' } as const;
 
-function Block({ eyebrow, title, children }: { eyebrow: string; title: React.ReactNode; children: React.ReactNode }) {
+function Block({ eyebrow, title, children }: { eyebrow?: string; title?: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className="grid gap-6 md:grid-cols-[14rem_1fr]">
       <div>
-        <p className="eyebrow">{eyebrow}</p>
-        <h2 className="t-h3 mt-2">{title}</h2>
+        {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+        {title && <h2 className="t-h3 mt-2">{title}</h2>}
       </div>
       <div className="max-w-[65ch] space-y-4 text-lg leading-7">{children}</div>
     </div>
@@ -116,7 +116,7 @@ export default function MethodologyPage() {
           <p>Each rating carries one of four values. The tier of a cell is the median of every rating in it.</p>
         </Block>
         <TierScale />
-        <Block eyebrow="" title="">
+        <Block>
           <ul className="list-disc space-y-3 pl-6">
             <li>
               <strong>Median, not mean.</strong> One outlier cannot move a cell. The overall tier of an app is the median of its

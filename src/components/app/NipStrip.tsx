@@ -31,7 +31,7 @@ export function NipStrip({ reviews, appPubkey, claimed, appName }: NipStripProps
   return (
     <div className="rounded-md border bg-card p-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <p className="eyebrow">At a glance · {TRACKED_NIPS.length} NIPs</p>
+        <h2 className="eyebrow">At a glance · {TRACKED_NIPS.length} NIPs</h2>
         <p className="font-mono text-xs text-muted-foreground tabular-nums">
           {counts.map(([t, n]) => `${n} ${TIER_LETTER[t]}`).join(' · ')}
           {selfOnly > 0 && ` · ${selfOnly} self-rated`}

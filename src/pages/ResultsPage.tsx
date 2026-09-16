@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Provenance } from '@/components/Provenance';
+import { ResultsStructuredData } from '@/components/StructuredData';
 import { MatrixLegend } from '@/components/matrix/MatrixLegend';
 import { MatrixSkeleton, MatrixTable } from '@/components/matrix/MatrixTable';
 import { NipDetailPanel } from '@/components/matrix/NipDetailPanel';
@@ -50,6 +51,7 @@ export default function ResultsPage() {
 
   return (
     <>
+      <ResultsStructuredData metrics={matrix.metrics} ratings={matrix.reviews?.length} />
       <PageHeader
         eyebrow="Readout · 02 · Results"
         title={
@@ -130,6 +132,7 @@ export default function ResultsPage() {
 
           {rows.length > 0 && (
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
+              <h2 className="sr-only">Client by NIP interoperability matrix</h2>
               <div className="min-w-0 flex-1">
                 <MatrixTable
                   rows={rows}

@@ -59,6 +59,9 @@ export function Footer() {
         <div className="flex flex-col gap-2 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getUTCFullYear()} Nostrometer</p>
           <p className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link to="/privacy" className="hover:text-foreground hover:underline">
+              Privacy
+            </Link>
             <a href={SITE_REPO_URL} {...ext} className="hover:text-foreground hover:underline">
               Site source
             </a>

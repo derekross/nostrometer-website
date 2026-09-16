@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build -l error && cp dist/index.html dist/404.html",
+    "build": "vite build -l error",
     "build:prerender": "PRERENDER=1 npm run build",
     "sync-data": "bash scripts/sync-data.sh",
-    "test": "tsc --noEmit && eslint --cache && vitest run --reporter=dot --silent && vite build -l error && cp dist/index.html dist/404.html && echo \"All tests passed!\""
+    "test": "tsc --noEmit && eslint --cache && vitest run --reporter=dot --silent && vite build -l error && echo \"All tests passed!\""
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

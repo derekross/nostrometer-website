@@ -3,7 +3,7 @@ import type { NostrEvent } from '@nostrify/nostrify';
 import { articlePublishedAt, articleTag } from '@/hooks/useUpdates';
 import { updatePath } from '@/lib/updates';
 
-export function UpdateCard({ event }: { event: NostrEvent }) {
+export function UpdateCard({ event, as: Heading = 'h3' }: { event: NostrEvent; as?: 'h2' | 'h3' }) {
   const title = articleTag(event, 'title') ?? 'Untitled';
   const summary = articleTag(event, 'summary');
   const published = new Date(articlePublishedAt(event) * 1000);
@@ -12,11 +12,11 @@ export function UpdateCard({ event }: { event: NostrEvent }) {
       <time dateTime={published.toISOString()} className="eyebrow">
         {published.toISOString().slice(0, 10)}
       </time>
-      <h3 className="mt-3 text-xl font-bold leading-7">
+      <Heading className="mt-3 text-xl font-bold leading-7">
         <Link to={updatePath(event)} className="hover:text-primary hover:underline">
           {title}
         </Link>
-      </h3>
+      </Heading>
       {summary && <p className="mt-2 line-clamp-3 text-base leading-6 text-muted-foreground">{summary}</p>}
     </article>
   );

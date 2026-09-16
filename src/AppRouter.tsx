@@ -14,6 +14,7 @@ const DevelopersPage = lazy(() => import('./pages/DevelopersPage'));
 const UpdatesPage = lazy(() => import('./pages/UpdatesPage'));
 const UpdatePage = lazy(() => import('./pages/UpdatePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 
 export function AppRouter() {
   return (
@@ -29,6 +30,7 @@ export function AppRouter() {
           <Route path="/updates" element={<UpdatesPage />} />
           <Route path="/updates/:naddr" element={<UpdatePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           {/* NIP-19 route for npub1, note1, naddr1, nevent1, nprofile1 */}
           <Route path="/:nip19" element={<NIP19Page />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

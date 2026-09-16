@@ -5,6 +5,7 @@ import { nip19 } from 'nostr-tools';
 import { RefreshCw } from 'lucide-react';
 import { Gauge } from '@/components/Gauge';
 import { Button } from '@/components/ui/button';
+import { BreadcrumbStructuredData } from '@/components/StructuredData';
 import { AppHeader } from '@/components/app/AppHeader';
 import { NipRatingList } from '@/components/app/NipRatingList';
 import { NipStrip } from '@/components/app/NipStrip';
@@ -66,11 +67,14 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
   const website = sanitizeUrl(app.data?.website);
   const repo = repoLabel(app.data?.repoRefs ?? [], claimed.data?.byAddress[address]?.repo ?? null);
 
-  const description = `NIP-by-NIP interoperability ratings for ${name} on Nostrometer.`;
+  // `name` falls back to the d-tag so the heading is never blank, but a raw
+  // slug makes a poor page title if a prerender snapshot beats the data.
+  const titleName = app.data?.name || metricsEntry?.name || 'App report';
+  const description = `NIP-by-NIP interoperability ratings for ${titleName} on Nostrometer.`;
   useSeoMeta({
-    title: `${name} · Nostrometer`,
+    title: `${titleName} · Nostrometer`,
     description,
-    ogTitle: `${name}: NIP compatibility`,
+    ogTitle: `${titleName}: NIP compatibility`,
     ogDescription: description,
     ogImage: DEFAULT_OG_IMAGE,
     twitterCard: 'summary_large_image',
@@ -80,6 +84,12 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
 
   return (
     <div className="mx-auto max-w-6xl px-4 pt-8 pb-20 sm:px-6">
+      <BreadcrumbStructuredData
+        trail={[
+          { name: 'Results', path: '/results' },
+          { name: titleName, path: `/app/${canonicalNaddr}` },
+        ]}
+      />
       <nav aria-label="Breadcrumb" className="font-mono text-sm text-muted-foreground">
         <Link to="/results" className="hover:text-foreground hover:underline">
           Results
@@ -102,7 +112,7 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
           )}
 
           <div className="mt-12">
-            <p className="eyebrow mb-4">Ratings by NIP</p>
+            <h2 className="eyebrow mb-4">Ratings by NIP</h2>
 
             {reviews.isLoading && (
               <div className="space-y-3" aria-busy="true">
@@ -148,7 +158,7 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
 
         <aside className="flex flex-col gap-4 lg:sticky lg:top-24">
           <div className="flex flex-col items-center rounded-md border bg-card p-6">
-            <p className="eyebrow self-start">Overall</p>
+            <h2 className="eyebrow self-start">Overall</h2>
             <Gauge
               value={overall?.rating ?? 0}
               label={overall ? TIERS[overall.tier].label : reviews.isLoading ? 'Reading…' : 'Unrated'}
@@ -158,7 +168,7 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
             />
           </div>
           <div className="rounded-md border bg-card p-6">
-            <p className="eyebrow">Listing</p>
+            <h2 className="eyebrow">Listing</h2>
             <div className="mt-3 flex flex-col gap-2">
               <Fact label="Published by" value={publisherName ?? `${pubkey.slice(0, 8)}…`} />
               <Fact label="Platforms" value={app.data?.platforms.length ? app.data.platforms.join(', ') : '—'} />
@@ -207,7 +217,7 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
             </div>
           </div>
           <div className="rounded-md border border-dashed bg-card p-6">
-            <p className="eyebrow">Move a cell</p>
+            <h2 className="eyebrow">Move a cell</h2>
             <p className="mt-2 text-sm leading-5 text-muted-foreground">
               Disagree with a tier? Publish your own rating with a note. The median moves; self-ratings are marked until confirmed.{' '}
               <Link to="/developers" className="text-primary underline underline-offset-2">

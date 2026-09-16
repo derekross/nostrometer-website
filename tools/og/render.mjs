@@ -28,8 +28,34 @@ const VIOLET = '#6a3fb8';
 const BORDER = '#d9d4cc';
 const MUTED = '#5c5c66';
 
-function iconHtml(size) {
-  const pad = Math.round(size * 0.14);
+/**
+ * Wrap a PNG in an ICO container. The ICO format has embedded PNG frames since
+ * Vista, so no re-encoding is needed — just the 6-byte header and one 16-byte
+ * directory entry.
+ */
+function pngToIco(png, size) {
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0); // reserved
+  header.writeUInt16LE(1, 2); // type: icon
+  header.writeUInt16LE(1, 4); // one image
+  const entry = Buffer.alloc(16);
+  entry.writeUInt8(size >= 256 ? 0 : size, 0); // width (0 means 256)
+  entry.writeUInt8(size >= 256 ? 0 : size, 1); // height
+  entry.writeUInt8(0, 2); // palette
+  entry.writeUInt8(0, 3); // reserved
+  entry.writeUInt16LE(1, 4); // colour planes
+  entry.writeUInt16LE(32, 6); // bits per pixel
+  entry.writeUInt32LE(png.length, 8);
+  entry.writeUInt32LE(header.length + entry.length, 12);
+  return Buffer.concat([header, entry, png]);
+}
+
+/**
+ * `maskable` fills the whole square and keeps the mark inside the central 80%,
+ * because Android crops an adaptive icon to whatever shape the launcher uses.
+ */
+function iconHtml(size, { maskable = false } = {}) {
+  const pad = Math.round(size * (maskable ? 0.26 : 0.14));
   return `<!doctype html><html><head><style>
     html,body{margin:0}
     body{width:${size}px;height:${size}px;background:${PAPER};display:flex;align-items:center;justify-content:center}
@@ -71,7 +97,9 @@ try {
   const page = await browser.newPage();
   const shots = [
     ['public/apple-touch-icon.png', 180, 180, iconHtml(180)],
+    ['public/icon-192.png', 192, 192, iconHtml(192)],
     ['public/icon-512.png', 512, 512, iconHtml(512)],
+    ['public/icon-maskable-512.png', 512, 512, iconHtml(512, { maskable: true })],
     ['public/og.png', 1200, 630, ogHtml()],
   ];
   for (const [file, w, h, html] of shots) {
@@ -81,6 +109,14 @@ try {
     await page.screenshot({ path: path.join(root, file), clip: { x: 0, y: 0, width: w, height: h } });
     console.log('wrote', file);
   }
+
+  // Legacy fallback for anything that will not take the SVG.
+  await page.setViewport({ width: 32, height: 32, deviceScaleFactor: 1 });
+  await page.setContent(iconHtml(32), { waitUntil: 'load' });
+  const png32 = await page.screenshot({ clip: { x: 0, y: 0, width: 32, height: 32 } });
+  const { writeFileSync } = await import('node:fs');
+  writeFileSync(path.join(root, 'public/favicon.ico'), pngToIco(Buffer.from(png32), 32));
+  console.log('wrote public/favicon.ico');
 } finally {
   await browser.close();
 }

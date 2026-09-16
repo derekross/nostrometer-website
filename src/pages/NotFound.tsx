@@ -7,6 +7,9 @@ const NotFound = () => {
   useSeoMeta({
     title: 'Not found · Nostrometer',
     description: 'The page you are looking for could not be found.',
+    // Unknown paths are served by the app with a 200, so this is what keeps a
+    // crawler from indexing endless copies of the site under bogus URLs.
+    robots: 'noindex, follow',
   });
 
   return (

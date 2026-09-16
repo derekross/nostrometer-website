@@ -65,7 +65,7 @@ export default function UpdatesPage() {
         {updates.data && updates.data.length > 0 && (
           <div className="grid gap-4 md:grid-cols-2">
             {updates.data.map((e) => (
-              <UpdateCard key={e.id} event={e} />
+              <UpdateCard key={e.id} event={e} as="h2" />
             ))}
           </div>
         )}

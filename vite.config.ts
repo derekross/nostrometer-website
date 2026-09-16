@@ -7,7 +7,13 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vitest/config";
 
 import { fetchDynamicRoutes, type DynamicRoute } from "./tools/seo/fetch.ts";
-import { STATIC_ROUTES, prerenderIndexFix, seoPlugin } from "./tools/seo/plugin.ts";
+import {
+  NOT_FOUND_ROUTE,
+  STATIC_ROUTES,
+  prerenderHtmlFix,
+  seoPlugin,
+  stripPrerenderOrigin,
+} from "./tools/seo/plugin.ts";
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
@@ -24,6 +30,7 @@ export default defineConfig(async () => {
   }
 
   let homeHtml: string | undefined;
+  let notFoundHtml: string | undefined;
 
   return {
     server: {
@@ -39,10 +46,17 @@ export default defineConfig(async () => {
       tailwindcss(),
       process.env.PRERENDER
         ? prerender({
-            routes: [...STATIC_ROUTES, ...dynamic.map((r) => r.path)],
+            routes: [...STATIC_ROUTES, NOT_FOUND_ROUTE, ...dynamic.map((r) => r.path)],
             renderer: "@prerenderer/renderer-puppeteer",
-            postProcess(route) {
+            postProcess(route: { route: string; html: string }) {
+              route.html = stripPrerenderOrigin(route.html);
               if (route.route === "/") homeHtml = route.html;
+              if (route.route === NOT_FOUND_ROUTE) {
+                notFoundHtml = route.html;
+                // Emptied so the plugin drops it: it is written to 404.html
+                // instead of becoming a /__404__/ page of its own.
+                route.html = "";
+              }
             },
             rendererOptions: {
               // Lazy route chunks + relay round-trips: wait before snapshotting.
@@ -53,7 +67,7 @@ export default defineConfig(async () => {
           })
         : null,
       seoPlugin(dynamic),
-      process.env.PRERENDER ? prerenderIndexFix(() => homeHtml) : null,
+      prerenderHtmlFix({ home: () => homeHtml, notFound: () => notFoundHtml }),
     ],
     test: {
       globals: true,

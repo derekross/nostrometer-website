@@ -1,5 +1,6 @@
 import { useSeoMeta } from '@unhead/react';
 import { Section } from '@/components/Layout';
+import { SiteStructuredData } from '@/components/StructuredData';
 import { TickRuler } from '@/components/TickRuler';
 import { Hero } from '@/components/sections/Hero';
 import { HowItWorks } from '@/components/sections/HowItWorks';
@@ -24,6 +25,7 @@ const Index = () => {
 
   return (
     <>
+      <SiteStructuredData />
       <Hero
         reading={matrix.rows ? ecosystemReading(matrix.rows) : undefined}
         apps={matrix.metrics?.apps}

@@ -72,7 +72,7 @@ export default function AboutPage() {
           <aside className="space-y-6">
             <div className="rounded-md border bg-card p-6">
               <MeterMark size={40} className="text-muted-foreground" />
-              <p className="eyebrow mt-4">Contact</p>
+              <h2 className="eyebrow mt-4">Contact</h2>
               <ul className="mt-2 space-y-2 text-base">
                 <li>
                   <a href={`https://njump.me/${DEREK_NPUB}`} {...ext} className="text-primary underline underline-offset-2">
@@ -88,7 +88,7 @@ export default function AboutPage() {
               <p className="mt-4 font-mono text-xs break-all text-muted-foreground">{DEREK_NPUB}</p>
             </div>
             <div className="rounded-md border bg-card p-6">
-              <p className="eyebrow">Source</p>
+              <h2 className="eyebrow">Source</h2>
               <ul className="mt-2 space-y-2 text-base">
                 <li>
                   <a href={REPO_URL} {...ext} className="text-primary underline underline-offset-2">

@@ -43,7 +43,12 @@ export function NIP19Page() {
 }
 
 function ProfileHandoff({ npub }: { npub: string }) {
-  useSeoMeta({ title: 'Profile · Nostrometer', description: 'Nostrometer does not render profiles. Open this key on njump.' });
+  useSeoMeta({
+    title: 'Profile · Nostrometer',
+    description: 'Nostrometer does not render profiles. Open this key on njump.',
+    // A hand-off, not content.
+    robots: 'noindex, follow',
+  });
   return (
     <Section>
       <p className="eyebrow">Profile</p>

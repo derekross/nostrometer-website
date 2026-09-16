@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { nip19 } from 'nostr-tools';
 import { Section } from '@/components/Layout';
 import { MarkdownContent } from '@/components/MarkdownContent';
+import { ArticleStructuredData, BreadcrumbStructuredData } from '@/components/StructuredData';
 import { ARTICLE_KIND, articlePublishedAt, articleTag, useUpdate } from '@/hooks/useUpdates';
 import { sanitizeUrl } from '@/lib/sanitizeUrl';
 import { DEFAULT_OG_IMAGE, DEREK_PUBKEY_HEX } from '@/lib/site';
@@ -49,6 +50,23 @@ function UpdateArticle({ identifier, naddr }: { identifier: string; naddr: strin
 
   return (
     <Section>
+      {event && (
+        <>
+          <ArticleStructuredData
+            headline={title}
+            description={summary}
+            published={articlePublishedAt(event)}
+            path={`/updates/${naddr}`}
+            image={image}
+          />
+          <BreadcrumbStructuredData
+            trail={[
+              { name: 'Updates', path: '/updates' },
+              { name: title, path: `/updates/${naddr}` },
+            ]}
+          />
+        </>
+      )}
       <nav aria-label="Breadcrumb" className="mb-8 text-sm text-muted-foreground">
         <Link to="/updates" className="hover:text-foreground hover:underline">
           Updates
@@ -57,6 +75,7 @@ function UpdateArticle({ identifier, naddr }: { identifier: string; naddr: strin
 
       {update.isLoading && (
         <div aria-busy="true">
+          <h1 className="sr-only">Loading update</h1>
           <div className="h-3 w-24 animate-pulse rounded bg-muted" />
           <div className="mt-4 h-12 w-3/4 animate-pulse rounded bg-muted" />
           <div className="mt-8 h-4 w-full animate-pulse rounded bg-muted" />
@@ -66,6 +85,7 @@ function UpdateArticle({ identifier, naddr }: { identifier: string; naddr: strin
 
       {update.isError && (
         <div className="rounded-md border border-dashed bg-card px-8 py-12 text-center text-muted-foreground">
+          <h1 className="t-h3 mb-2 text-foreground">Update unavailable</h1>
           The relays did not answer.{' '}
           <button type="button" onClick={() => update.refetch()} className="text-primary underline">
             Retry
@@ -82,7 +102,15 @@ function UpdateArticle({ identifier, naddr }: { identifier: string; naddr: strin
             <h1 className="t-h1 mt-4">{title}</h1>
             {summary && <p className="mt-6 text-xl leading-8 text-muted-foreground">{summary}</p>}
           </header>
-          {image && <img src={image} alt="" loading="lazy" referrerPolicy="no-referrer" className="mt-8 max-w-[65ch] rounded-md border" />}
+          {image && (
+            <img
+              src={image}
+              alt={title}
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              className="mt-8 max-w-[65ch] rounded-md border"
+            />
+          )}
           <div className="mt-10">
             <MarkdownContent event={event} />
           </div>
