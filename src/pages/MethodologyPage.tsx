@@ -147,8 +147,8 @@ export default function MethodologyPage() {
               evidence. The developer hears it from us first, and the cell changes when the fix ships.
             </li>
             <li>
-              <strong>Anyone can rerun it.</strong> The crawls, the join and the median are open source and stdlib Python.
-              Point them at the same relays and you get the same matrix.
+              <strong>Anyone can rerun it.</strong> The crawls, the join and the median are open source. Point them at
+              the same relays and you get the same matrix.
             </li>
           </ul>
           <p>
