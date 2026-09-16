@@ -52,12 +52,12 @@ export default function AboutPage() {
               . The crawls are read-only and every event is signature-verified before it counts. The tooling never signs or
               publishes anything; ratings are published by people, from{' '}
               <a href={NOSTRHUB_APPS_URL} {...ext} className="text-primary underline underline-offset-2">
-                nostrhub.io/apps
+                NostrHub
               </a>{' '}
               or any Nostr client.
             </p>
             <p>
-              The data is shared 1:1 with nostrhub.io. The same kind 31986 events feed both. There is no private score.
+              The data is shared 1:1 with NostrHub. The same kind 31986 events feed both. There is no private score.
             </p>
             <p>
               The name is the idea. A meter reads what is there. If a cell says Incomplete, the fix is in the app, and the

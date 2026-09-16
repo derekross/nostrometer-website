@@ -91,7 +91,7 @@ export default function ResultsPage() {
             <div className="rounded-md border border-dashed bg-card px-8 py-12 text-center">
               <p className="text-lg font-semibold">The relays did not answer.</p>
               <p className="mx-auto mt-2 max-w-md text-muted-foreground">
-                Ratings are read live from Nostr relays. Try again, or browse the same ratings on nostrhub.io.
+                Ratings are read live from Nostr relays. Try again, or browse the same ratings on NostrHub.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Button onClick={() => matrix.refetch()}>
@@ -99,7 +99,7 @@ export default function ResultsPage() {
                 </Button>
                 <Button asChild variant="outline">
                   <a href={NOSTRHUB_APPS_URL} target="_blank" rel="noopener noreferrer">
-                    nostrhub.io/apps
+                    Browse on NostrHub
                   </a>
                 </Button>
                 <Button asChild variant="outline">

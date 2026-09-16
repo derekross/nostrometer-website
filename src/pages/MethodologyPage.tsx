@@ -104,7 +104,7 @@ export default function MethodologyPage() {
             <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">nip-compatibility</code> and addressed to the app's
             kind 31990 listing. The same events power{' '}
             <a href="https://nostrhub.io/apps" {...ext} className="text-primary underline underline-offset-2">
-              nostrhub.io/apps
+              NostrHub
             </a>
             .
           </p>

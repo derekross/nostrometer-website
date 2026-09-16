@@ -96,7 +96,7 @@ export default function DevelopersPage() {
           <p>
             The{' '}
             <a href={`${NOSTRHUB_APPS_URL}/submit`} {...ext} className="text-primary underline underline-offset-2">
-              nostrhub.io/apps wizard
+              NostrHub wizard
             </a>{' '}
             builds and signs one for you. If you prefer a file and a key, this one-liner with{' '}
             <a href="https://github.com/fiatjaf/nak" {...ext} className="text-primary underline underline-offset-2">
@@ -105,6 +105,12 @@ export default function DevelopersPage() {
             does it:
           </p>
           <Code>{NAK_ONE_LINER}</Code>
+          <p>
+            For apps in the review queue we prepare the file for you. The listing is assembled from your current
+            listing, your repo and Zapstore release, and the NIPs the review verified, then handed over unsigned with a
+            note on where every field came from. Edit anything, delete anything, and publish it from your key. It exists
+            to save you the afternoon, not to speak for you.
+          </p>
           <p>
             <strong>Publish it from the key you develop with.</strong> Ratings bind to the listing's address. If someone else
             seeds a listing for your app, every rating attaches to their copy, and when you finally publish your own the
