@@ -1,5 +1,27 @@
 # Plan: `nostrometer-website` — public site for nostrometer.com
 
+> **Status (2026-09-15):** sections 1–7 and 9.1–9.5 done; the site builds, prerenders and
+> passes `npm run test`. Changes from the original plan, all at Derek's request or found in
+> verification:
+> - No borkstr.com references anywhere in copy (the `borkstr` NIP-32 label namespace string
+>   stays in `appReviews.ts` because published rating events carry it and the parser requires it).
+> - No "Vibed with MKStack" footer credit; the About "Source" box lists the two repos with no
+>   language/licence/template notes.
+> - **Ratings snapshot** (`public/data/ratings.json`, from the tooling's `ratings.jsonl`) is
+>   merged with the live relay read (`src/lib/reviews.ts`, `src/hooks/useReviews.ts`; newest
+>   revision per rater+app+NIP wins) so the matrix never shows fewer ratings than the last
+>   crawl. `NostrProvider` `eoseTimeout` raised 200 → 5000 ms: the template default stopped
+>   collecting 200 ms after the *first* relay's EOSE, so the fastest relay decided the result set.
+> - `tools/seo/plugin.ts#prerenderIndexFix`: the prerender plugin's re-emit of `/` as
+>   `index.html` is dropped on Vite 8; the fix writes the captured home HTML after `closeBundle`.
+> - Vite `assetsInlineLimit: 0`: small font subsets were inlined as `data:` URIs, which the CSP
+>   `font-src 'self'` blocks.
+> - Constants shared between components live in `src/lib/{nav,tiers,nips,updates}.ts`
+>   (react-refresh lint rule).
+> - Remaining (manual, section 8): create GitHub repo `derekross/nostrometer-website` with
+>   Derek's go-ahead, add the `PROD_*` secrets, then DNS + `setup-site.sh` + certbot on nostr01
+>   via the `deploy-nostr01` skill; post-deploy checks in 9.6.
+
 ## Context
 
 Nostrometer is Derek Ross's Nostr interoperability measurement program: every app discovered
@@ -205,7 +227,7 @@ re-checks `pubkey === DEREK_PUBKEY_HEX` after decode. `MarkdownContent` ported f
 - **Updates** h1 "What changed." Lede "Crawl dates, new apps, rule changes, and NIP revisions
   that shifted a score." Kind 30023 feed; mention how to follow on Nostr.
 - **About** h1 "A meter, not a leaderboard." Built and maintained by Derek Ross; read-only,
-  signature-verified crawls; open source; data shared 1:1 with nostrhub.io/apps and borkstr.com;
+  signature-verified crawls; open source; data shared 1:1 with nostrhub.io/apps;
   the name = an instrument that measures, it reports, it does not decide. Contact: npub + GitHub.
 
 ## 7. SEO / prerender

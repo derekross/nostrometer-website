@@ -1,0 +1,49 @@
+name: Deploy to nostr01
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Prerender reaches out to public relays to discover app and update
+      # routes; when that fails the build still succeeds with static routes.
+      - name: Build (prerendered)
+        run: npm run build:prerender
+
+      # rsync, not scp: Vite content-hashes every bundle, so --delete keeps the
+      # webroot an exact mirror of dist/ instead of accumulating old builds.
+      # .well-known is excluded: it can hold hand-placed NIP-05 and ACME files.
+      - name: Deploy to production server
+        uses: burnett01/rsync-deployments@v9
+        with:
+          # No -p, plus --omit-dir-times: the deploy user can write inside the
+          # webroot but does not own it; preserving perms/dir times returns
+          # EPERM and turns a successful transfer into a red build.
+          switches: -rlt --omit-dir-times --delete --exclude='.well-known/'
+          path: dist/
+          remote_path: ${{ secrets.PROD_PATH }}
+          remote_host: ${{ secrets.PROD_HOST }}
+          remote_port: ${{ secrets.PROD_PORT }}
+          remote_user: ${{ secrets.PROD_USER }}
+          remote_key: ${{ secrets.PROD_SSH_KEY }}

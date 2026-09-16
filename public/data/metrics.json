@@ -1,0 +1,1825 @@
+{
+ "apps": 379,
+ "byAddress": {
+  "31990:00000000507f1a27b43d2c47da2ee826378dba007501d66691fada36fa931856:mercasats": {
+   "id": "mercasats",
+   "mau": 0,
+   "name": "Mercasats"
+  },
+  "31990:0155373ac79b7ffb0f586c3e68396f9e82d46f7afe7016d46ed9ca46ba3e1bed:isometrix-5x3": {
+   "id": "isometrix 5x3",
+   "mau": 0,
+   "name": "Isometrix 5x3"
+  },
+  "31990:018605354f9e6d3b0a0fca11fad65be43fc384e6dac3285d947bb81cc6af21fd:neirotunes": {
+   "id": "neirotunes",
+   "mau": 0,
+   "name": "Neirotunes"
+  },
+  "31990:0461fcbecc4c3374439932d6b8f11269ccdb7cc973ad7a50ae362db135a474dd:jws12ndab9j": {
+   "id": "nostrhub",
+   "mau": 26,
+   "name": "NostrHub"
+  },
+  "31990:04d6ee7155053e07a0b580a8a54c5deeaba8450b15bf34744626d9f789b82083:asr2nlyxn3g": {
+   "id": "nostr raycast extension",
+   "mau": 0,
+   "name": "Nostr Raycast Extension"
+  },
+  "31990:04f74530a6ede6b24731b976b8e78fb449ea61f40ff10e3d869a3030c4edc91f:D94C72C241D1C73B2C36EEA73E9FB": {
+   "id": "gen image ai",
+   "mau": 0,
+   "name": "Gen Image AI"
+  },
+  "31990:06639a386c9c1014217622ccbcf40908c4f1a0c33e23f8d6d68f4abf655f8f71:k7cbumux2u": {
+   "id": "ccns",
+   "mau": 1,
+   "name": "CCNS"
+  },
+  "31990:06639a386c9c1014217622ccbcf40908c4f1a0c33e23f8d6d68f4abf655f8f71:wdu1lnwqal": {
+   "id": "nostrver.se",
+   "mau": 0,
+   "name": "nostrver.se"
+  },
+  "31990:07907690ce3fec30fb2089eb5a61c147548c244ba85605e713d7991cd4e015f6:tell-it-web": {
+   "id": "tell it!",
+   "mau": 0,
+   "name": "Tell it!"
+  },
+  "31990:0d97beae567fcec9c6574f1c6ef6126ea969d4992c3198e51c0fac52c5274a14:1690923487423": {
+   "id": "iris.to",
+   "mau": 0,
+   "name": "Iris.to"
+  },
+  "31990:0d9b9cb0e70c84261fb09bf6c2d90a6762730703251b4472ee3461a454f6df33:5300:ln_directory": {
+   "id": "milo lightning ecosystem directory",
+   "mau": 0,
+   "name": "Milo Lightning Ecosystem Directory"
+  },
+  "31990:0d9b9cb0e70c84261fb09bf6c2d90a6762730703251b4472ee3461a454f6df33:5300:mcp_trust": {
+   "id": "milo mcp trust oracle",
+   "mau": 0,
+   "name": "Milo MCP Trust Oracle"
+  },
+  "31990:0f4795bf31824a414148daf1b589bb8138fb0a03963f984c84462e40a8365abe:mlt7t22b": {
+   "id": "pareto",
+   "mau": 20,
+   "name": "Pareto"
+  },
+  "31990:0f479c7dff7bb53dae53f3bb32ad1109edbb07ba562bdd5168044b3f4364e7b5:8020802080208020": {
+   "id": "pareto",
+   "mau": 20,
+   "name": "Pareto"
+  },
+  "31990:101fce8bea020bce793dc3f23ede81b4e60b458dc0d7598d6142d43af41e9991:vesper-dvm-50products": {
+   "id": "vesper dvm \ud83c\udf19 \u2014 50+ ai services",
+   "mau": 0,
+   "name": "Vesper DVM \ud83c\udf19 \u2014 50+ AI Services"
+  },
+  "31990:11653db7a808363207e1ea0992c830f1a573cdaf22530cead4fd3e0dc4df6230:alpenriderchain-app": {
+   "id": "alpenriderchain",
+   "mau": 4,
+   "name": "AlpenRiderChain"
+  },
+  "31990:11e8115aadd480342645224a1aabd859b436ffa96fc4a8118deb4ec8583e9fb9:nhc-2026": {
+   "id": "lightning node health check",
+   "mau": 0,
+   "name": "Lightning Node Health Check"
+  },
+  "31990:126103bfddc8df256b6e0abfd7f3797c80dcc4ea88f7c2f87dd4104220b4d65f:1688714503272": {
+   "id": "lume",
+   "mau": 1,
+   "name": "Lume"
+  },
+  "31990:128bc05aa6fd421d00c3c3389329f39cfc750b035db6cdad2eb0f983bff5629f:1686556116689": {
+   "id": "nosta",
+   "mau": 0,
+   "name": "Nosta"
+  },
+  "31990:13258106eaac0c7b2bd14dc97436b55684c3675b5e7e45322be223e17ecf3e31:solomon-stream": {
+   "id": "solomon live",
+   "mau": 0,
+   "name": "Solomon Live"
+  },
+  "31990:13406302bf30a8a9495f5627293f8076768b08fdc5e4f024ce700f19e6289d27:ditto": {
+   "id": "henhouse",
+   "mau": 0,
+   "name": "Henhouse"
+  },
+  "31990:1512c707b7c4709e5b88958f10ee83b08119b86f8c27c68ca4ab6c7a7f4bccfe:l2lnqzklpin": {
+   "id": "\u20bfyo\u20bf-nostr-rs-relay",
+   "mau": 0,
+   "name": "\u20bfYO\u20bf-NOSTR-RS-RELAY"
+  },
+  "31990:15b68d319a088a9b0c6853d2232aff0d69c8c58f0dccceabfb9a82bd4fd19c58:ditto": {
+   "id": "ditto",
+   "mau": 1062,
+   "name": "Ditto"
+  },
+  "31990:1bbd7fdf68eaf5c19446c3aaf63b39dd4a8e33548bc96f6bd239a4124d8f229e:1705955994053": {
+   "id": "malware dvms",
+   "mau": 0,
+   "name": "Malware DVMs"
+  },
+  "31990:1c197b12ca9ce0415b70e7405b9770f0ec6bccfb59b32b63aafd42cb242e1642:893ip1mga4j": {
+   "id": "runabout",
+   "mau": 0,
+   "name": "Runabout"
+  },
+  "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747": {
+   "id": "yakihonne",
+   "mau": 144,
+   "name": "YakiHonne"
+  },
+  "31990:20d29810d6a5f92b045ade02ebbadc9036d741cc686b00415c42b4236fe4ad2f:16ue4qyfb7a": {
+   "id": "substr",
+   "mau": 0,
+   "name": "Substr"
+  },
+  "31990:20d29810d6a5f92b045ade02ebbadc9036d741cc686b00415c42b4236fe4ad2f:r158088eqb": {
+   "id": "nostrguard",
+   "mau": 0,
+   "name": "NostrGuard"
+  },
+  "31990:20d29810d6a5f92b045ade02ebbadc9036d741cc686b00415c42b4236fe4ad2f:r6k11m38vq9": {
+   "id": "nostr0",
+   "mau": 0,
+   "name": "Nostr0"
+  },
+  "31990:20e7c953439e66f3882ab96fe0faa8ba246d6fb12c03b0cb4e2dc4623b8bcb21:3ztaqwfg": {
+   "id": "skatespots",
+   "mau": 3,
+   "name": "SkateSpots"
+  },
+  "31990:20e7c953439e66f3882ab96fe0faa8ba246d6fb12c03b0cb4e2dc4623b8bcb21:skatespots": {
+   "id": "skatespots",
+   "mau": 3,
+   "name": "SkateSpots"
+  },
+  "31990:21ac29561b5de90cdc21995fc0707525cd78c8a52d87721ab681d3d609d1e2df:1713667818434": {
+   "id": "nokakoi (old)",
+   "mau": 0,
+   "name": "nokakoi (old)"
+  },
+  "31990:21ac29561b5de90cdc21995fc0707525cd78c8a52d87721ab681d3d609d1e2df:1727621066968": {
+   "id": "kakoi",
+   "mau": 0,
+   "name": "kakoi"
+  },
+  "31990:21ac29561b5de90cdc21995fc0707525cd78c8a52d87721ab681d3d609d1e2df:1756530676223": {
+   "id": "omochat",
+   "mau": 0,
+   "name": "omochat"
+  },
+  "31990:21ac29561b5de90cdc21995fc0707525cd78c8a52d87721ab681d3d609d1e2df:1760607697586": {
+   "id": "nokakoi",
+   "mau": 6,
+   "name": "nokakoi"
+  },
+  "31990:21ac29561b5de90cdc21995fc0707525cd78c8a52d87721ab681d3d609d1e2df:1763998625847": {
+   "id": "nokandro",
+   "mau": 0,
+   "name": "nokandro"
+  },
+  "31990:21ef0d8541375ae4bca85285097fba370f7e540b5a30e5e75670c16679f9d144:1691411787932": {
+   "id": "secret-border",
+   "mau": 0,
+   "name": "secret-border"
+  },
+  "31990:266815e0c9210dfa324c6cba3573b14bee49da4209a9456f9484e5106cd408a5:1686066542546": {
+   "id": "nostrudel",
+   "mau": 76,
+   "name": "nostrudel"
+  },
+  "31990:266815e0c9210dfa324c6cba3573b14bee49da4209a9456f9484e5106cd408a5:1710774103420": {
+   "id": "blossom-drive",
+   "mau": 0,
+   "name": "blossom-drive"
+  },
+  "31990:266815e0c9210dfa324c6cba3573b14bee49da4209a9456f9484e5106cd408a5:7tyr9woam2k": {
+   "id": "wifistr",
+   "mau": 0,
+   "name": "Wifistr"
+  },
+  "31990:291c75d937a45f66a1209f8ea6611df7448c59b3526520c66ca2cdcd37f1bfbe:amon-din": {
+   "id": "amon din",
+   "mau": 0,
+   "name": "Amon Din"
+  },
+  "31990:291c75d937a45f66a1209f8ea6611df7448c59b3526520c66ca2cdcd37f1bfbe:heir": {
+   "id": "heir",
+   "mau": 0,
+   "name": "Heir"
+  },
+  "31990:291c75d937a45f66a1209f8ea6611df7448c59b3526520c66ca2cdcd37f1bfbe:nostr-station": {
+   "id": "nostr-station",
+   "mau": 0,
+   "name": "nostr-station"
+  },
+  "31990:291c75d937a45f66a1209f8ea6611df7448c59b3526520c66ca2cdcd37f1bfbe:nostrVM": {
+   "id": "nostrvm",
+   "mau": 1,
+   "name": "nostrVM"
+  },
+  "31990:291c75d937a45f66a1209f8ea6611df7448c59b3526520c66ca2cdcd37f1bfbe:nostrion": {
+   "id": "nostrion",
+   "mau": 1,
+   "name": "Nostrion"
+  },
+  "31990:291c75d937a45f66a1209f8ea6611df7448c59b3526520c66ca2cdcd37f1bfbe:tombstone": {
+   "id": "tombstone",
+   "mau": 0,
+   "name": "Tombstone"
+  },
+  "31990:29320975df855fe34a7b45ada2421e2c741c37c0136901fe477133a91eb18b07:1686503786770": {
+   "id": "nostrmo",
+   "mau": 0,
+   "name": "Nostrmo"
+  },
+  "31990:2944e915ba71cf0fc19f5dda048ce053a87c01fd7478b179330a17edca4ce2f4:deepmarks": {
+   "id": "deepmarks",
+   "mau": 9,
+   "name": "Deepmarks"
+  },
+  "31990:2b377dc01816468e44af3fdf09edafccf09cc1757aff32d2afac5f8a44490701:neirotunes": {
+   "id": "neirotunes",
+   "mau": 0,
+   "name": "Neirotunes"
+  },
+  "31990:2c917bfcfe4f3777ccacb4c968d6a3e9266d39a22db65c2cf2ca0c09fddf8638:untitled": {
+   "id": "medstr",
+   "mau": 0,
+   "name": "MedStr"
+  },
+  "31990:2efaa715bbb46dd5be6b7da8d7700266d11674b913b8178addb5c2e63d987331:grwd8mjz96e": {
+   "id": "catallax - decentralized bounties *demo client*",
+   "mau": 0,
+   "name": "Catallax - decentralized bounties *demo client*"
+  },
+  "31990:30782a8323b7c98b172c5a2af7206bb8283c655be6ddce11133611a03d5f1177:1693659868280": {
+   "id": "yana",
+   "mau": 0,
+   "name": "Yana"
+  },
+  "31990:3316e2d88ff91e1089c75feedcd8baa2258b45455a3b156af617d7ec79b45fe5:fw693uur": {
+   "id": "betwithfriends",
+   "mau": 0,
+   "name": "BetWithFriends"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1685723153804": {
+   "id": "damus",
+   "mau": 694,
+   "name": "damus"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1685723889433": {
+   "id": "iris",
+   "mau": 0,
+   "name": "Iris"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1691078729935": {
+   "id": "primal",
+   "mau": 1625,
+   "name": "Primal"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692337616017": {
+   "id": "zap_stream",
+   "mau": 80,
+   "name": "zap_stream"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692338702686": {
+   "id": "swarmstr",
+   "mau": 0,
+   "name": "SwarmStr"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692338773980": {
+   "id": "swarmstr",
+   "mau": 0,
+   "name": "SwarmStr"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692339501260": {
+   "id": "stemstr",
+   "mau": 0,
+   "name": "Stemstr"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692683792058": {
+   "id": "badges",
+   "mau": 0,
+   "name": "Badges"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692701797176": {
+   "id": "zapplepay",
+   "mau": 0,
+   "name": "Zapplepay"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692857799051": {
+   "id": "nostrchat",
+   "mau": 0,
+   "name": "NostrChat"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1692866173785": {
+   "id": "habla",
+   "mau": 1,
+   "name": "Habla"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1693120655506": {
+   "id": "blowater",
+   "mau": 0,
+   "name": "Blowater"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1693121964758": {
+   "id": "nostrends",
+   "mau": 0,
+   "name": "NosTrends"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1693122197928": {
+   "id": "blogstack",
+   "mau": 0,
+   "name": "BlogStack"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1694175589929": {
+   "id": "mutinywallet",
+   "mau": 0,
+   "name": "MutinyWallet"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1694175789689": {
+   "id": "alby",
+   "mau": 0,
+   "name": "alby"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1694176252745": {
+   "id": "w3.do",
+   "mau": 0,
+   "name": "w3.do"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1694179873731": {
+   "id": "wavman",
+   "mau": 0,
+   "name": "Wavman"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1694180008377": {
+   "id": "stacker.news",
+   "mau": 12,
+   "name": "stacker.news"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1696224875550": {
+   "id": "nostatus",
+   "mau": 0,
+   "name": "nostatus"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1696505930071": {
+   "id": "zephyr",
+   "mau": 0,
+   "name": "Zephyr"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1696613367039": {
+   "id": "lapps",
+   "mau": 0,
+   "name": "Lapps"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698218238210": {
+   "id": "memestr",
+   "mau": 0,
+   "name": "Memestr"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698389975074": {
+   "id": "lv",
+   "mau": 0,
+   "name": "LV"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698473684890": {
+   "id": "connect4",
+   "mau": 0,
+   "name": "Connect4"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698759484132": {
+   "id": "flockstr",
+   "mau": 0,
+   "name": "Flockstr"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698818538247": {
+   "id": "shotr",
+   "mau": 0,
+   "name": "Shotr"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698818767606": {
+   "id": "nosotros",
+   "mau": 3,
+   "name": "Nosotros"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698820040195": {
+   "id": "lightninggpt",
+   "mau": 0,
+   "name": "LightningGPT"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1698821505362": {
+   "id": "plebeian.market",
+   "mau": 0,
+   "name": "plebeian.market"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1701522314486": {
+   "id": "geyser",
+   "mau": 2,
+   "name": "Geyser"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1701524740562": {
+   "id": "nostr build",
+   "mau": 0,
+   "name": "Nostr Build"
+  },
+  "31990:3356de61b39647931ce8b2140b2bab837e0810c0ef515bbe92de0248040b8bdd:1703150957505": {
+   "id": "flare",
+   "mau": 1,
+   "name": "Flare"
+  },
+  "31990:3612d660aeb8547a74099f8924f9f92e2919f5221d3aaf8cecb6795ebd0ff508:1691533038149": {
+   "id": "triviamasters",
+   "mau": 0,
+   "name": "TriviaMasters"
+  },
+  "31990:366aad5d389c4abe4af00d04d8b70446cd59fd4285662fc836730429ab269ec4:relayhop-handler-suite-2026-05": {
+   "id": "relayhop services suite",
+   "mau": 0,
+   "name": "relayhop services suite"
+  },
+  "31990:375c92f77eb1c789ea51651d46cd758054488fffc604c64aa03131ec24e68060:solomon-stream": {
+   "id": "streaming in flames",
+   "mau": 0,
+   "name": "Streaming In Flames"
+  },
+  "31990:375c92f77eb1c789ea51651d46cd758054488fffc604c64aa03131ec24e68060:tony-live": {
+   "id": "tony live",
+   "mau": 0,
+   "name": "Tony Live"
+  },
+  "31990:375c92f77eb1c789ea51651d46cd758054488fffc604c64aa03131ec24e68060:zap-stream-core": {
+   "id": "tony's stream server",
+   "mau": null,
+   "name": "Tony's Stream Server"
+  },
+  "31990:39398278659e2447a0e46ccb0d76dc00dc5e762e1c7d38db8fccb17743b1a29d:ylq7uxjr": {
+   "id": "clestr",
+   "mau": 0,
+   "name": "Clestr"
+  },
+  "31990:39398278659e2447a0e46ccb0d76dc00dc5e762e1c7d38db8fccb17743b1a29d:ywt0twh8": {
+   "id": "schess battle royale",
+   "mau": 0,
+   "name": "Schess Battle Royale"
+  },
+  "31990:3bbcab7e3d2b07a55027206d5e193813f01406882daad05412389a50b67ba92e:qa4psg3h2oi": {
+   "id": "n-active-pubs",
+   "mau": 0,
+   "name": "N-Active-Pubs"
+  },
+  "31990:3db5e1b9daa57cc6a7d552a86a87574eea265e0759ddeb87d44e0727f79ed88d:1697703329057": {
+   "id": "wherostr",
+   "mau": 0,
+   "name": "wherostr"
+  },
+  "31990:3e294d2fd339bb16a5403a86e3664947dd408c4d87a0066524f8a573ae53ca8e:1685825809163": {
+   "id": "pinstr",
+   "mau": 0,
+   "name": "Pinstr"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:1686834215605": {
+   "id": "nostr nests",
+   "mau": 17,
+   "name": "Nostr Nests"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:7ss3j0rqr5n": {
+   "id": "yakbak",
+   "mau": 0,
+   "name": "YakBak"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:f44wsz2d": {
+   "id": "onyx",
+   "mau": 0,
+   "name": "Onyx"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:lqpttle21tb": {
+   "id": "plektos",
+   "mau": 7,
+   "name": "Plektos"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:omz3zbjl9gq": {
+   "id": "zaplytics",
+   "mau": 0,
+   "name": "Zaplytics"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:r2v0t62imw": {
+   "id": "zappix",
+   "mau": 2,
+   "name": "Zappix"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:rssvo1d30ds": {
+   "id": "zaptrax",
+   "mau": 5,
+   "name": "ZapTrax"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:w3pzkk675ve": {
+   "id": "podstr",
+   "mau": 0,
+   "name": "Podstr"
+  },
+  "31990:3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24:z8xvb5mhhvj": {
+   "id": "syncstr",
+   "mau": 0,
+   "name": "SyncStr"
+  },
+  "31990:40b9c85fffeafc1cadf8c30a4e5c88660ff6e4971a0dc723d5ab674b5e61b451:1692810248727": {
+   "id": "nostree",
+   "mau": 0,
+   "name": "Nostree"
+  },
+  "31990:45c41f21e1cf715fa6d9ca20b8e002a574db7bb49e96ee89834c66dac5446b7a:1685969736998": {
+   "id": "flycat",
+   "mau": 0,
+   "name": "flycat"
+  },
+  "31990:45c41f21e1cf715fa6d9ca20b8e002a574db7bb49e96ee89834c66dac5446b7a:1703084008416": {
+   "id": "flycat",
+   "mau": 0,
+   "name": "flycat"
+  },
+  "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447": {
+   "id": "amethyst",
+   "mau": 5184,
+   "name": "Amethyst"
+  },
+  "31990:46761647d6adb9b5820605838416f845999704602c04b048b4cf7cdaeae4012f:1687045251607": {
+   "id": "npubkey",
+   "mau": 0,
+   "name": "npubkey"
+  },
+  "31990:46f3c7bb33cc3019049b76dc89dbb96e34c247bdda68b6ad8632682793ff8a1a:5wo5lk0l": {
+   "id": "snippets",
+   "mau": 0,
+   "name": "Snippets"
+  },
+  "31990:46f3c7bb33cc3019049b76dc89dbb96e34c247bdda68b6ad8632682793ff8a1a:78a8m9tl": {
+   "id": "phoem - event based photo sharing platform",
+   "mau": 0,
+   "name": "Phoem - Event Based Photo Sharing Platform"
+  },
+  "31990:46f3c7bb33cc3019049b76dc89dbb96e34c247bdda68b6ad8632682793ff8a1a:ej25mk4b": {
+   "id": "nostr bridge",
+   "mau": 0,
+   "name": "Nostr Bridge"
+  },
+  "31990:46f3c7bb33cc3019049b76dc89dbb96e34c247bdda68b6ad8632682793ff8a1a:nj51zxnv": {
+   "id": "appointment tool",
+   "mau": 0,
+   "name": "Appointment Tool"
+  },
+  "31990:46f3c7bb33cc3019049b76dc89dbb96e34c247bdda68b6ad8632682793ff8a1a:p8wkanpk": {
+   "id": "read only nostr client",
+   "mau": 0,
+   "name": "Read Only Nostr Client"
+  },
+  "31990:480ec1a7516406090dc042ddf67780ef30f26f3a864e83b417c053a5a611c838:1693458963193": {
+   "id": "nostrid online",
+   "mau": 0,
+   "name": "Nostrid Online"
+  },
+  "31990:480ec1a7516406090dc042ddf67780ef30f26f3a864e83b417c053a5a611c838:1694472898498": {
+   "id": "nostrid online beta",
+   "mau": 0,
+   "name": "Nostrid Online BETA"
+  },
+  "31990:480ec1a7516406090dc042ddf67780ef30f26f3a864e83b417c053a5a611c838:1706861364459": {
+   "id": "lumina",
+   "mau": 0,
+   "name": "LUMINA"
+  },
+  "31990:480ec1a7516406090dc042ddf67780ef30f26f3a864e83b417c053a5a611c838:c0lxygvp8ig": {
+   "id": "lumina",
+   "mau": 0,
+   "name": "LUMINA"
+  },
+  "31990:480ec1a7516406090dc042ddf67780ef30f26f3a864e83b417c053a5a611c838:e97t8834g4n": {
+   "id": "zapgoals",
+   "mau": 0,
+   "name": "ZapGoals"
+  },
+  "31990:480ec1a7516406090dc042ddf67780ef30f26f3a864e83b417c053a5a611c838:j8ew9r1118s": {
+   "id": "zelo.news",
+   "mau": 0,
+   "name": "zelo.news"
+  },
+  "31990:4a686576f55cf7d6963b4b83d3ac76fb8875af0b9d0ca01c42fee3137c67d8f8:nostr-relay-center": {
+   "id": "nostr relay center",
+   "mau": 0,
+   "name": "Nostr Relay Center"
+  },
+  "31990:4abc8f17e30e49e8b960ea8211cfcc6448cc908b741e7f9819f066f272470848:3wufaobv9cp": {
+   "id": "nosjobs.space",
+   "mau": 0,
+   "name": "NosJobs.space"
+  },
+  "31990:4ad6fa2d16e2a9b576c863b4cf7404a70d4dc320c0c447d10ad6ff58993eacc8:dhyg9csu": {
+   "id": "routstrd",
+   "mau": 0,
+   "name": "routstrd"
+  },
+  "31990:4d584dab7c880a9809e7df0476d745bfe9a3fe91a1c062bc1fec024e0b5e1f1f:mojobus-handler-v1": {
+   "id": "mojobus",
+   "mau": 1,
+   "name": "MojoBus"
+  },
+  "31990:5069ea44d8977e77c6aea605d0c5386b24504a3abd0fe8a3d1cf5f4cedca40a7:dq0g2rl3": {
+   "id": "nostr district",
+   "mau": 0,
+   "name": "Nostr District"
+  },
+  "31990:57d1a264c9bbd10b1fbc0b2981d1339575f7d8c8d7c3a189e276ace369f1fee1:3rfb3lu6aax": {
+   "id": "bitcoin-safe",
+   "mau": 0,
+   "name": "Bitcoin-Safe"
+  },
+  "31990:5b0183ab6c3e322bf4d41c6b3aef98562a144847b7499543727c5539a114563e:diwp67b2qrv": {
+   "id": "block raider",
+   "mau": 0,
+   "name": "Block Raider"
+  },
+  "31990:5d1e8c763e3daa5e161b0bafc447db7a0ffa23bf6a3865fe39f388cf4e30f63b:1700388070873": {
+   "id": "heya!",
+   "mau": 0,
+   "name": "Heya!"
+  },
+  "31990:5d2ffec27aa3833b56ba87b250804e29993474e14d4ce240f321d3e3fdf2f382:lightning-fm": {
+   "id": "lightning fm",
+   "mau": 0,
+   "name": "Lightning FM"
+  },
+  "31990:5e8d39d642fd19499b34719136caab0fb92d26763302546cc2daf3dd2e5419a1:neirotunes": {
+   "id": "neirotunes",
+   "mau": 0,
+   "name": "Neirotunes"
+  },
+  "31990:5f6dc275f3f9f8752d010a110c226148a9ba3399c5b63a0f469ee93b1394a53e:sn13bm1p": {
+   "id": "nostrfy",
+   "mau": 0,
+   "name": "nostrfy"
+  },
+  "31990:62abb9fd0b633ec75b7292001201788318e027062c910612356e556c50ed30d3:1721227447186": {
+   "id": "0xchat",
+   "mau": 0,
+   "name": "0xchat"
+  },
+  "31990:63fe6318dc58583cfe16810f86dd09e18bfd76aabc24a0081ce2856f330504ed:1701255911856": {
+   "id": "dtan.xyz",
+   "mau": 0,
+   "name": "DTAN.XYZ"
+  },
+  "31990:64af1c26320a5fc9b93aa9e6c1917be0ee177daec9d3c3d99cc67c8c8b7e3fdb:meshline": {
+   "id": "meshline",
+   "mau": 2,
+   "name": "MeshLine"
+  },
+  "31990:6b0a60cff3eca5a2b2505ccb3f7133d8422045cbef40f3d2c6189fb0b952e7d4:1735964023115": {
+   "id": "nos haiku",
+   "mau": 4,
+   "name": "Nos Haiku"
+  },
+  "31990:6b0a60cff3eca5a2b2505ccb3f7133d8422045cbef40f3d2c6189fb0b952e7d4:1748755611571": {
+   "id": "kuchiyose",
+   "mau": 1,
+   "name": "KUCHIYOSE"
+  },
+  "31990:6be38f8c63df7dbf84db7ec4a6e6fbbd8d19dca3b980efad18585c46f04b26f9:mostr": {
+   "id": "mostr bridge",
+   "mau": 9,
+   "name": "Mostr Bridge"
+  },
+  "31990:6c0e9016b9c1efe7edef87e505e2a1e03db1fbbcfdc3ed6b4f8aaa4b540ad98f:1709306677108": {
+   "id": "unleashed.chat private ai chatbots",
+   "mau": 0,
+   "name": "Unleashed.chat private AI chatbots"
+  },
+  "31990:7107a209703d1077676d24022939fa95ab2a5d6475d23b4f2b703fc17fcb70bc:24133": {
+   "id": "satlantis.io",
+   "mau": 0,
+   "name": "Satlantis.io"
+  },
+  "31990:73491509b8e2d80840873b5a13ba98a5d1ac3a16c9292e106b1f2eda31152c52:nostr-live-canvas": {
+   "id": "nostr live canvas",
+   "mau": 2,
+   "name": "Nostr Live Canvas"
+  },
+  "31990:73c6bb92440a9344279f7a36aa3de1710c9198b1e9e8a394cd13e0dd5c994c63:1704502265408": {
+   "id": "highlighter",
+   "mau": 19,
+   "name": "Highlighter"
+  },
+  "31990:73c6bb92440a9344279f7a36aa3de1710c9198b1e9e8a394cd13e0dd5c994c63:24133": {
+   "id": "highlighter.com",
+   "mau": 0,
+   "name": "Highlighter.com"
+  },
+  "31990:748bfa87c437b294164d1784b324a0d2e9495c8268e0044e3c7796a3b158c9d8:1686065725263": {
+   "id": "zapddit",
+   "mau": 0,
+   "name": "zapddit"
+  },
+  "31990:76396eeeb15842d454e75d06707338593724dd12d8fac8aaaaae3e4132951ff6:p0v1u5e9": {
+   "id": "nostr feed",
+   "mau": 0,
+   "name": "Nostr Feed"
+  },
+  "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto": {
+   "id": "ditto",
+   "mau": 1062,
+   "name": "Ditto"
+  },
+  "31990:7999814161743f2279006ab10cfd83bd33adff23c85e5d9d0949fdd60f8f1901:77xirqooqw6": {
+   "id": "conduit market",
+   "mau": 0,
+   "name": "Conduit Market"
+  },
+  "31990:7999814161743f2279006ab10cfd83bd33adff23c85e5d9d0949fdd60f8f1901:dvvtn4dbhx": {
+   "id": "conduit merchant",
+   "mau": 0,
+   "name": "Conduit Merchant"
+  },
+  "31990:79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798:nostr-relay-center": {
+   "id": "nostr relay center",
+   "mau": 0,
+   "name": "Nostr Relay Center"
+  },
+  "31990:7a38a2f5d560926fa7bc7705859b57322ff38ee95f62c627603b7fbe4f4cd75b:Fororium": {
+   "id": "relatos \u2014 encrypted nostr forum",
+   "mau": 3,
+   "name": "Relatos \u2014 Encrypted Nostr Forum"
+  },
+  "31990:7ab124c84351506938f502bdf14a91431d9c0f5788dad8aff735aa6c8ccc99ca:NostrTube": {
+   "id": "nostrtube",
+   "mau": 7,
+   "name": "NostrTube"
+  },
+  "31990:7b04adb54a37cfd1c823012133a7d25239970b93ed973996b8a52ff761c4272a:fxmmjmma": {
+   "id": "nostr.blue",
+   "mau": 15,
+   "name": "nostr.blue"
+  },
+  "31990:7cc328a08ddb2afdf9f9be77beff4c83489ff979721827d628a542f32a247c0e:1693466404655": {
+   "id": "relay tools",
+   "mau": 0,
+   "name": "Relay Tools"
+  },
+  "31990:7d4e04503ab26615dd5f29ec08b52943cbe5f17bacc3012b26220caa232ab14c:1687329691033": {
+   "id": "habla",
+   "mau": 1,
+   "name": "Habla"
+  },
+  "31990:7dce3c70c2232f59bf904bbd3ffe551f3186a854a27be6701108d2cbd4dbf9bd:3bd9d47a817960df": {
+   "id": "fiyah jamaican patois dvm",
+   "mau": 0,
+   "name": "Fiyah Jamaican Patois DVM"
+  },
+  "31990:7fa56f5d6962ab1e3cd424e758c3002b8665f7b0d8dcee9fe9e288d7751ac194:1703943849446": {
+   "id": "emojito",
+   "mau": 0,
+   "name": "emojito"
+  },
+  "31990:7fa56f5d6962ab1e3cd424e758c3002b8665f7b0d8dcee9fe9e288d7751ac194:k50nvf8d85": {
+   "id": "grimoire",
+   "mau": 9,
+   "name": "grimoire"
+  },
+  "31990:818a39b5f164235f86254b12ca586efccc1f95e98b45cb1c91c71dc5d9486dda:0": {
+   "id": "nostr.band",
+   "mau": 0,
+   "name": "Nostr.Band"
+  },
+  "31990:818a39b5f164235f86254b12ca586efccc1f95e98b45cb1c91c71dc5d9486dda:1685801142073": {
+   "id": "nostrapp",
+   "mau": 0,
+   "name": "nostrapp"
+  },
+  "31990:818a39b5f164235f86254b12ca586efccc1f95e98b45cb1c91c71dc5d9486dda:1697444566568": {
+   "id": "nostrapp",
+   "mau": 0,
+   "name": "nostrapp"
+  },
+  "31990:81afa077ed02be614ff3c406310e744e90c2030f34df964297488ec7e3e72c4d:neirotunes": {
+   "id": "neirotunes",
+   "mau": 0,
+   "name": "Neirotunes"
+  },
+  "31990:83d52b4363d2d1bc5a098de7be67c120bfb7c0cee8efefd8eb6e42372af24689:1696997648659": {
+   "id": "nostter",
+   "mau": 11,
+   "name": "nostter"
+  },
+  "31990:83d52b4363d2d1bc5a098de7be67c120bfb7c0cee8efefd8eb6e42372af24689:1782011724356": {
+   "id": "nostter deck",
+   "mau": 2,
+   "name": "nostter deck"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:1696996761145": {
+   "id": "nostr-bookmark-viewer",
+   "mau": 0,
+   "name": "nostr-bookmark-viewer"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:1702273123812": {
+   "id": "nostviewstr",
+   "mau": 0,
+   "name": "NostViewstr"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:1713081918844": {
+   "id": "bookmarkrecoverytool",
+   "mau": 0,
+   "name": "BookmarkRecoveryTool"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:1727506446612": {
+   "id": "lumilumi",
+   "mau": 40,
+   "name": "Lumilumi"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:1732002200891": {
+   "id": "luminostr",
+   "mau": 0,
+   "name": "Luminostr"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:1732006256975": {
+   "id": "nostr follow organizer",
+   "mau": 0,
+   "name": "Nostr Follow Organizer"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:1747569626889": {
+   "id": "makimono",
+   "mau": 4,
+   "name": "MAKIMONO"
+  },
+  "31990:84b0c46ab699ac35eb2ca286470b85e081db2087cdef63932236c397417782f5:nake": {
+   "id": "nostr army knife extension",
+   "mau": 0,
+   "name": "Nostr Army Knife Extension"
+  },
+  "31990:85df00a2f6a91845354c8d2d9fbab4002bb85b4225baeab60fafb2587c5038ea:shosho-recommends-01": {
+   "id": "shosho \u2013 live stream on nostr",
+   "mau": 0,
+   "name": "Shosho \u2013 Live Stream on Nostr"
+  },
+  "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:2uu57s3x00f": {
+   "id": "nostrdamus",
+   "mau": 1,
+   "name": "Nostrdamus"
+  },
+  "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:8z7wwy743zd": {
+   "id": "surveil",
+   "mau": 3,
+   "name": "Surveil"
+  },
+  "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:9upx5m9n": {
+   "id": "wordsoul",
+   "mau": 0,
+   "name": "Wordsoul"
+  },
+  "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:cgdgkgvtgnb": {
+   "id": "treasures",
+   "mau": 20,
+   "name": "Treasures"
+  },
+  "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:espy": {
+   "id": "espy",
+   "mau": 11,
+   "name": "Espy"
+  },
+  "31990:89e14be49ed0073da83b678279cd29ba5ad86cf000b6a3d1a4c3dc4aa4fdd02c:1691484192414": {
+   "id": "nostrcheck.me",
+   "mau": 0,
+   "name": "nostrcheck.me"
+  },
+  "31990:8ae1b230c71b2e82c538f543d400fd1d6103b0d1ae9ba9c9217c1c677f8b86c0:neblr-web": {
+   "id": "neblr",
+   "mau": 3,
+   "name": "neblr"
+  },
+  "31990:8d7a152d0cadf3898853840fae21af7fd3f156be9e12eeec36b0e64ad1121dbb:vo7ku2bh": {
+   "id": "cockciturr",
+   "mau": 0,
+   "name": "cockciturr"
+  },
+  "31990:8fb140b4e8ddef97ce4b821d247278a1a4353362623f64021484b372f948000c:hmjvr4fuxuj": {
+   "id": "nostr build",
+   "mau": 0,
+   "name": "Nostr Build"
+  },
+  "31990:903ae1dd833ce4cbbbf395edd651d93c0d586ea441c6abe1ba341ee6ec8d26f6:pagesnap-text-extraction": {
+   "id": "pagesnap url to markdown",
+   "mau": 0,
+   "name": "PageSnap URL to Markdown"
+  },
+  "31990:932614571afcbad4d17a191ee281e39eebbb41b93fac8fd87829622aeb112f4d:3szq2y4x8o2": {
+   "id": "bookstr",
+   "mau": 6,
+   "name": "Bookstr"
+  },
+  "31990:932614571afcbad4d17a191ee281e39eebbb41b93fac8fd87829622aeb112f4d:ecps4vlkjh": {
+   "id": "yourspace",
+   "mau": 2,
+   "name": "YourSpace"
+  },
+  "31990:932614571afcbad4d17a191ee281e39eebbb41b93fac8fd87829622aeb112f4d:polaroids": {
+   "id": "polaroids",
+   "mau": 1,
+   "name": "Polaroids"
+  },
+  "31990:96203d66276e3214ea93b6c78a577c3c9a7279f9ee7e51b22f3b8c17643a819c:1697382843064": {
+   "id": "rabbit",
+   "mau": 0,
+   "name": "Rabbit"
+  },
+  "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690": {
+   "id": "coracle",
+   "mau": 17,
+   "name": "Coracle"
+  },
+  "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1737058597050": {
+   "id": "flotilla",
+   "mau": 0,
+   "name": "Flotilla"
+  },
+  "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl": {
+   "id": "flotilla",
+   "mau": 0,
+   "name": "Flotilla"
+  },
+  "31990:9b9dd223f9a4401cf378d557899ceb42be845d0eb21c74ebd3766321c0655f1f:8rxkwd84": {
+   "id": "wikistar",
+   "mau": 0,
+   "name": "Wikistar"
+  },
+  "31990:9be0be0fc079548233231614e4e1efc9f28b0db398011efeecf05fe570e5dd33:1685868693432": {
+   "id": "nostur",
+   "mau": 252,
+   "name": "Nostur"
+  },
+  "31990:9be1b8315248eeb20f9d9ab2717d1750e4f27489eab1fa531d679dadd34c2f8d:1726937516": {
+   "id": "nostrsms",
+   "mau": 0,
+   "name": "NostrSMS"
+  },
+  "31990:9ee0109e05a99ada70fcd651a82acac8e0a67620edb6e950b37789325d407cfc:1763904201808": {
+   "id": "nostr wars",
+   "mau": 0,
+   "name": "Nostr Wars"
+  },
+  "31990:a19aadee53bc71d25afef365067a3978ac30d5520d36ec8cc74d77a872af7359:24133": {
+   "id": "satlantis.io",
+   "mau": 0,
+   "name": "Satlantis.io"
+  },
+  "31990:a19caaa8404721584746fb0e174cf971a94e0f51baaf4c4e8c6e54fa88985eaf:1755917022711": {
+   "id": "flowgazer",
+   "mau": 4,
+   "name": "flowgazer"
+  },
+  "31990:a66b3840bd58fe5d8a7d399ce8068766ab83a95cb7e180eadea5dcaf915dddf4:eltociear-x402-security-dvm": {
+   "id": "eltociear x402 security & crypto-data dvm",
+   "mau": 0,
+   "name": "eltociear x402 security & crypto-data DVM"
+  },
+  "31990:a80398e86c03ffadc7030fe135ee7614b6fabb204fc0f6641838fb4b8abf0b0c:1745663921447": {
+   "id": "runstr",
+   "mau": 0,
+   "name": "Runstr"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:49c1ikctxgd": {
+   "id": "vidstr",
+   "mau": 6,
+   "name": "VidStr"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:5elj8lt04lm": {
+   "id": "inkpress",
+   "mau": 0,
+   "name": "InkPress"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:act-pear-new": {
+   "id": "shakespeare act pear \ud83c\udf50",
+   "mau": 0,
+   "name": "Shakespeare Act PEAR \ud83c\udf50"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:act-spear": {
+   "id": "shakespeare act spear",
+   "mau": 0,
+   "name": "Shakespeare Act Spear"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:aether-chat-1": {
+   "id": "aether chat",
+   "mau": 0,
+   "name": "Aether Chat"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:apex-wallet-1": {
+   "id": "apex wallet",
+   "mau": 0,
+   "name": "Apex Wallet"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:bahai-calendar": {
+   "id": "bah\u00e1'\u00ed calendar generator",
+   "mau": 0,
+   "name": "Bah\u00e1'\u00ed Calendar Generator"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:blocktime-calendar": {
+   "id": "bitcoin block time calendar",
+   "mau": 0,
+   "name": "Bitcoin Block Time Calendar"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:calendarium": {
+   "id": "calendarium",
+   "mau": 0,
+   "name": "Calendarium"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:calendrier-republicain": {
+   "id": "calendrier r\u00e9publicain",
+   "mau": 0,
+   "name": "Calendrier R\u00e9publicain"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:cartridgeqr": {
+   "id": "cartridgeqr",
+   "mau": 0,
+   "name": "CartridgeQR"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:cipherchat": {
+   "id": "cipherchat",
+   "mau": 0,
+   "name": "CipherChat"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:discordian-calendar": {
+   "id": "discordian calendar",
+   "mau": 0,
+   "name": "Discordian Calendar"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:ftvwput5czi": {
+   "id": "nostr music",
+   "mau": 1,
+   "name": "Nostr Music"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:hebrew-calendar": {
+   "id": "hebrew calendar",
+   "mau": 0,
+   "name": "Hebrew Calendar"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:inkpress": {
+   "id": "inkpress",
+   "mau": 0,
+   "name": "InkPress"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:islamic-calendar-generator": {
+   "id": "islamic calendar generator",
+   "mau": 0,
+   "name": "Islamic Calendar Generator"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:j0ndxpqg7aq": {
+   "id": "nostrdocs",
+   "mau": 1,
+   "name": "NostrDocs"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:j9j1469vfkc": {
+   "id": "raw nostr",
+   "mau": 0,
+   "name": "Raw Nostr"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:livewave": {
+   "id": "livewave",
+   "mau": 1,
+   "name": "LiveWave"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:neopolygraphia": {
+   "id": "neopolygraphia",
+   "mau": 0,
+   "name": "Neopolygraphia"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:nostr-docs": {
+   "id": "nostrdocs",
+   "mau": 1,
+   "name": "NostrDocs"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:nostr-image-board-copy": {
+   "id": "nostr images",
+   "mau": 1,
+   "name": "Nostr Images"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:nostr-music": {
+   "id": "nostr music",
+   "mau": 1,
+   "name": "Nostr Music"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:nostr-press": {
+   "id": "nostrpress",
+   "mau": 0,
+   "name": "NostrPress"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:nostrhub": {
+   "id": "nostrhub (stl1988 fork)",
+   "mau": 0,
+   "name": "NostrHub (stl1988 fork)"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:nostrmon-world": {
+   "id": "nostrmon world",
+   "mau": 0,
+   "name": "Nostrmon World"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:nq1sticatk": {
+   "id": "storyforge ai",
+   "mau": 3,
+   "name": "StoryForge AI"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:og6or3t6p7a": {
+   "id": "calendarium (and more calendar generators)",
+   "mau": 0,
+   "name": "Calendarium (and more calendar generators)"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:pixel-odyssey": {
+   "id": "pixel odyssey",
+   "mau": 0,
+   "name": "Pixel Odyssey"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:pokopia-cloud-island": {
+   "id": "pokopia cloud island",
+   "mau": 0,
+   "name": "Pokopia Cloud Island"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:pressstr": {
+   "id": "pressstr",
+   "mau": 1,
+   "name": "PressStr"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:raw-nostr": {
+   "id": "nostr raw events",
+   "mau": 0,
+   "name": "Nostr Raw Events"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:raw-nostr-2": {
+   "id": "raw nostr 2",
+   "mau": 0,
+   "name": "Raw Nostr 2"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:report-viewer": {
+   "id": "nostr report viewer",
+   "mau": 0,
+   "name": "Nostr Report Viewer"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:storyforge-ai": {
+   "id": "storyforge ai",
+   "mau": 3,
+   "name": "StoryForge AI"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:surreal-credits": {
+   "id": "surreal credits",
+   "mau": 0,
+   "name": "Surreal Credits"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:unixcal": {
+   "id": "unixcal",
+   "mau": 0,
+   "name": "UnixCal"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:vidstr": {
+   "id": "(old) vidstr - decentralized video platform",
+   "mau": 0,
+   "name": "(Old) VidStr - Decentralized Video Platform"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:vidstr2": {
+   "id": "vidstr",
+   "mau": 6,
+   "name": "VidStr"
+  },
+  "31990:a8d1560d6a647d501699167246f237b36fb123f89168fda11dc743533fec7a08:wv7g6lq3ds": {
+   "id": "nostr image board",
+   "mau": 1,
+   "name": "Nostr Image Board"
+  },
+  "31990:aaedcba04cdb88654162b26f41bc15587ffb675124cba2c9d206d411fdf9d507:1696253589722": {
+   "id": "tasktiger",
+   "mau": 0,
+   "name": "TaskTiger"
+  },
+  "31990:b17c59874dc05d7f6ec975bce04770c8b7fa9d37f3ad0096fdb76c9385d68928:1685828165310": {
+   "id": "agora",
+   "mau": 22,
+   "name": "Agora"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:1752305149787": {
+   "id": "donow",
+   "mau": 0,
+   "name": "Donow"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:1756055942813": {
+   "id": "couleur",
+   "mau": 0,
+   "name": "Couleur"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:1763758161543": {
+   "id": "divine",
+   "mau": 808,
+   "name": "diVine"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:ahqqjadlzd6": {
+   "id": "file transfer",
+   "mau": 0,
+   "name": "File transfer"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:bkdmj9q6": {
+   "id": "open specs",
+   "mau": 3,
+   "name": "Open Specs"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:dijeleceuw": {
+   "id": "submarine",
+   "mau": 0,
+   "name": "Submarine"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:mjbj42x7nuj": {
+   "id": "peridot",
+   "mau": 0,
+   "name": "Peridot"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:r4lsnn5ub7": {
+   "id": "nostr app finder",
+   "mau": 0,
+   "name": "Nostr app finder"
+  },
+  "31990:b22b06b051fd5232966a9344a634d956c3dc33a7f5ecdcad9ed11ddc4120a7f2:y2gdcn1y7qi": {
+   "id": "nostr video uploader",
+   "mau": 0,
+   "name": "Nostr video uploader"
+  },
+  "31990:b3633fb9e5e26c8dae0ab752f31f75d829ec9a7af9c62a3d949a08355e32a613:1730745989886": {
+   "id": "chainduel",
+   "mau": 0,
+   "name": "chainduel"
+  },
+  "31990:b450f2a87f1327e9a5628c979286c6d4441f3e93bf8e3d5e4196e944c91e1ab0:i8dpznjm": {
+   "id": "bitblik",
+   "mau": 0,
+   "name": "BitBlik"
+  },
+  "31990:b4b12dfbc3dfdfa803bb72e344e761dc78db4ec2058c8db3f1c3ac63f9e42b44:powforge-identity-score-l402": {
+   "id": "powforge identity score",
+   "mau": 0,
+   "name": "PowForge Identity Score"
+  },
+  "31990:b4b12dfbc3dfdfa803bb72e344e761dc78db4ec2058c8db3f1c3ac63f9e42b44:powforge-oracle-l402": {
+   "id": "powforge oracle",
+   "mau": 0,
+   "name": "PowForge Oracle"
+  },
+  "31990:b5d34eedc7d8f81ceaa5ed377b5a2d534ee949fae0c5ab3bae0a576aa7475cbf:piyu44rn": {
+   "id": "mangatsu",
+   "mau": 0,
+   "name": "Mangatsu"
+  },
+  "31990:b7c6f6915cfa9a62fff6a1f02604de88c23c6c6c6d1b8f62c7cc10749f307e81:1690791186980": {
+   "id": "slidestr",
+   "mau": 0,
+   "name": "slidestr"
+  },
+  "31990:b8f07cd6cbd0ad99d79ab7e9e297e27be23b0e7846f4a202e506f2e427bc2ad9:blindoracle-v1": {
+   "id": "blindoracle",
+   "mau": 0,
+   "name": "BlindOracle"
+  },
+  "31990:ba3eefec0e795362230f869461ea16e20b782e11eef6107edeed0d3d19e7651b:blindoracle-v1": {
+   "id": "blindoracle",
+   "mau": 0,
+   "name": "BlindOracle"
+  },
+  "31990:ba984db20ef2f5027608a0720f40d3fe332fb61c40b5ed60f316ba20408131e9:fbo-network-articles-reader-app": {
+   "id": "fbo.network",
+   "mau": 0,
+   "name": "FBO.Network"
+  },
+  "31990:c0f3d58dfa1d583f0c4652935b75cd4c8ea22de563a83039f6eccf01d637d3cf:1705244533590": {
+   "id": "creatr",
+   "mau": 0,
+   "name": "Creatr"
+  },
+  "31990:c179be0ef742929069230208848e29cf375387e16851d6487c0c4eb602815989:bl9n7k49": {
+   "id": "kargain",
+   "mau": 0,
+   "name": "Kargain"
+  },
+  "31990:c1e4bb58e055e586a92476ba4c5b935e37ab4518e4d97095e7d8eda18d87df35:c0b36116d9f0ea9f": {
+   "id": "notarized notes",
+   "mau": 0,
+   "name": "Notarized Notes"
+  },
+  "31990:c202147d37401f9091496e139516f249d71a20a17f742f91d669978bbca55546:friday-security-audit": {
+   "id": "friday security audit dvm",
+   "mau": 0,
+   "name": "Friday Security Audit DVM"
+  },
+  "31990:c45041618951bb6012ac23f5cdf3d740465f2d640be841fd9bb1d0733370cd3c:hcfjgdre": {
+   "id": "indexstr",
+   "mau": 1,
+   "name": "Indexstr"
+  },
+  "31990:c45041618951bb6012ac23f5cdf3d740465f2d640be841fd9bb1d0733370cd3c:i33rphgp": {
+   "id": "crawlstr",
+   "mau": 0,
+   "name": "Crawlstr"
+  },
+  "31990:c5fb6ecc876e0458e3eca9918e370cbcd376901c58460512fe537a46e58c38bb:1691089211316": {
+   "id": "nosbin",
+   "mau": 0,
+   "name": "nosbin"
+  },
+  "31990:c6e3a2096d95a8a8e6821df468bd91fb4688cb7aeec881431e40172c991b62c1:9cxtd71l": {
+   "id": "bearings",
+   "mau": 0,
+   "name": "Bearings"
+  },
+  "31990:c6f7077f1699d50cf92a9652bfebffac05fc6842b9ee391089d959b8ad5d48fd:1691355999029": {
+   "id": "nostryfied",
+   "mau": 0,
+   "name": "Nostryfied"
+  },
+  "31990:c6f7077f1699d50cf92a9652bfebffac05fc6842b9ee391089d959b8ad5d48fd:1691356518501": {
+   "id": "zapit",
+   "mau": 0,
+   "name": "Zapit"
+  },
+  "31990:c6f7077f1699d50cf92a9652bfebffac05fc6842b9ee391089d959b8ad5d48fd:1691356808584": {
+   "id": "nostrnet",
+   "mau": 0,
+   "name": "NostrNet"
+  },
+  "31990:c7617e1e5991dd585b9c6edb7b3d552b2d0027188c2d4b5e3fd79efe31aef4b2:wordstr": {
+   "id": "wordstr \u2014 marc\u2019s writing on nostr",
+   "mau": 2,
+   "name": "wordstr \u2014 Marc\u2019s writing on Nostr"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Autonomous_Customs_Tariff_Compliance_Oracle": {
+   "id": "autonomous customs tariff & compliance oracle",
+   "mau": 0,
+   "name": "Autonomous Customs Tariff & Compliance Oracle"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Compliance_Cross_Reference_Engine": {
+   "id": "compliance-cross-reference-engine",
+   "mau": 0,
+   "name": "Compliance-Cross-Reference-Engine"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Deterministic_Cross_Chain_Approval_Audit": {
+   "id": "deterministic-cross-chain-approval-audit",
+   "mau": 0,
+   "name": "Deterministic-Cross-Chain-Approval-Audit"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Deterministic_Invariant_Logic_Auditor": {
+   "id": "deterministic-invariant-logic-auditor",
+   "mau": 0,
+   "name": "Deterministic-Invariant-Logic-Auditor"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-MEV_Latency_Sentinel": {
+   "id": "mev-latency-sentinel",
+   "mau": 0,
+   "name": "MEV-Latency-Sentinel"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Mempool_Latency_Arbitrage_Tracker": {
+   "id": "mempool_latency_arbitrage_tracker",
+   "mau": 0,
+   "name": "Mempool_Latency_Arbitrage_Tracker"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-OmniChain_Yield_Delta_Rebalancer": {
+   "id": "omnichain-yield-delta-rebalancer",
+   "mau": 0,
+   "name": "OmniChain-Yield-Delta-Rebalancer"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Semantic_Cache_Pruner": {
+   "id": "semantic_cache_pruner",
+   "mau": 0,
+   "name": "Semantic_Cache_Pruner"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Semantic_Context_Pruner": {
+   "id": "semantic_context_pruner",
+   "mau": 0,
+   "name": "Semantic_Context_Pruner"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Smart_Clause_Jurisdiction_Adapter": {
+   "id": "smart-clause-jurisdiction-adapter",
+   "mau": 0,
+   "name": "Smart-Clause-Jurisdiction-Adapter"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-Smart_Contract_Regulatory_Compliance_Validator": {
+   "id": "smart_contract_regulatory_compliance_validator",
+   "mau": 0,
+   "name": "Smart_Contract_Regulatory_Compliance_Validator"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-bias_neutralizer": {
+   "id": "bias_neutralizer",
+   "mau": 0,
+   "name": "bias_neutralizer"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-correlation_sentinel": {
+   "id": "correlation_sentinel",
+   "mau": 0,
+   "name": "correlation_sentinel"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-cross_chain_yield_rebalancer_oracle": {
+   "id": "cross-chain yield rebalancer oracle",
+   "mau": 0,
+   "name": "Cross-Chain Yield Rebalancer Oracle"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-damage_probability": {
+   "id": "damage_probability",
+   "mau": 0,
+   "name": "damage_probability"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-format_validator": {
+   "id": "format_validator",
+   "mau": 0,
+   "name": "format_validator"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-fx_arbitrage": {
+   "id": "fx_arbitrage",
+   "mau": 0,
+   "name": "fx_arbitrage"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-phi_contextual_redactor": {
+   "id": "phi-contextual-redactor",
+   "mau": 0,
+   "name": "phi-contextual-redactor"
+  },
+  "31990:ca16f05b118822ecec12d1824c11c7094620592a4f47cd50e0b8ae4bbf065c59:logicnodes-trademark_collision": {
+   "id": "trademark_collision",
+   "mau": 0,
+   "name": "trademark_collision"
+  },
+  "31990:cbcff8bb959c6099d9a9ca2a8677b997f678bc67c386a434e6d245ee5de8e36a:audit-hypothesis-crosscheck": {
+   "id": "copperbramble dvm",
+   "mau": 0,
+   "name": "copperbramble DVM"
+  },
+  "31990:cbcff8bb959c6099d9a9ca2a8677b997f678bc67c386a434e6d245ee5de8e36a:copperbramble-soliditity-audit-dvm-2026-04": {
+   "id": "copperbramble \u2014 solidity audit-hypothesis cross-check dvm",
+   "mau": 0,
+   "name": "copperbramble \u2014 Solidity audit-hypothesis cross-check DVM"
+  },
+  "31990:cbcff8bb959c6099d9a9ca2a8677b997f678bc67c386a434e6d245ee5de8e36a:copperbramble-solidity-audit-dvm-v1": {
+   "id": "copperbramble solidity-audit dvm",
+   "mau": 0,
+   "name": "copperbramble Solidity-Audit DVM"
+  },
+  "31990:cc5f259f036683798e4a52071dbb97238702ffb6f0c85af6d273c8ddbe5c0afb:ee45d18813cd44c0b1e085638d0c7892": {
+   "id": "opreturnbot",
+   "mau": 0,
+   "name": "opreturnbot"
+  },
+  "31990:cc8d072efdcc676fcbac14f6cd6825edc3576e55eb786a2a975ee034a6a026cb:1699883465313": {
+   "id": "nostrocket",
+   "mau": 0,
+   "name": "Nostrocket"
+  },
+  "31990:cdb618cf6ba6c3b2e619033390213fe99df46143ffbdfdca038a4f24c5383009:diversz-commons-tool": {
+   "id": "diversz-commons",
+   "mau": 0,
+   "name": "diversz-commons"
+  },
+  "31990:ce97367c75d7d91fb9bc3bc6ff5bb3bdb52c18941bfce2f368616dcbf0adfd2f:izlh731o7h": {
+   "id": "blobbi",
+   "mau": 18,
+   "name": "Blobbi"
+  },
+  "31990:cf13a4f45628931f1cdbe7d31f923b6f6884d41644ab2cc055a0e0805b77cb9e:D94C72C241D1C73B2C36EEA73E9FB": {
+   "id": "text2speech",
+   "mau": 0,
+   "name": "Text2Speech"
+  },
+  "31990:d0514175a31de1942812597ee4e3f478b183f7f35fb73ee66d8c9f57485544e4:jorgenclaw-dvm": {
+   "id": "jorgenclaw",
+   "mau": 0,
+   "name": "Jorgenclaw"
+  },
+  "31990:d133ecb09963a7f7a705bf250324a226fcacbf51eba6f0b1b97df8c09338a4c8:5ijupcvs": {
+   "id": "vector",
+   "mau": 119,
+   "name": "Vector"
+  },
+  "31990:d1a61498f4b1dc26df0becd1a3e9e88f355fb614b771e8b5b277d0ff99a82a23:ij29km3h": {
+   "id": "inkan",
+   "mau": 1,
+   "name": "Inkan"
+  },
+  "31990:d1bd33333733dcc411f0ee893b38b8522fc0de227fff459d99044ced9e65581b:yanci05pku": {
+   "id": "nostria",
+   "mau": 287,
+   "name": "Nostria"
+  },
+  "31990:d3495bbc01ac822936ee78943d0db59768278cf834f63d6a356f85823f7121ff:zap-stream-core": {
+   "id": "let's fo live",
+   "mau": 0,
+   "name": "Let's Fo Live"
+  },
+  "31990:d36e8083fa7b36daee646cb8b3f99feaa3d89e5a396508741f003e21ac0b6bec:1695929113961": {
+   "id": "shopstr",
+   "mau": 10,
+   "name": "Shopstr"
+  },
+  "31990:d993b854eca3f743a33eafb3ccf92a11e83783fa5697bdee06fc4a0082358b16:nostrthreads": {
+   "id": "nostrthreads",
+   "mau": 0,
+   "name": "NostrThreads"
+  },
+  "31990:daa41bedb68591363bf4407f687cb9789cc543ed024bb77c22d2c84d88f54153:1756790869749": {
+   "id": "nostrpass",
+   "mau": 0,
+   "name": "NostrPass"
+  },
+  "31990:daa41bedb68591363bf4407f687cb9789cc543ed024bb77c22d2c84d88f54153:1758212851359": {
+   "id": "bloom",
+   "mau": 0,
+   "name": "Bloom"
+  },
+  "31990:daa41bedb68591363bf4407f687cb9789cc543ed024bb77c22d2c84d88f54153:1d5szjvp": {
+   "id": "signet",
+   "mau": 0,
+   "name": "Signet"
+  },
+  "31990:daa41bedb68591363bf4407f687cb9789cc543ed024bb77c22d2c84d88f54153:f26b8249-5f2f-49e3-befc-292d141d394a": {
+   "id": "hanami",
+   "mau": 1,
+   "name": "Hanami"
+  },
+  "31990:db0e60d10b9555a39050c258d460c5c461f6d18f467aa9f62de1a728b8a891a4:ditto": {
+   "id": "gleasonator",
+   "mau": 24,
+   "name": "Gleasonator"
+  },
+  "31990:dbb19ae0e0ea853289c54c7ca810782b61306c848cad8d8416174597c3f22d5a:1732877729963": {
+   "id": "oddbean",
+   "mau": 0,
+   "name": "Oddbean"
+  },
+  "31990:dbb19ae0e0ea853289c54c7ca810782b61306c848cad8d8416174597c3f22d5a:1732877977254": {
+   "id": "jumble",
+   "mau": 55,
+   "name": "Jumble"
+  },
+  "31990:dbb19ae0e0ea853289c54c7ca810782b61306c848cad8d8416174597c3f22d5a:1732889768899": {
+   "id": "metadata",
+   "mau": 0,
+   "name": "Metadata"
+  },
+  "31990:dbb19ae0e0ea853289c54c7ca810782b61306c848cad8d8416174597c3f22d5a:1732891823008": {
+   "id": "nostr.band",
+   "mau": 0,
+   "name": "Nostr.Band"
+  },
+  "31990:dbb19ae0e0ea853289c54c7ca810782b61306c848cad8d8416174597c3f22d5a:1734026492752": {
+   "id": "nostr portfolio website generator",
+   "mau": 13,
+   "name": "Nostr portfolio website generator"
+  },
+  "31990:dbb19ae0e0ea853289c54c7ca810782b61306c848cad8d8416174597c3f22d5a:1740727467284": {
+   "id": "nostr inactive users checker",
+   "mau": 0,
+   "name": "Nostr Inactive Users Checker"
+  },
+  "31990:ddb5dea3ae83ff6d02d888ccea202a61e5c35ae90c74982b4aad50c4ba48ba6a:neirotunes": {
+   "id": "neirotunes",
+   "mau": 0,
+   "name": "Neirotunes"
+  },
+  "31990:df478568479de26b4a83c1bdc4dbab61b5cc82e1a312e2b28bc815a12a951e67:family-budget-nest": {
+   "id": "home hub",
+   "mau": 0,
+   "name": "Home Hub"
+  },
+  "31990:df5bcaba9e74cc1764c9773ae160299dde5acf79416e2c96758dba225e6707cc:bchstr24-1": {
+   "id": "bchnostr",
+   "mau": 179,
+   "name": "BCHNostr"
+  },
+  "31990:df5bcaba9e74cc1764c9773ae160299dde5acf79416e2c96758dba225e6707cc:bitcoincashstr": {
+   "id": "bitcoincashstr",
+   "mau": 0,
+   "name": "Bitcoincashstr"
+  },
+  "31990:df5bcaba9e74cc1764c9773ae160299dde5acf79416e2c96758dba225e6707cc:gsg6bbhh73p": {
+   "id": "bitcoin cash nostr client",
+   "mau": 0,
+   "name": "Bitcoin Cash Nostr Client"
+  },
+  "31990:e3a006360f3e4a19b3e30e5ed232d60dc62e9c738ddae87757b739b753704703:1691533175854": {
+   "id": "winemasters",
+   "mau": 0,
+   "name": "WineMasters"
+  },
+  "31990:e4336cd525df79fa4d3af364fd9600d4b10dce4215aa4c33ed77ea0842344b10:ctdvlsafz9m": {
+   "id": "gitplaza",
+   "mau": 9,
+   "name": "Gitplaza"
+  },
+  "31990:e4fb6710ea424575497599e61176139b2873d11f917a0ef63f48c5b893f4dacc:1766904245036": {
+   "id": "nostr-graveyard",
+   "mau": 0,
+   "name": "nostr-graveyard"
+  },
+  "31990:e8ed3798c6ffebffa08501ac39e271662bfd160f688f94c45d692d8767dd345a:1700165345380": {
+   "id": "onosendai",
+   "mau": 0,
+   "name": "onosendai"
+  },
+  "31990:e8ed3798c6ffebffa08501ac39e271662bfd160f688f94c45d692d8767dd345a:1727894479527": {
+   "id": "straylightcafe",
+   "mau": 0,
+   "name": "straylightcafe"
+  },
+  "31990:eb119234c467ac9d2ffea5b7284f3a74bd04287a12cfd58a22d19626434cddf2:1698543002061": {
+   "id": "usagi",
+   "mau": 0,
+   "name": "usagi"
+  },
+  "31990:ec42c765418b3db9c85abff3a88f4a3bbe57535eebbdc54522041fa5328c0600:1734704902690": {
+   "id": "nostr-zap-view",
+   "mau": 0,
+   "name": "nostr-zap-view"
+  },
+  "31990:ec42c765418b3db9c85abff3a88f4a3bbe57535eebbdc54522041fa5328c0600:1754918316480": {
+   "id": "ehagaki",
+   "mau": 29,
+   "name": "eHagaki"
+  },
+  "31990:ee38ae16af08d28aa8a6af4d0b238acd3bc648d526b32de4e43aeb3855623a82:sat-sorter": {
+   "id": "sat sorter - bitcoin budget app",
+   "mau": 0,
+   "name": "Sat Sorter - Bitcoin Budget App"
+  },
+  "31990:eeef8f1c33febecebc8fe0aabccf426685f56085ee8de10ebe9200aa8ae3f7ab:1688221808024": {
+   "id": "nosteen",
+   "mau": 0,
+   "name": "nosteen"
+  },
+  "31990:efc37e97fa4fad679e464b7a6184009b7cc7605aceb0c5f56b464d2b986a60f0:1688891204471": {
+   "id": "nostr.kiwi",
+   "mau": 0,
+   "name": "nostr.kiwi"
+  },
+  "31990:f06f5ead66e65a7d53370965a6ad3708a45e8a94733833b440d2ea4d46206678:rq4hv3lr": {
+   "id": "nostru",
+   "mau": 0,
+   "name": "Nostru"
+  },
+  "31990:f35ae048215769b4e07639918d407cb144cfba1e4c0b1836492f8c2dd018a92d:1690321963400": {
+   "id": "nostrearth",
+   "mau": 0,
+   "name": "nostrearth"
+  },
+  "31990:f35ae048215769b4e07639918d407cb144cfba1e4c0b1836492f8c2dd018a92d:1692412838759": {
+   "id": "nostrwrite",
+   "mau": 0,
+   "name": "NostrWrite"
+  },
+  "31990:f35ae048215769b4e07639918d407cb144cfba1e4c0b1836492f8c2dd018a92d:1692480042170": {
+   "id": "nostrlinks",
+   "mau": 0,
+   "name": "NostrLinks"
+  },
+  "31990:f35ae048215769b4e07639918d407cb144cfba1e4c0b1836492f8c2dd018a92d:1692480426418": {
+   "id": "nostrtool",
+   "mau": 0,
+   "name": "NostrTool"
+  },
+  "31990:f35ae048215769b4e07639918d407cb144cfba1e4c0b1836492f8c2dd018a92d:1693905254066": {
+   "id": "nostrgraph",
+   "mau": 0,
+   "name": "NostrGraph"
+  },
+  "31990:f35ae048215769b4e07639918d407cb144cfba1e4c0b1836492f8c2dd018a92d:1694744471402": {
+   "id": "nostrmap",
+   "mau": 0,
+   "name": "NostrMap"
+  },
+  "31990:f527cf970ce260e74261214bf612e8f75a59db1835ed7e4053326c3f65e232ee:7ro2q0g4": {
+   "id": "noornote",
+   "mau": 11,
+   "name": "NoorNote"
+  },
+  "31990:f7922a0adb3fa4dda5eecaa62f6f7ee6159f7f55e08036686c68e08382c34788:jt2783vg": {
+   "id": "boost me bitch",
+   "mau": 0,
+   "name": "Boost Me Bitch"
+  },
+  "31990:f839fb6714598a7233d09dbd42af82cc9781d0faa57474f1841af90b5c930939:6n4rpbe6": {
+   "id": "vfstore",
+   "mau": 0,
+   "name": "VFStore"
+  },
+  "31990:f839fb6714598a7233d09dbd42af82cc9781d0faa57474f1841af90b5c930939:fjtqc5nw": {
+   "id": "blastits",
+   "mau": 0,
+   "name": "Blastits"
+  },
+  "31990:f839fb6714598a7233d09dbd42af82cc9781d0faa57474f1841af90b5c930939:luwe8jx7": {
+   "id": "holy fit",
+   "mau": 0,
+   "name": "Holy Fit"
+  },
+  "31990:f839fb6714598a7233d09dbd42af82cc9781d0faa57474f1841af90b5c930939:pkagh1h8": {
+   "id": "saint stream",
+   "mau": 0,
+   "name": "Saint Stream"
+  },
+  "31990:f839fb6714598a7233d09dbd42af82cc9781d0faa57474f1841af90b5c930939:zjolneuwg2": {
+   "id": "nunlock",
+   "mau": 0,
+   "name": "Nunlock"
+  },
+  "31990:f9a352db4aa115ec5d330540dda37b71e2460cc0f65e3318fa3b244945dc8eb8:1687614378516": {
+   "id": "nostrfiles",
+   "mau": 0,
+   "name": "Nostrfiles"
+  },
+  "31990:f9f64238b262b1bcc39356b377acc9b17ede1d57ad949ee7f9dd1ef6b74f892d:lfl": {
+   "id": "let's fo live",
+   "mau": 0,
+   "name": "Let's Fo Live"
+  },
+  "31990:fa984bd7dbb282f07e16e7ae87b26a2a7b9b90b7246a44771f0cf5ae58018f52:1693136529049": {
+   "id": "vendata",
+   "mau": 0,
+   "name": "Vendata"
+  },
+  "31990:fa984bd7dbb282f07e16e7ae87b26a2a7b9b90b7246a44771f0cf5ae58018f52:1697879858862": {
+   "id": "shipyard",
+   "mau": 0,
+   "name": "Shipyard"
+  },
+  "31990:fa984bd7dbb282f07e16e7ae87b26a2a7b9b90b7246a44771f0cf5ae58018f52:1706177503655": {
+   "id": "shipyard dvm",
+   "mau": 0,
+   "name": "Shipyard DVM"
+  },
+  "31990:fa984bd7dbb282f07e16e7ae87b26a2a7b9b90b7246a44771f0cf5ae58018f52:1731850618505": {
+   "id": "olas",
+   "mau": 2,
+   "name": "olas"
+  },
+  "31990:facdaf1ce758bdf04cdf1a1fa32a3564a608d4abc2481a286ffc178f86953ef0:1703912976178": {
+   "id": "zapddit",
+   "mau": 0,
+   "name": "zapddit"
+  },
+  "31990:facdaf1ce758bdf04cdf1a1fa32a3564a608d4abc2481a286ffc178f86953ef0:1763893024190": {
+   "id": "kanbanstr",
+   "mau": 0,
+   "name": "Kanbanstr"
+  },
+  "31990:fcbc1ad1784967e541b15614cfdd2766abe65c6990bcf0f8973bc527f75e5d27:ditto": {
+   "id": "cobrafuma",
+   "mau": 3,
+   "name": "Cobrafuma"
+  },
+  "31990:fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1:1qt7yi94": {
+   "id": "scriptorium obsidian",
+   "mau": 0,
+   "name": "Scriptorium Obsidian"
+  },
+  "31990:fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1:875fityw": {
+   "id": "alexandria",
+   "mau": 0,
+   "name": "Alexandria"
+  },
+  "31990:fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1:9ribc64o": {
+   "id": "imwald android",
+   "mau": 0,
+   "name": "Imwald Android"
+  },
+  "31990:fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1:akrj3a5x": {
+   "id": "imwald",
+   "mau": 39,
+   "name": "Imwald"
+  },
+  "31990:fd208ee8c8f283780a9552896e4823cc9dc6bfd442063889577106940fd927c1:lzwwpqrf": {
+   "id": "aitherboard",
+   "mau": 0,
+   "name": "aitherboard"
+  },
+  "31990:fea400befeb5bf115b16575e2176bfbd8fb8ab9985ac170adb402bf8c89b9d0a:1691532738130": {
+   "id": "choose your fate game",
+   "mau": 0,
+   "name": "Choose Your Fate Game"
+  },
+  "31990:ff27d01cb1e56fb58580306c7ba76bb037bf211c5b573c56e4e70ca858755af0:1685937754496": {
+   "id": "satellite",
+   "mau": 0,
+   "name": "Satellite"
+  },
+  "31990:ffca54e078fd9884a745d70eb0159c0b8a9e7d383a4906a7484b83ebf6101dd5:1735625660146": {
+   "id": "nostrudel",
+   "mau": 76,
+   "name": "nostrudel"
+  },
+  "31990:ffd375eb40eb486656a028edbc83825f58ff0d5c4a1ba22fe7745d284529ed08:1688605904986": {
+   "id": "nostr-java",
+   "mau": 0,
+   "name": "nostr-java"
+  }
+ },
+ "crawled_at": "2026-09-14T17:11:12+00:00",
+ "metric": "distinct authors (#client), NIP-45 COUNT + distinct:author",
+ "relay": "wss://relay.ditto.pub",
+ "since": 1786813582,
+ "until": 1789405582
+}

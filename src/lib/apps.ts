@@ -1,0 +1,356 @@
+import { nip19 } from 'nostr-tools';
+import type { NostrEvent, NostrMetadata } from '@nostrify/nostrify';
+
+/**
+ * NIP-89 Handler Information events (kind 31990) announce Nostr applications:
+ * the `content` field carries kind-0-style app metadata and `k` tags list the
+ * event kinds the app can handle. This is the same discovery mechanism used by
+ * app directories like nostrhub.io and nostrapp.link.
+ */
+export const APP_HANDLER_KIND = 31990;
+
+/** Platform tags a kind 31990 event may carry (each tag value is a URL template). */
+export const APP_PLATFORMS = ['web', 'ios', 'android', 'desktop', 'linux', 'macos', 'windows'] as const;
+
+export type AppPlatform = (typeof APP_PLATFORMS)[number];
+
+/**
+ * Common `t` category tags used by real app listings, mirrored from the
+ * ecosystem. Querying `#t` with this list (OR match) surfaces app
+ * announcements that a plain recency query would miss.
+ */
+export const APP_CATEGORY_TAGS = [
+  'social', 'tools', 'video', 'pictures', 'marketplace',
+  'music', 'podcast', 'communities', 'messaging', 'dvm',
+  'fitness', 'productivity', 'education', 'image', 'todo',
+  'rideshare', 'ditto', 'mkstack',
+  'relay', 'nostr', 'chat', 'news', 'article', 'blog',
+  'media', 'images', 'hosting', 'code', 'pastebin',
+  'storage', 'blossom', 'upload', 'tool',
+  'zaps', 'goals', 'gigs', 'bounties', 'escrow', 'freelance',
+  'bunker', 'desktop', 'ephemeral', 'password-manager',
+  'nip46', 'nip96', 'nip-71',
+  'distributed', 'decentralization',
+];
+
+/** GitHub blob base for official NIPs — same URL format used by NIP approvals and NIP forks. */
+export const NIPS_REPO_BASE = 'https://github.com/nostr-protocol/nips/blob/master';
+
+/** GitHub blob base for Blossom BUDs — same URL format used by BUD approvals and forks. */
+export const BUDS_REPO_BASE = 'https://github.com/hzrd149/blossom/blob/master/buds';
+
+/** Whether a GitHub blob URL points at a Blossom BUD (vs. an official NIP). */
+export function isBudUrl(url: string): boolean {
+  return /hzrd149\/blossom\/.*\/buds\/[A-Za-z0-9]+\.md$/.test(url);
+}
+
+/** Extract a NIP number from a GitHub blob URL, e.g. ".../blob/master/01.md" → "01". */
+export function nipNumberFromUrl(url: string): string | null {
+  if (isBudUrl(url)) return null;
+  const m = url.match(/\/([A-F0-9]{2})\.md$/i);
+  return m ? m[1].toUpperCase() : null;
+}
+
+/** Extract a BUD number from a Blossom blob URL, e.g. ".../buds/01.md" → "01". */
+export function budNumberFromUrl(url: string): string | null {
+  if (!isBudUrl(url)) return null;
+  const m = url.match(/\/buds\/([A-Za-z0-9]+)\.md$/);
+  return m ? m[1] : null;
+}
+
+/** Build the canonical GitHub blob URL for an official NIP number (e.g. "01" → full URL). */
+export function nipGithubUrl(number: string): string {
+  return `${NIPS_REPO_BASE}/${number.toUpperCase()}.md`;
+}
+
+/** Build the canonical GitHub blob URL for a BUD number (e.g. "01" → full URL). */
+export function budGithubUrl(number: string): string {
+  return `${BUDS_REPO_BASE}/${number}.md`;
+}
+
+/**
+ * A spec referenced by a kind 31990 app event.
+ * - `type: 'custom'` — a community NIP (kind 30817), addressed by naddr coordinate.
+ * - `type: 'official'` — an official NIP by number (e.g. "01", "34").
+ * - `type: 'bud'` — a Blossom BUD by number (e.g. "01", "12").
+ */
+export type AppNipRef =
+  | { type: 'custom'; address: string; relayHint?: string }
+  | { type: 'official'; number: string }
+  | { type: 'bud'; number: string };
+
+/** A NIP-34 git repository (kind 30617) referenced by a kind 31990 app event. */
+export interface AppRepoRef {
+  address: string;   // "30617:<pubkey>:<d>"
+  pubkey: string;
+  identifier: string;
+  relayHint?: string;
+}
+
+/** A Zapstore app listing (kind 32267) referenced by a kind 31990 app event. */
+export interface AppZapstoreRef {
+  address: string;   // "32267:<pubkey>:<d>"
+  pubkey: string;
+  identifier: string;
+  relayHint?: string;
+}
+
+/** Parsed app data from a kind 31990 event. */
+export interface AppInfo {
+  event: NostrEvent;
+  pubkey: string;
+  identifier: string;
+  name: string;
+  picture?: string;
+  about?: string;
+  website?: string;
+  nip05?: string;
+  /** Event kinds the app declares it can handle (`k` tags). */
+  supportedKinds: number[];
+  /** Platforms the app ships on (platform-named tags). */
+  platforms: AppPlatform[];
+  /** Category hashtags (`t` tags). */
+  hashtags: string[];
+  /** NIPs this app explicitly references (custom or official). */
+  nipRefs: AppNipRef[];
+  /** NIP-34 git repos this app is associated with. */
+  repoRefs: AppRepoRef[];
+  /** Zapstore app listing(s) for this app. */
+  zapstoreRefs: AppZapstoreRef[];
+  /** Plain address coordinate: "31990:<pubkey>:<d-tag>". */
+  address: string;
+  /** bech32 naddr for routing to the app's detail page. */
+  naddr: string;
+  createdAt: number;
+}
+
+/** Parse a kind 31990 event into structured AppInfo. Returns null if not an app event. */
+export function parseAppEvent(event: NostrEvent): AppInfo | null {
+  if (event.kind !== APP_HANDLER_KIND) return null;
+
+  const identifier = event.tags.find(([name]) => name === 'd')?.[1];
+  if (!identifier) return null;
+
+  let metadata: NostrMetadata = {};
+  if (event.content) {
+    try {
+      metadata = JSON.parse(event.content) as NostrMetadata;
+    } catch {
+      // content may be empty or invalid JSON
+    }
+  }
+
+  const supportedKinds = Array.from(
+    new Set(
+      event.tags
+        .filter(([name]) => name === 'k')
+        .map(([, value]) => parseInt(value, 10))
+        .filter((k) => Number.isInteger(k) && k >= 0),
+    ),
+  ).sort((a, b) => a - b);
+
+  const platforms = new Set<AppPlatform>();
+  for (const [name] of event.tags) {
+    if ((APP_PLATFORMS as readonly string[]).includes(name)) {
+      platforms.add(name as AppPlatform);
+    }
+  }
+
+  const hashtags = Array.from(
+    new Set(
+      event.tags
+        .filter(([name, value]) => name === 't' && value)
+        .map(([, value]) => value.toLowerCase()),
+    ),
+  );
+
+  // References carried by the event:
+  // - `i` tags: official NIPs, either marker form (["i", "nip-01", "nip"]) or a
+  //   NIP-73 GitHub blob URL (["i", "https://github.com/.../01.md"]).
+  // - `a` tags: addressable refs, either marker form (["a", addr, hint, "nip" |
+  //   "repo" | "zapstore"]) or plain — in which case the kind prefix of the
+  //   address ("30817:", "30617:", "32267:") is unambiguous.
+  const nipRefs: AppNipRef[] = [];
+  const repoRefs: AppRepoRef[] = [];
+  const zapstoreRefs: AppZapstoreRef[] = [];
+  for (const tag of event.tags) {
+    if (tag[0] === 'i' && tag[1]) {
+      if (tag[2] === 'nip') {
+        // value like "nip-01" → number "01"
+        const num = tag[1].replace(/^nip-/i, '').padStart(2, '0');
+        nipRefs.push({ type: 'official', number: num });
+      } else if (tag[2] === 'bud') {
+        // value like "bud-01" → number "01"
+        const num = tag[1].replace(/^bud-/i, '').padStart(2, '0');
+        nipRefs.push({ type: 'bud', number: num });
+      } else {
+        const budNum = budNumberFromUrl(tag[1]);
+        if (budNum) {
+          nipRefs.push({ type: 'bud', number: budNum });
+        } else {
+          const num = nipNumberFromUrl(tag[1]);
+          if (num) nipRefs.push({ type: 'official', number: num });
+        }
+      }
+      continue;
+    }
+
+    if (tag[0] !== 'a' || !tag[1]) continue;
+    const parts = tag[1].split(':');
+    const kindPrefix = parts[0];
+    const marker = tag[3];
+    const relayHint = tag[2] || undefined;
+
+    if (marker === 'nip' || (!marker && kindPrefix === '30817')) {
+      nipRefs.push({ type: 'custom', address: tag[1], relayHint });
+    } else if (kindPrefix === '30617' && parts.length === 3 && (marker === 'repo' || !marker)) {
+      repoRefs.push({ address: tag[1], pubkey: parts[1], identifier: parts[2], relayHint });
+    } else if (kindPrefix === '32267' && parts.length === 3 && (marker === 'zapstore' || !marker)) {
+      zapstoreRefs.push({ address: tag[1], pubkey: parts[1], identifier: parts[2], relayHint });
+    }
+  }
+
+  return {
+    event,
+    pubkey: event.pubkey,
+    identifier,
+    name: metadata.name || metadata.display_name || identifier,
+    picture: metadata.picture,
+    about: metadata.about,
+    website: metadata.website,
+    nip05: metadata.nip05,
+    supportedKinds,
+    platforms: Array.from(platforms),
+    hashtags,
+    nipRefs,
+    repoRefs,
+    zapstoreRefs,
+    address: `${APP_HANDLER_KIND}:${event.pubkey}:${identifier}`,
+    naddr: nip19.naddrEncode({
+      kind: APP_HANDLER_KIND,
+      pubkey: event.pubkey,
+      identifier,
+    }),
+    createdAt: event.created_at,
+  };
+}
+
+/**
+ * Derive the `#client` tag values used to count an app's usage. Different
+ * clients tag the posts they publish with different conventions, so we OR
+ * together the app name, its lowercase form, and the website hostname (sans
+ * `www.`) to widen the match. Deduplicated; empty values filtered out.
+ *
+ * Shared by the app detail page metrics and the directory card active-users
+ * count so both attribute usage the same way.
+ */
+export function clientTagsForApp(app: Pick<AppInfo, 'name' | 'website'>): string[] {
+  const tags = new Set<string>();
+  if (app.name) {
+    tags.add(app.name);
+    tags.add(app.name.toLowerCase());
+  }
+  if (app.website) {
+    try {
+      tags.add(new URL(app.website).hostname.replace(/^www\./, ''));
+    } catch {
+      /* unparseable URL — skip */
+    }
+  }
+  return [...tags].filter(Boolean);
+}
+
+/**
+ * Whether an app listing carries the full metadata set (name, picture, about,
+ * website). Kind 31990 is also used by DVM handlers, bots, and other services;
+ * requiring complete metadata filters the directory down to real applications,
+ * matching the approach of other Nostr app directories.
+ */
+export function hasFullAppMetadata(app: AppInfo): boolean {
+  return Boolean(app.name && app.picture && app.about && app.website);
+}
+
+/**
+ * Collect the unique repo references across a set of app listings — the
+ * NIP-89 event is the nexus linking NIPs to the repos that implement them.
+ *
+ * No author scoping: an app can legitimately be built from a repo published by
+ * someone else, so the repo↔app relationship is nebulous by design.
+ */
+export function uniqueRepoRefs(apps: AppInfo[]): AppRepoRef[] {
+  const map = new Map<string, AppRepoRef>();
+  for (const app of apps) {
+    for (const ref of app.repoRefs) {
+      if (!map.has(ref.address)) map.set(ref.address, ref);
+    }
+  }
+  return Array.from(map.values());
+}
+
+/**
+ * Collect the unique NIP references across a set of app listings.
+ *
+ * No author scoping: an app can implement a community NIP authored by someone
+ * else, so the NIP↔app relationship is nebulous by design.
+ */
+export function uniqueNipRefs(apps: AppInfo[]): AppNipRef[] {
+  const seen = new Set<string>();
+  const refs: AppNipRef[] = [];
+  for (const app of apps) {
+    for (const ref of app.nipRefs) {
+      const key =
+        ref.type === 'official'
+          ? `official:${ref.number}`
+          : ref.type === 'bud'
+            ? `bud:${ref.number}`
+            : `custom:${ref.address}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      refs.push(ref);
+    }
+  }
+  return refs;
+}
+
+/**
+ * Reduce kind 31990 events to the latest revision per (pubkey, d) address,
+ * parsed into AppInfo and sorted newest first.
+ */
+export function dedupeAppEvents(events: NostrEvent[]): AppInfo[] {
+  const latest = new Map<string, NostrEvent>();
+  for (const event of events) {
+    if (event.kind !== APP_HANDLER_KIND) continue;
+    const d = event.tags.find(([name]) => name === 'd')?.[1];
+    if (!d) continue;
+    const key = `${event.pubkey}:${d}`;
+    const prev = latest.get(key);
+    if (!prev || event.created_at > prev.created_at) latest.set(key, event);
+  }
+
+  return Array.from(latest.values())
+    .map(parseAppEvent)
+    .filter((app): app is AppInfo => app !== null)
+    .sort((a, b) => b.createdAt - a.createdAt);
+}
+
+/**
+ * Zapstore listings an app may surface in its own sidebar. The app developer
+ * publishes both their kind 32267 Zapstore listing and their kind 31990 NIP-89
+ * listing under the same key, so a zapstore ref is only trusted when it points
+ * at the app author's own coordinate (`ref.pubkey === app.pubkey`). Repo and
+ * NIP refs are nebulous by design (an app can be built from someone else's repo
+ * or implement someone else's NIP) and are surfaced as-is.
+ */
+export function ownZapstoreRefs(app: AppInfo): AppZapstoreRef[] {
+  return app.zapstoreRefs.filter((ref) => ref.pubkey === app.pubkey);
+}
+
+/** Whether the app declares anything worth a sidebar. */
+export function hasSidebarContent(app: AppInfo): boolean {
+  return (
+    ownZapstoreRefs(app).length > 0 ||
+    app.repoRefs.length > 0 ||
+    app.nipRefs.length > 0 ||
+    app.supportedKinds.length > 0
+  );
+}

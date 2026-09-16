@@ -1,0 +1,1320 @@
+{
+ "count": 146,
+ "crawled_at": "2026-09-16T00:45:23+00:00",
+ "ratings": [
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "mobile never verifies event signatures or ids ✔ (the only verify wrapper has no callers); both platforms strip unknown kind 0 fields on profile edit",
+   "created_at": 1789479578,
+   "id": "1e9dd8d33b7a618142cc77e712766b75d81f8d66480751eccfba474373733ffb",
+   "nip": "nip-01",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "web rewrites kind 3 as bare p tags ✔, wiping petnames, relay hints and t/a/e tags; mobile drops petnames and misaligns relay hints",
+   "created_at": 1789479579,
+   "id": "38deeb01855e4cc982bb2488d47598e1a13581f4c64ff5e53e4c77dd2c879ab7",
+   "nip": "nip-02",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "both fetchers follow redirects (MUST ignore)",
+   "created_at": 1789479579,
+   "id": "654bca3db8a63fd1ace294d4fcad5f74b1fd192dbbb5ffc519d25cb12a1df038",
+   "nip": "nip-05",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479580,
+   "id": "5cd77f4d2feab5e85cd555790fd677ae9a93b7f1462bdfd29d9e9c984eeb2b41",
+   "nip": "nip-07",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "kind 5 without k tag (SHOULD); received deletions from other clients never hidden (SHOULD)",
+   "created_at": 1789479580,
+   "id": "b606ce57c40ee6e9fbc2619ba8769d7361a146fc715443b5bd93edf54d328e7c",
+   "nip": "nip-09",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479580,
+   "id": "4ec5c17b6da3964d504b52f116cf0fdf3afb55d61ab04813e0eae7cefd373e92",
+   "nip": "nip-10",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "wraps also published to sender's own relays and sent even without a 10050 (MUST); mobile Amber/bunker paths skip the seal-pubkey check (MUST)",
+   "created_at": 1789479581,
+   "id": "f9a11cbb0e2a12cf5965cb5448a484939016ac2d0678ccea3c53511ed0f157ac",
+   "nip": "nip-17",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "repost e tag has no relay URL (MUST); no kind 16 authoring",
+   "created_at": 1789479581,
+   "id": "9e9affced53206cbdeced6dc6ee65ccd9d70786bd832fdbe79cfe3661b067224",
+   "nip": "nip-18",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479582,
+   "id": "3413297e1eaea50c17e1ecb78b86cc8617154f6508f80a85b0a456469d540854",
+   "nip": "nip-19",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479582,
+   "id": "15d72b9d4f64aa30bb05535175161f82bc79c2ad0ba8336c32b8496b939c2d2b",
+   "nip": "nip-21",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479583,
+   "id": "cf9adde2a1de947369d10478c17d89e51eed121b42d1b659da5429f411bbed8a",
+   "nip": "nip-22",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "HTML iframe/video/img knowingly passed through ✔ (MUST NOT support HTML); edit keeps d and published_at; drafts are plaintext 30024",
+   "created_at": 1789479583,
+   "id": "d0089e152f8ba790fe98447cb167a5b407a07766c5954b16d828b02cabd29fda",
+   "nip": "nip-23",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "reactions to addressable events carry only an a tag, no e ✔ (MUST); mobile counts - as a reaction",
+   "created_at": 1789479584,
+   "id": "adbe010a0cea50500e51952d2826bcf7b93b081f83e04dba88aeea565abb0f6e",
+   "nip": "nip-25",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479584,
+   "id": "f6a9e360647b2d6ed075f89280d3f17aa1836df272493c23e584f7625a051bd5",
+   "nip": "nip-27",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "web retries after auth-required via NDK; mobile ignores CLOSED and auth-required OK, stores no challenge (MUST)",
+   "created_at": 1789479585,
+   "id": "5e096119093332b521794471729a6187fab0b810e19edf8f9cfbedeec4c9fc54",
+   "nip": "nip-42",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "web via nostr-tools v2; mobile library rejects the extended length prefix on encrypt and decrypt (spec since 2026-06-28)",
+   "created_at": 1789479585,
+   "id": "a450521ab15bb151f2f8be50ed078a252e92bc6ba50761b0ce0f424d5f9ec983",
+   "nip": "nip-44",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "mobile bunker + nostrconnect correct; web nostrconnect never validates the returned secret ✔ (MUST, connection spoofing)",
+   "created_at": 1789479585,
+   "id": "c560dc8117a3a090bb86cf952be6aa7a0bc0e8c4a073b6e26fdb7174dd36910f",
+   "nip": "nip-46",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479586,
+   "id": "2b3e3c57dc9ab7af74b83edb83fed755a585ddd2932636f4d9b1f60eb74f9585",
+   "nip": "nip-47",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479586,
+   "id": "448afa30839c2c03228f9e6a0330188d918637f13da4d8081ff7d930b125571c",
+   "nip": "nip-50",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "every list write sends empty content ✔, wiping private mutes/bookmarks from other clients; mobile drops t/word mutes on rewrite; 30005 video items unreadable across its own platforms",
+   "created_at": 1789479587,
+   "id": "3b038fac964b34502613dff9f1265f87cbda8bd09f533e1258c9742ff26aabb7",
+   "nip": "nip-51",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "receipts never validated against LNURL nostrPubkey or amount ✔ (Appendix F MUST); web ignores zap splits when paying",
+   "created_at": 1789479587,
+   "id": "bd5c3bf647aaf847d07c74c4c7a188df7a7089e7106cf24b580ea288bd348972",
+   "nip": "nip-57",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479587,
+   "id": "9e37b6720a30d4e2847360e5537e2c349d2c1e47dcfaec47f921bab2ea431f5b",
+   "nip": "nip-65",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "client tag on everything with no opt-out (SHOULD); mobile's 31990 parser needs 3-element k tags so standard ones are skipped",
+   "created_at": 1789479588,
+   "id": "9ead05a9abef4bcc4e1f851e437123dae8d09e2164999adc3b58793ac002535e",
+   "nip": "nip-89",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:20986fb83e775d96d188ca5c9df10ce6d613e0eb7e5768a0f0b12b37cdac21b3:1700732875747",
+   "content": "",
+   "created_at": 1789479588,
+   "id": "e6fab41b78299c76708266b3ee3e88912aac76f59a93955c6583b09b0039c4f0",
+   "nip": "nip-92",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416167,
+   "id": "9ed0f201037d618eafb4097335bb3aa906f05c470f21a9a901b5bf50614e2392",
+   "nip": "nip-01",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091702,
+   "id": "be0351c1495f637e7b6646ad0502629b261b69bf169361f79d078c8a0fcbb1cd",
+   "nip": "nip-01",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416168,
+   "id": "f08b12e01fd268d75d6ecc5442883c6313f6e7af04941b7e99103840cde4d594",
+   "nip": "nip-02",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091704,
+   "id": "c607a4507555f6d9c85f86fd51f4841440890a90c965b9d22a28dbc7890d26ee",
+   "nip": "nip-02",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416168,
+   "id": "2f8403ca30622b240dd908ccf8044cdb96dac2280af356af25c5215689481fb0",
+   "nip": "nip-05",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091707,
+   "id": "4b8dd9d04e60b5086e46bd15e476396002c56a9d00b292aecf088c70a604def5",
+   "nip": "nip-05",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091711,
+   "id": "f68e4f27c324495455e5b5aa337271894cb62dc0139279525f351c8575b6d2dd",
+   "nip": "nip-07",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416169,
+   "id": "2cf9382c3eef7dbc1cf2b223ddf505032f37c551b9f4aa55bb9dee363a12c639",
+   "nip": "nip-09",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091712,
+   "id": "690a08b5093daf5d7a86f7d160838fc6126e51ee4c8d0c5fe9b983de4f42a942",
+   "nip": "nip-09",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416170,
+   "id": "b48fc7ecbf4e42137a54ac913cfa3d8b5cd557fca0cd723b8efe718226d20394",
+   "nip": "nip-10",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091712,
+   "id": "cc17a80c50918e11effa55ae2a5e2370d63a3766868b034c4ba56fcf4736cb39",
+   "nip": "nip-10",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416170,
+   "id": "079bb77f65c368035470c9ec8303a4f93038c1b080a596d8bee0d8e47a9f5a5a",
+   "nip": "nip-17",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091713,
+   "id": "1421f60801d6a3dc0c924063321a816bb0a4cbe3c29c906840e306c80b8cfa7e",
+   "nip": "nip-17",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416171,
+   "id": "1caa7c032451738f0df09624a477a5db525e8f0c0eb7e3c4f29239b55ea68b28",
+   "nip": "nip-18",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091714,
+   "id": "9a0c8c0e9633094d6f7f0d9ac4d80687be1947bd939e093d2648665e2f8a3618",
+   "nip": "nip-18",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416171,
+   "id": "f90d20765a09f557287399202632556ab6ff779f7d57bb4470fa2c03878f0a2a",
+   "nip": "nip-19",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091723,
+   "id": "c282188435b490512779ea15e5d24f00f6dbea68039203e5f82126da3d8bda1a",
+   "nip": "nip-19",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416172,
+   "id": "05c8c8dafb4d89005b18f01a993c781cf35698e8da683301bf835bb4d76a5292",
+   "nip": "nip-21",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091723,
+   "id": "625ae411223615cc7e061904f43a265242569bd6d0ec4ccc1d29b54015bc3c08",
+   "nip": "nip-21",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416172,
+   "id": "d4b9c934d56f2dde24db95eb3775e4fc2bb79d694b287fdb0a2071f853c3c4a5",
+   "nip": "nip-22",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091724,
+   "id": "57c6a1643cde060f80cc46497b772dfefc3de6ee27d3d6846a4d855708ee45af",
+   "nip": "nip-22",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416173,
+   "id": "d60b45a0ccbb834eb445c17063ebf05b29360868ba3696ea724dd80084d36483",
+   "nip": "nip-23",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091724,
+   "id": "1510c6f9735a64711b01a7ab71bbfc3a22859e52d607f29c546988bb37de309e",
+   "nip": "nip-23",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416174,
+   "id": "4bbb39b412bcad08fa5cc1873ddef8d7dacff4d1bad6de209bd4f9f8efd9afcc",
+   "nip": "nip-25",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091725,
+   "id": "2a25aca3517239ee545b1f757b1b51666346fa8a3dbc7fcfafada857807206c4",
+   "nip": "nip-25",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416174,
+   "id": "9c57ff121362a81df5ae1d7cb4e8209650acdf0d771ea3877da5b1acafedbc08",
+   "nip": "nip-27",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091726,
+   "id": "b69e79fcd13551c671fbe0da743d6ec1cf4fc55146ef53ca233240a74307a1ba",
+   "nip": "nip-27",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416175,
+   "id": "506ad97f167a4520833cd061bd4d5f1f4510139f3bff07239fa6ad389e19cf0a",
+   "nip": "nip-28",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091726,
+   "id": "8819ca0cc85b3c7f200594bbb32b70ce17c09ae2f1f5a95f5d557d11a28f6c7f",
+   "nip": "nip-28",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "no kind 10009 migration/fork check, which is a MUST when the group relay is unreachable",
+   "created_at": 1789416176,
+   "id": "4df6c1a4ffb7e5340f19823c79a5a15e6170851a4fb2a01bddba9543a34b70e7",
+   "nip": "nip-29",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091727,
+   "id": "11df91f99ec868f45a89f519b97afb45f8ab1c9e99380b05aa6975c161a12c0f",
+   "nip": "nip-29",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416176,
+   "id": "c0302d46636fb77249e11a8feda1345fe90e1aa30d1e1a97555915c91f4df577",
+   "nip": "nip-30",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091727,
+   "id": "04a3f34479b07fbe38456df0ac6886ea5b16629143d46cf35483965d849a1588",
+   "nip": "nip-30",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416177,
+   "id": "6686825db9a8d1a03f3bd92fb2de95240eb41ee1c9b69a4dcc4d85934c78eb4d",
+   "nip": "nip-32",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416177,
+   "id": "949aa37385370d8e92c6e112ba2156ccd2d58945de71a549d7fde5f39eacb82d",
+   "nip": "nip-42",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091728,
+   "id": "cd9d9d3a2991c2abcddc5e6803a2556c4361ace2c8f9a7982b9218ec83911ecb",
+   "nip": "nip-42",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416178,
+   "id": "840cede79fe5a4da5a7ec0674b61b682f1e1e0d22c4490d45f287a8f8e69e4c8",
+   "nip": "nip-44",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091728,
+   "id": "bd31715f8fbca1127ffeed220848bda0d0b13b3960093b66bb84aad359f6bbbd",
+   "nip": "nip-44",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "Amethyst is the signer (bunker:// + nostrconnect://, all core methods); it never logs in as a NIP-46 client",
+   "created_at": 1789416179,
+   "id": "a59ebd56a38b1f580d0d55f569ff7d5d3dd772ec8749ac1b96808e74c676e683",
+   "nip": "nip-46",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416179,
+   "id": "076bdc5ceebe3e62571a7fe1de16c5c8a117a330999622a2886e65611d91028c",
+   "nip": "nip-47",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091729,
+   "id": "36bee6c0a7b8aa2f60cd5ae70722db109607e3360cc9c3d5a09030b1c8de868c",
+   "nip": "nip-47",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416180,
+   "id": "47fb93614b28b03615339886d6779979d76b2c63a53ca9acf393828779eb5b1f",
+   "nip": "nip-50",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091729,
+   "id": "bbf24173c7bfa24cde3eaf5da8052fcb275566434c249eb1963fd23b44ba1d4d",
+   "nip": "nip-50",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416180,
+   "id": "b0201cf6f74e301d9daf45b259ebae00b40c577fd5e3e2da54fe94eed657e6c3",
+   "nip": "nip-51",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091730,
+   "id": "46608be5f56cc6da48d9da15e03507c3ae216caaa0c25c633cd059358e6971cb",
+   "nip": "nip-51",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "reads every 30311 tag, writes 1311 with a tag, hosts Nests; 8 h stale rule vs 1 h MAY",
+   "created_at": 1789416181,
+   "id": "126ab626a436129dc7e17aeed8d1f29a57e8e3aaa23067eafc1e280f2d493af2",
+   "nip": "nip-53",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091730,
+   "id": "ebc62fb74de9c8038161bbf9012ede5d01bbb530b383ea82e73e37aae4c70544",
+   "nip": "nip-53",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "Appendix F validation gates totals; splits, private and anonymous zaps, goals",
+   "created_at": 1789416182,
+   "id": "4d02a7590132609a90d772a9fc78016c54ea53f96007ccbe65367b881ef0b47a",
+   "nip": "nip-57",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091731,
+   "id": "f56ffe36482f8cda787e9156858e2ac34d176583d4ded6eaccef31e8e4838dfb",
+   "nip": "nip-57",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416182,
+   "id": "94c0dacf92791be7a23df3d1f5cd5de2a400b01531c0bdcb76c053c75c7f51c8",
+   "nip": "nip-58",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091731,
+   "id": "6dfba41b663f0df53251ce1cc3dd18cd0b6c91708abc1c38095ff1e507465cd2",
+   "nip": "nip-58",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416183,
+   "id": "d892ec745890334365fc7c876aad6dd96ca6c2615a58cb9b5a94a2ff46afe0f0",
+   "nip": "nip-65",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091732,
+   "id": "a56f181a1cfa6fe6017a829bc5a9989cd74dfdf08d12183f0b9c2e00b67bd846",
+   "nip": "nip-65",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "renders 31990, publishes 31989, client tag with the opt-out toggle the spec SHOULDs",
+   "created_at": 1789416184,
+   "id": "8b9129072c6c341c6271cda9b5f59472dcb8f6fed3f21e9afb04470e1bca6512",
+   "nip": "nip-89",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091732,
+   "id": "75ae1b0375816ce6d573b6c0bee52c45ad9a24c93e90956c3a2c89a3f9e406a3",
+   "nip": "nip-89",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 0.3
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1789416184,
+   "id": "a3740964e980c1d4435315cd81322e94bf8ccd1962114e430daf36c8d5e79265",
+   "nip": "nip-92",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c:1685802317447",
+   "content": "",
+   "created_at": 1771091733,
+   "id": "91e07b0101590d54a32179cb19cb67dc7bbc6fb257ecab816d05663e2be53694",
+   "nip": "nip-92",
+   "pubkey": "460c25e682fda7832b52d1f22d3d22b3176d972f60dcdc3212ed8c92ef85065c",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413938,
+   "id": "5f60561afe05e7d93a9ae752d1e5b52995e925d65cee039d6f0d7e53ed9e19b8",
+   "nip": "nip-01",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413941,
+   "id": "c93c0dfcc54b4a9e51f12457879aba6fd097cb5820ecc2a5c5de5e71313aceeb",
+   "nip": "nip-02",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "follows HTTP redirects (spec MUST NOT); 800 ms timeout hides slow-but-valid ids",
+   "created_at": 1789414581,
+   "id": "2e4df1b1396cc045efcdb7b3a0fdf34c7b8c1c8d662014891ad566404aaf6b68",
+   "nip": "nip-05",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413942,
+   "id": "b6630fb97e41355bbe7ad6600594fe2d0e02ac069d0760218a1cb68cd32d8eca",
+   "nip": "nip-07",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "own deletions complete; another client's deletion hides only once every relay has processed it (visible lag on the profile page, cleared after a few refreshes)",
+   "created_at": 1789413942,
+   "id": "c1819fb740fd64c276246e39156aac61c6ef4813de7381d5c9f5aa47bad22271",
+   "nip": "nip-09",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "reads/threads every NIP-10 form; replies go out as kind 1111, which NIP-22 now permits",
+   "created_at": 1789413943,
+   "id": "8bd68da586a849e611ffbd5e5048f779722e6e1825245f2dd23c0028d8a0e0c6",
+   "nip": "nip-10",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "every MUST/SHOULD met; empty content is allowed (\"not recommended\")",
+   "created_at": 1789413943,
+   "id": "944c744d72683df83dda02a00adf5efddd13da14c9718d4c60a5481108d1bce5",
+   "nip": "nip-18",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413944,
+   "id": "3a287e8057042be2e3021871fb0e46e8d55659029026fb7774b80953d511e381",
+   "nip": "nip-19",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413945,
+   "id": "d5c9119144d229922de0fedf06b8e3deb7266fbe9498ffc6e500f274e3366a91",
+   "nip": "nip-21",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413945,
+   "id": "9e27ff1ab335f4a6f82ae665bbf6bf3d6271e042e1d4f339a54a53e3dee68ce1",
+   "nip": "nip-22",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "all MUSTs met, replies via 1111 as required; 30024 drafts are optional; GFM tables degrade to text",
+   "created_at": 1789413946,
+   "id": "af9a53c2a8cee5c1bc9b29008d460913c2cb0429c225a09084a97c055efd5395",
+   "nip": "nip-23",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "all MUSTs met incl. kind 17 with NIP-73 k+i; misses two SHOULDs (a tag on addressable, relay hints)",
+   "created_at": 1789413947,
+   "id": "ae15f1184e6df6c18e66aae8f23ef884f6ca817d5cc9fd2fa96b12042e09e0f9",
+   "nip": "nip-25",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413947,
+   "id": "d70b2bee266fddb3f067c25b3b8a3ad7705cdbcdd65a01ee71901cf2f941c141",
+   "nip": "nip-27",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413947,
+   "id": "a3e15580de5d0ef27ba5319fbe1861464f7d350bcd17d260a1d9808f01506b88",
+   "nip": "nip-30",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413955,
+   "id": "0dc9bf5641d7f895c024347ae3cfb19034dea301b70f30529be025dc03a56ed9",
+   "nip": "nip-32",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413948,
+   "id": "415a8c93e63f4c404ee21bcc5cdcffa6610da0abffcf16a69020d520f5a56474",
+   "nip": "nip-42",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413948,
+   "id": "5b2fa09c254c247044609a5a8ad09930bdd3000df8abda01bce116e09e585a35",
+   "nip": "nip-44",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413949,
+   "id": "0916e7cfa339af392ed79a0a830fef02f65c38ae5499490a44de55eaf6ff9464",
+   "nip": "nip-46",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "pay_invoice is spec-correct with nip44/nip04 negotiation; other methods are optional",
+   "created_at": 1789413950,
+   "id": "6268b48c3793fc3e0fd71333850099f07a203977d2430e5cb6de8582ad94ce22",
+   "nip": "nip-47",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413950,
+   "id": "ebf0953738ea662b44c4c7efcb89acdebd9d38eeee025b45100a9cb7e43b7054",
+   "nip": "nip-50",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "NIP-44 private items per current spec; public mutes become private on update (design choice)",
+   "created_at": 1789413951,
+   "id": "33a796fbf73e49dae474903a2119a245a00c9484415fcb0e4a9148a41a54ae37",
+   "nip": "nip-51",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "viewer + chat meet every MUST (1311 carries a tag); hosting is optional",
+   "created_at": 1789413952,
+   "id": "cfa83f888a2bfd70e71530a6f016cfd61daccd03208f0b9af4d61d4b6cc78145",
+   "nip": "nip-53",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413952,
+   "id": "99c7caa417d773fe30dc49727861bc6dfeb1b77a0a3c1af8c067bb9ff84daf94",
+   "nip": "nip-57",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413953,
+   "id": "c93cbc19460124b7bf066ab4c6ae027b443695e6e928b2753875c68a7c70579c",
+   "nip": "nip-58",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "correct 10002; user-relays setting routes reads/writes by the list; outbox for authors' events, not the home feed",
+   "created_at": 1789413954,
+   "id": "9d2c76caaab95e1dc57de6f2c8e94bb2ad90ee9125e15a6135cf86d14f56141a",
+   "nip": "nip-65",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "client tag without the opt-out the spec SHOULDs; no unknown-kind discovery, which is the NIP's core flow",
+   "created_at": 1789413954,
+   "id": "964d82b1769f82b116a3ef845f64c3308c4aceaccba040bd31c6c47caec04879",
+   "nip": "nip-89",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:781a1527055f74c1f70230f10384609b34548f8ab6a0a6caa74025827f9fdae5:ditto",
+   "content": "",
+   "created_at": 1789413955,
+   "id": "bf17ba0c0f4ed59be6d16d78635129ae3265ee0664249d7a9110bf6edc190b25",
+   "nip": "nip-92",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:cgdgkgvtgnb",
+   "content": "Seems to work!",
+   "created_at": 1771046010,
+   "id": "b4a6a55f4807d292a297ddafceb2693e8ef530fdabe4c54919437ec6ae7f4970",
+   "nip": "nip-01",
+   "pubkey": "86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:cgdgkgvtgnb",
+   "content": "",
+   "created_at": 1771046011,
+   "id": "f81dc68f762c4141853a2defe1ed7f42249ffdcef0fed88044db03ee2fbbe818",
+   "nip": "nip-02",
+   "pubkey": "86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:cgdgkgvtgnb",
+   "content": "",
+   "created_at": 1771046011,
+   "id": "090699ce8b64eb70b5ff6e80861ccd64fc978c33d416e52bbe5cdb801a1ab8c7",
+   "nip": "nip-05",
+   "pubkey": "86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:cgdgkgvtgnb",
+   "content": "",
+   "created_at": 1771046011,
+   "id": "dba323ca3ecee4a84da256c55b8c143b062cd89bf664c0003f91d6c6631ee969",
+   "nip": "nip-07",
+   "pubkey": "86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47:cgdgkgvtgnb",
+   "content": "",
+   "created_at": 1771046011,
+   "id": "fbb034cc33f5e2ddecc3dfa274c4c737f642f65932d16bb54c1a621b6e6515c1",
+   "nip": "nip-09",
+   "pubkey": "86184109eae937d8d6f980b4a0b46da4ef0d983eade403ee1b4c0b6bde238b47",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519317,
+   "id": "956f1b984396dd9d016ab356e06dc341058e4b17aa5a419ab7deb79b989a6736",
+   "nip": "nip-01",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519318,
+   "id": "769871a464b2f8a02cd2f0b1f7981751aa46f0b836c138a621fcbdcd27b1f4a7",
+   "nip": "nip-02",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "fetch follows redirects ✔ (MUST ignore); persisted cache keyed wrong so it never reloads",
+   "created_at": 1789519319,
+   "id": "02cd1eead64f3ff5f47e9207a2b10bd674ffe03308cb0d7e2b53751d642fc898",
+   "nip": "nip-05",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519319,
+   "id": "45889fb5eabff199f22e4db96337eb7b7eb512b903683a0d66688eba8c85ff14",
+   "nip": "nip-07",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519320,
+   "id": "e4a124655d8e967297d46f7b490ba2abc045b3c33a78486de9088b70be53f3b4",
+   "nip": "nip-09",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519320,
+   "id": "99c1ba13baf12445103c6b4051ce6107d887b119f49373e4ff0709c5bcd22a16",
+   "nip": "nip-10",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519321,
+   "id": "38a8883f454ac23ca5c769a430e5ee81bf3b476ba9d6e74aeef237b6ac7116b2",
+   "nip": "nip-17",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519321,
+   "id": "387f91d115ac3d29d49d9439b2987bf1526dce444b674b0d18701cce385521d5",
+   "nip": "nip-18",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519321,
+   "id": "3fadc4348e769eb8424e768d168df6e5671b5c789dcd251451c2a984560e973e",
+   "nip": "nip-19",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519322,
+   "id": "02fa9e081268e4b4b990d5291393b19742c9f69f004c2b1393d19b947a7d4ed8",
+   "nip": "nip-21",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519322,
+   "id": "3c328d39a1ef01b2db4aee88c9619b9dc41d136a9492eeb4ef5e92715db8507e",
+   "nip": "nip-22",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519323,
+   "id": "28a705c4b09f2372e50d139f287a525aa1b3bc2873c8a661821865211dcd953d",
+   "nip": "nip-23",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "publishes clean kind 7 with e, a, k, p; but the heart counter counts every kind 7 incl. - ✔ (MUST interpret as dislike)",
+   "created_at": 1789519323,
+   "id": "72daa3a3783c44042239ab5b7ceb69277c0ab70a2c6fa921f5f4dba14b2de0c9",
+   "nip": "nip-25",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519323,
+   "id": "f92aae54d9fea51e20cdb314746ae0cc396d3e74ff84aa631380c00b1232eaf4",
+   "nip": "nip-32",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519324,
+   "id": "93a55998fa41f8e3254427d0be5d2f779b7f4f0b4ddfe75174baa576d8545d08",
+   "nip": "nip-42",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "nsec sessions use the pinned nostr-tools 2.23.0, which lacks the extended length prefix (spec since 2026-06-28); extension/bunker sessions delegate",
+   "created_at": 1789519324,
+   "id": "077c0a9cdd6f7ebeb73c27e96f2e1f1be39dd7add8d1bdb5ffc8663cecbe8073",
+   "nip": "nip-44",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "bunker:// and nostrconnect:// both accept a bare ack instead of requiring the secret ✔ (MUST; code carries a TODO)",
+   "created_at": 1789519325,
+   "id": "f5759025e8f2deaafd98691d9e313d5ab554e37afc931667e96a457deff88368",
+   "nip": "nip-46",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519325,
+   "id": "fc10c120ba77e94daf3d31ceeac636ce2c4f87bf88256507b582c5e44e72995f",
+   "nip": "nip-47",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519326,
+   "id": "43096b2e437a5b9b1b5c5ba3364b810437dfd17b4f2c498913645fed6de73c6d",
+   "nip": "nip-50",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519326,
+   "id": "2193dd38e175e9b7d80d5d1c278e766235207f2354b0c973e9f44ebc3ce74026",
+   "nip": "nip-51",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "reference-quality request and Appendix F validation, except a receipt signed by the recipient's own key is accepted before the nostrPubkey check ✔ (MUST)",
+   "created_at": 1789519327,
+   "id": "20c67823f1f0e9cdcd1a75d0b0bbbffae0e74b860f36eef9f55d60716dc325bf",
+   "nip": "nip-57",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 0.6
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519327,
+   "id": "a317cd17c33653dc7900faf577b7015267645ea51403668f3dcbd81d844cbf47",
+   "nip": "nip-65",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519328,
+   "id": "1319a9ce5078d1a67040b74058a35e2eb02d1bb5cace1042007c8c68d3052848",
+   "nip": "nip-89",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:1685968093690",
+   "content": "",
+   "created_at": 1789519328,
+   "id": "4bed8938073e68c5392295660af06250b06ff45212c6c99e1b6ba06f787a6945",
+   "nip": "nip-92",
+   "pubkey": "3f770d65d3a764a9c5cb503ae123e62ec7598ad035d836e2a810f3877a745b24",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl",
+   "content": "",
+   "created_at": 1787631423,
+   "id": "722e770819adf753c084e83ca9f66442ab2bfe60ee6f5244e77696ade7acb173",
+   "nip": "nip-01",
+   "pubkey": "8781fe5ddc7a247b1a1e91ac3fb3eba77be553120dd60507f71e0b174900ffa8",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl",
+   "content": "",
+   "created_at": 1787631429,
+   "id": "2afebbbbe05b31ee5005ffdf3945fab06215a02d3521358529744fc3443594db",
+   "nip": "nip-02",
+   "pubkey": "8781fe5ddc7a247b1a1e91ac3fb3eba77be553120dd60507f71e0b174900ffa8",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl",
+   "content": "",
+   "created_at": 1787631430,
+   "id": "56279d9a830914bbf979cf73eeb0c9df5a7329826647decbaa4eb9f24c3a2d0b",
+   "nip": "nip-05",
+   "pubkey": "8781fe5ddc7a247b1a1e91ac3fb3eba77be553120dd60507f71e0b174900ffa8",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl",
+   "content": "",
+   "created_at": 1787631430,
+   "id": "6aee9316dbf31200db5d629ffa5711208793cf082a2a2558b7ab53024b2007ad",
+   "nip": "nip-07",
+   "pubkey": "8781fe5ddc7a247b1a1e91ac3fb3eba77be553120dd60507f71e0b174900ffa8",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl",
+   "content": "",
+   "created_at": 1787631431,
+   "id": "a5c35fd22f7582dd3623b6b3a4216890f831b33d19052971288cdcf08f7d3db5",
+   "nip": "nip-10",
+   "pubkey": "8781fe5ddc7a247b1a1e91ac3fb3eba77be553120dd60507f71e0b174900ffa8",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl",
+   "content": "",
+   "created_at": 1787631432,
+   "id": "9c58319240ca3bdfe89227d50827b5aa10208ff6c1c751da3fe59f2e290621bd",
+   "nip": "nip-17",
+   "pubkey": "8781fe5ddc7a247b1a1e91ac3fb3eba77be553120dd60507f71e0b174900ffa8",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:97c70a44366a6535c145b333f973ea86dfdc2d7a99da618c40c64705ad98e322:rwsg6ecl",
+   "content": "",
+   "created_at": 1787631433,
+   "id": "54bd5eaccd87cda80a942bf5fa0640931c6b1e54cd446698111c94fdd2f2109b",
+   "nip": "nip-18",
+   "pubkey": "8781fe5ddc7a247b1a1e91ac3fb3eba77be553120dd60507f71e0b174900ffa8",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:c6e3a2096d95a8a8e6821df468bd91fb4688cb7aeec881431e40172c991b62c1:9cxtd71l",
+   "content": "",
+   "created_at": 1787987255,
+   "id": "e395586540e210ced98fbf168903c34b82163fba531c40d192e2b7a32f0baf60",
+   "nip": "nip-01",
+   "pubkey": "c6e3a2096d95a8a8e6821df468bd91fb4688cb7aeec881431e40172c991b62c1",
+   "rating": 1.0
+  },
+  {
+   "address": "31990:c6e3a2096d95a8a8e6821df468bd91fb4688cb7aeec881431e40172c991b62c1:9cxtd71l",
+   "content": "",
+   "created_at": 1787987256,
+   "id": "774f3672c045ff23f2b0ab141def4302391a6f67027341986ae973f15dfa5cb8",
+   "nip": "nip-02",
+   "pubkey": "c6e3a2096d95a8a8e6821df468bd91fb4688cb7aeec881431e40172c991b62c1",
+   "rating": 1.0
+  }
+ ]
+}
