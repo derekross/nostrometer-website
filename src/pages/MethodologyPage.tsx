@@ -79,6 +79,12 @@ export default function MethodologyPage() {
         <TickRuler />
 
         <Block eyebrow="03 · Rating rule" title="What a NIP requires of a client">
+          <p>
+            Every review starts with a read-only pass over the app's source against the current NIP text, then hand-tests
+            the cells that pass flags. The test is always a round trip: publish in the app, open it in a second client. A
+            cell earns Flawless only when the artifact works on both sides. Working only inside the app proves isolation,
+            not interoperability.
+          </p>
           <blockquote className="border-l-2 border-primary pl-4 text-muted-foreground">
             <p>
               <strong className="text-foreground">How to rate.</strong> Rate an app against what the NIP <em>requires of a client</em>{' '}
@@ -131,6 +137,18 @@ export default function MethodologyPage() {
             <li>
               <strong>Claimed is not verified.</strong> A hatched <span className="font-mono">c</span> means markers for the NIP were
               found in the client's source. Nobody has rated it yet.
+            </li>
+            <li>
+              <strong>Real keys, real names.</strong> Testing happens on throwaway keys so no community post is touched. Ratings are
+              published under the rater's real key, because credibility is the point.
+            </li>
+            <li>
+              <strong>Findings go upstream.</strong> Every Borked or Isolated cell gets an issue filed with the app, with the
+              evidence. The developer hears it from us first, and the cell changes when the fix ships.
+            </li>
+            <li>
+              <strong>Anyone can rerun it.</strong> The crawls, the join and the median are open source and stdlib Python.
+              Point them at the same relays and you get the same matrix.
             </li>
           </ul>
           <p>

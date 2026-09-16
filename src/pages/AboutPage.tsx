@@ -34,8 +34,15 @@ export default function AboutPage() {
         <div className="grid gap-12 md:grid-cols-[1fr_16rem]">
           <div className="max-w-[65ch] space-y-5 text-lg leading-7">
             <p>
-              Nostrometer is a measurement program for the Nostr ecosystem. It discovers every app that announces itself,
-              ranks them by real usage, and rates them NIP-by-NIP with ratings that anyone can publish and anyone can check.
+              Nostr's promise is that one identity, one set of posts and one social graph work in any app. That is only true
+              if apps implement the same specs the same way, and until now nobody measured whether they do. Nostrometer is
+              that measurement: every app that announces itself, ranked by real usage, rated NIP-by-NIP with ratings that
+              anyone can publish and anyone can check.
+            </p>
+            <p>
+              The numbers hold up because nothing in them is private. Every rating is a signed public event. Every tier is a
+              median. Every claim from source code says which file the marker was found in. Every Borked or Isolated finding
+              goes to the app's tracker as an issue. Rerun the crawls against the same relays and you get the same matrix.
             </p>
             <p>
               It is built and maintained by{' '}

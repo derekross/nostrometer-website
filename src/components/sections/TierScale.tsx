@@ -1,5 +1,13 @@
-import { TIER_ORDER, TIERS } from '@/lib/appReviews';
+import { TIER_ORDER, TIERS, type CompatTier } from '@/lib/appReviews';
 import { TIER_LETTER } from '@/lib/tiers';
+
+/** What each tier means in practice, from the hands-on test rubric. */
+const TIER_DETAIL: Record<CompatTier, string> = {
+  flawless: 'The full round trip works and the result renders and behaves correctly in other clients.',
+  incomplete: 'The common cases work but something is missing: it renders what it receives but cannot compose it, or drops metadata other clients rely on.',
+  isolated: 'It functions only inside the app. Other clients do not see the result, or see it wrong.',
+  borked: 'The app fails or crashes on the NIP\u2019s basic events. Never used for a feature that is simply absent.',
+};
 
 /** The four tiers, their values and their thresholds. */
 export function TierScale() {
@@ -18,7 +26,7 @@ export function TierScale() {
                 <p className="font-mono text-sm text-muted-foreground tabular-nums">{t.ratingValue.toFixed(1)}</p>
               </div>
             </div>
-            <p className="mt-4 text-base leading-6 text-muted-foreground">{t.description}</p>
+            <p className="mt-4 text-base leading-6 text-muted-foreground">{TIER_DETAIL[tier]}</p>
           </div>
         );
       })}

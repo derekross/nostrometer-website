@@ -105,7 +105,13 @@ export default function DevelopersPage() {
             does it:
           </p>
           <Code>{NAK_ONE_LINER}</Code>
-          <p>Publish from the key you develop with. A listing from the developer's own key is authoritative over any other.</p>
+          <p>
+            <strong>Publish it from the key you develop with.</strong> Ratings bind to the listing's address. If someone else
+            seeds a listing for your app, every rating attaches to their copy, and when you finally publish your own the
+            ratings do not follow. Only the key that published a listing can update it, so the implemented NIPs, platforms
+            and repo link are yours to set. One listing from your key, and everything published about your app sticks to it
+            for good.
+          </p>
         </Step>
 
         <TickRuler />
@@ -116,7 +122,11 @@ export default function DevelopersPage() {
             published events. Add one to everything your app signs:
           </p>
           <Code>{`["client", "Your App", "31990:<your-pubkey>:your-app", "wss://relay.ditto.pub"]`}</Code>
-          <p>The first value is matched against your listing's name and website host. An app that does not tag shows as 0, and 0 sorts last.</p>
+          <p>
+            The first value is matched against your listing's name and website host. An app that does not tag shows as 0,
+            and 0 sorts last. A listing seeded under someone else's key, or a name whose capitalisation differs from what
+            your app writes in the tag, makes the count miss you. Your own listing fixes both.
+          </p>
         </Step>
 
         <TickRuler />
@@ -142,6 +152,10 @@ export default function DevelopersPage() {
           <p>
             There is no appeals form. Every cell is a median of public events, so the way to change it is to add one. Fix the
             issue, publish your rating with a note pointing at the commit, and ask a rater to re-check. The median moves.
+          </p>
+          <p>
+            You will not be surprised by a bad cell. Every Borked or Isolated finding comes with an issue in your tracker
+            that names the NIP, the clause, and what we saw, before it is public anywhere else.
           </p>
         </Step>
 

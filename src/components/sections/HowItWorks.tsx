@@ -14,7 +14,7 @@ const STEPS = [
   {
     n: '03',
     title: 'Rate',
-    body: 'Anyone publishes a kind 31986 rating per app per NIP. The median per cell sets the tier; the median of those sets the overall tier.',
+    body: 'Reviews check the current NIP text, then test the round trip against a second client: a cell earns Flawless only when it works on both sides. Anyone can publish a rating; the median per cell sets the tier.',
   },
   {
     n: '04',
