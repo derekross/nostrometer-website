@@ -48,22 +48,32 @@ function prefersReducedMotion(): boolean {
   return typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 }
 
-/** Eases a displayed number toward `target` over the sweep duration; returns `target` when disabled. */
+/**
+ * Eases a displayed number toward `target`; returns `target` when disabled.
+ *
+ * The reading lands in stages — nothing, then the crawl snapshot, then the
+ * live relay read — so this is interrupted mid-count most page loads. It
+ * resumes from the value currently on screen rather than restarting at zero,
+ * which is what made the dial appear to count up twice.
+ */
 function useCountUp(target: number, enabled: boolean): number {
   const [shown, setShown] = useState(0);
-  const fromRef = useRef(0);
+  const shownRef = useRef(0);
   useEffect(() => {
     if (!enabled) return;
-    const from = fromRef.current;
+    const from = shownRef.current;
     const start = performance.now();
     let frame = 0;
     const tick = (now: number) => {
-      const t = Math.min(1, (now - start) / SWEEP_MS);
+      // Clamp at both ends: rAF reports the timestamp of the frame it belongs
+      // to, which can predate the `start` captured in this effect, and a
+      // negative elapsed time flips the easing curve below zero.
+      const t = Math.min(1, Math.max(0, (now - start) / SWEEP_MS));
       const eased = 1 - Math.pow(1 - t, 3);
       const v = from + (target - from) * eased;
+      shownRef.current = v;
       setShown(v);
       if (t < 1) frame = requestAnimationFrame(tick);
-      else fromRef.current = target;
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
@@ -135,12 +145,14 @@ export function Gauge({ value, label, caption, size = 320, className, animate = 
           );
         })}
         <g
-          // Re-keying on the value restarts the sweep from zero whenever the reading changes.
-          key={angle}
+          // A transition, not a keyframe: the needle mounts at the zero mark and
+          // sweeps to the first reading, then glides from wherever it is as the
+          // reading firms up. Re-keying a keyframe here restarted it from zero
+          // on every update, so the dial swept twice on most loads.
           style={{
             transform: `rotate(${angle}deg)`,
             transformOrigin: `${cx}px ${cy}px`,
-            animation: motion ? `gauge-sweep ${SWEEP_MS}ms ${EASE} both` : undefined,
+            transition: motion ? `transform ${SWEEP_MS}ms ${EASE}` : undefined,
           }}
         >
           <line

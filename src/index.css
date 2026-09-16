@@ -376,11 +376,6 @@
     box-shadow: 0 24px 60px -30px rgb(106 63 184 / 0.55);
   }
 
-  /* Needle sweep: from the zero mark to the reading. */
-  @keyframes gauge-sweep {
-    from { transform: rotate(135deg); }
-  }
-
   /* Live badge dot. */
   @keyframes pulse-dot {
     0%, 100% { opacity: 1; }
