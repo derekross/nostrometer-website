@@ -1,11 +1,11 @@
 import { useAuthor } from '@/hooks/useAuthor';
 import { TRACKED_NIPS, type ReviewReport } from '@/lib/appReviews';
-import { formatMau } from '@/lib/staticData';
+import { formatMau, mauTitle } from '@/lib/staticData';
 import { cn } from '@/lib/utils';
 
-function Readout({ label, value, note, small }: { label: string; value: string; note: string; small?: boolean }) {
+function Readout({ label, value, note, small, title }: { label: string; value: string; note: string; small?: boolean; title?: string }) {
   return (
-    <div className="led p-5">
+    <div className="led p-5" title={title}>
       <p className="eyebrow text-[11px]">{label}</p>
       <p className={cn('led-value mt-2 whitespace-nowrap', small ? 'text-[32px] leading-[52px]' : 'text-[40px] leading-[52px] md:text-[44px]')}>
         {value}
@@ -32,7 +32,7 @@ export function Readouts({ mau, reviews }: ReadoutsProps) {
 
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      <Readout label="Monthly authors" value={formatMau(mau)} note="distinct #client authors, 30 days" />
+      <Readout label="Monthly authors" value={formatMau(mau)} note="distinct #client authors, 30 days" title={mauTitle(mau)} />
       <Readout label="Raters" value={reviews ? String(raters) : dash} note="distinct keys" />
       <Readout label="NIPs rated" value={reviews ? String(nips) : dash} note={`of ${TRACKED_NIPS.length} tracked · ${reviews?.length ?? 0} ratings`} />
       <Readout

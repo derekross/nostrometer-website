@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { TierCell } from '@/components/matrix/TierCell';
 import { TIER_ORDER, TRACKED_NIPS, type ReviewReport } from '@/lib/appReviews';
 import { columnCoverage, type MatrixRow } from '@/lib/matrix';
-import { formatMau } from '@/lib/staticData';
+import { formatMau, mauTitle } from '@/lib/staticData';
 
 interface NipDetailPanelProps {
   nip: string;
@@ -55,7 +55,9 @@ export function NipDetailPanel({ nip, rows, reviews, onClose }: NipDetailPanelPr
             <Link to={`/app/${r.naddr}#${nip}`} className="font-semibold hover:text-primary hover:underline">
               {r.name}
             </Link>
-            <span className="ml-auto font-mono text-xs text-muted-foreground tabular-nums">{formatMau(r.mau)}</span>
+            <span className="ml-auto font-mono text-xs text-muted-foreground tabular-nums" title={mauTitle(r.mau)}>
+              {formatMau(r.mau)}
+            </span>
           </li>
         ))}
         {apps.length === 0 && <li className="text-muted-foreground">No app has a rating or a claim for this NIP yet.</li>}

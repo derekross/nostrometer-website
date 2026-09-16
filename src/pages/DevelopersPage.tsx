@@ -148,16 +148,21 @@ export default function DevelopersPage() {
 
         <TickRuler />
 
-        <Step n="02" title={<>Tag events with <code className="font-mono">client</code> so usage counts you</>}>
+        <Step n="02" title={<>Tag events with <code className="font-mono">client</code> if you want usage counted</>}>
           <p>
-            Monthly authors are counted by the <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">client</code> tag on
-            published events. Add one to everything your app signs:
+            Monthly authors are counted from the <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">client</code> tag on
+            published events. If you want your app's usage measured, add one to everything it signs:
           </p>
           <Code>{`["client", "Your App", "31990:<your-pubkey>:your-app", "wss://relay.ditto.pub"]`}</Code>
           <p>
-            The first value is matched against your listing's name and website host. An app that does not tag shows as 0,
-            and 0 sorts last. A listing seeded under someone else's key, or a name whose capitalisation differs from what
-            your app writes in the tag, makes the count miss you. Your own listing fixes both.
+            The first value is matched against your listing's name and website host. A listing seeded under someone else's
+            key, or a name whose capitalisation differs from what your app writes in the tag, makes the count miss you. Your
+            own listing fixes both.
+          </p>
+          <p>
+            Omitting the tag is a legitimate choice, and NIP-89 says you SHOULD offer users the option: the tag tells every
+            relay which software a person runs. An untagged app shows no usage figure rather than a zero, and usage has no
+            bearing on its ratings either way.
           </p>
         </Step>
 

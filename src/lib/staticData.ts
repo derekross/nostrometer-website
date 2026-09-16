@@ -111,10 +111,24 @@ export async function fetchRatings(signal?: AbortSignal): Promise<RatingsData> {
   }
 }
 
-/** Format a MAU value for display: `?` when unknown, thousands-separated otherwise. */
+/**
+ * Format a usage count for display.
+ *
+ * Only a count the crawl actually saw is printed. Zero is not: a relay that
+ * returned nothing and an app whose users publish where we do not look are
+ * indistinguishable to this method, so printing `0` would assert something the
+ * crawl never established. Apps that decline the `client` tag, and apps built
+ * around closed or group relays, both land here legitimately.
+ */
 export function formatMau(mau: number | null | undefined): string {
-  if (mau === null || mau === undefined) return '?';
+  if (mau === null || mau === undefined || mau <= 0) return '—';
   return mau.toLocaleString('en-US');
+}
+
+/** Why a usage cell is empty, for a tooltip. */
+export function mauTitle(mau: number | null | undefined): string | undefined {
+  if (mau !== null && mau !== undefined && mau > 0) return undefined;
+  return 'No activity seen for this app on the sampled relay. That can mean no users, no client tag, or an app whose users publish to relays this crawl does not sample.';
 }
 
 /** "2026-09-14 17:11 UTC" from an ISO timestamp; empty string when absent. */

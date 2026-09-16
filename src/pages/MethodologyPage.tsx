@@ -67,12 +67,26 @@ export default function MethodologyPage() {
             keyed by the app's <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">#client</code> tag values
             over a 30-day window. It counts people who published something from the app, once each.
           </p>
+          <p>One relay's view of public activity has two blind spots, and both are worth stating plainly.</p>
+          <ul className="list-disc space-y-3 pl-6">
+            <li>
+              <strong>Closed relays are invisible.</strong> An app whose users publish to private, paid or group relays is
+              under-counted here however busy it is. That kind of interoperability matters as much as the public kind. This
+              measurement simply cannot see it.
+            </li>
+            <li>
+              <strong>Untagged apps are unmeasured, not unpopular.</strong> NIP-89 says a client SHOULD let users opt out of
+              the <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">client</code> tag, because it tells every relay
+              which software a person uses. Declining it is following the spec, not ignoring it.
+            </li>
+          </ul>
           <p>
-            It is one relay's view and it undercounts apps that do not tag their events. That is the point of publishing the
-            method: a developer can fix the count by tagging.
+            So the meter never prints a zero. A number appears only where the crawl actually saw activity. Everywhere else the
+            column reads <span className="font-mono">—</span>, which means we did not measure it, not that nobody uses it.
           </p>
           <p>
-            A failed query is recorded as <span className="font-mono">?</span>, never as zero.
+            <strong>Usage affects ordering and review priority. It never affects a rating.</strong> An app with no usage figure
+            at all can hold a Flawless cell on every NIP it implements.
           </p>
         </Block>
 
@@ -99,6 +113,13 @@ export default function MethodologyPage() {
               before calling something a violation; NIPs change, and a rating against a stale draft is wrong.
             </p>
           </blockquote>
+          <p>
+            <strong>Where a NIP is silent, so are we.</strong> A great deal of real interoperability is a judgement the spec
+            never settles: which relays a kind 1 ought to reach, how far to fall back, how hard to retry. Behaviour a NIP
+            leaves open is recorded in the rater's note, not scored, because there is no text to score it against. Where
+            raters disagree on a judgement the spec does cover, the median across independent keys is the mechanism, which is
+            why every chip carries its rater count.
+          </p>
           <p>
             Ratings are kind 31986 events (proposed NIP-85 reviews) labelled{' '}
             <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">nip-compatibility</code> and addressed to the app's

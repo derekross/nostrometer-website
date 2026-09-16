@@ -324,8 +324,9 @@ and rated.
 
 ### Get the app's usage counted
 
-Nostrometer ranks apps by distinct monthly authors, counted from the `client` tag on events the
-app publishes. No tag means the app reports as zero, and zero sorts last.
+Nostrometer orders apps by distinct monthly authors, counted from the `client` tag on events the
+app publishes. Without the tag there is nothing to count, so the app shows no usage figure at all.
+It is never shown as a zero, and usage has no bearing on the app's ratings.
 
 ```json
 ["client", "Your App", "31990:<your-pubkey>:your-app", "wss://relay.ditto.pub"]
@@ -334,7 +335,7 @@ app publishes. No tag means the app reports as zero, and zero sorts last.
 **The first value has to match exactly.** It is matched case-sensitively against one of three
 strings derived from the listing: the `name` verbatim, the `name` lowercased, or the website's
 hostname without a leading `www.`. A tag reading `"Your App Web"` or `"your-app"` when the name is
-`"Your App"` counts as zero.
+`"Your App"` matches nothing, and the app shows no usage figure.
 
 Find where the app signs events and **propose the change as a diff**. Do not edit their
 publishing code yourself; it is theirs, and the tag has privacy consequences.
@@ -342,6 +343,8 @@ publishing code yourself; it is theirs, and the tag has privacy consequences.
 Those consequences are the reason NIP-89 says a client SHOULD let users opt out of the tag: it
 tells every relay and every reader which software a person uses. Include the opt-out in what you
 propose. Apps have already been marked down on Nostrometer for shipping the tag without one.
+
+Declining the tag altogether is equally legitimate. It costs a usage figure, not a rating.
 
 ### Announce the repo on Nostr
 

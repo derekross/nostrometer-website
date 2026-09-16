@@ -4,7 +4,7 @@ import { NipHeader } from '@/components/matrix/NipHeader';
 import { TierCell } from '@/components/matrix/TierCell';
 import { TIER_ORDER } from '@/lib/appReviews';
 import { columnCoverage, type MatrixRow } from '@/lib/matrix';
-import { formatMau } from '@/lib/staticData';
+import { formatMau, mauTitle } from '@/lib/staticData';
 import { TIER_LETTER } from '@/lib/tiers';
 import { cn } from '@/lib/utils';
 
@@ -121,7 +121,9 @@ export function MatrixTable({ rows, nips, className, caption, coverage, compact,
                     </span>
                   )}
                 </TableCell>
-                <TableCell className={cn('text-right font-mono tabular-nums', compact && 'py-1')}>{formatMau(row.mau)}</TableCell>
+                <TableCell className={cn('text-right font-mono tabular-nums', compact && 'py-1')} title={mauTitle(row.mau)}>
+                  {formatMau(row.mau)}
+                </TableCell>
                 <TableCell className={cn('text-center', compact && 'py-1')}>
                   {row.overall ? (
                     <span
