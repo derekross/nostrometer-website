@@ -33,7 +33,7 @@ export function useAllAppReviews() {
   const { nostr } = useNostr();
 
   return useQuery<ReviewReport[]>({
-    queryKey: ['app-reviews', 'all'],
+    queryKey: ['nostr', 'app-reviews', 'all'],
     queryFn: async ({ signal }) => {
       const events = await nostr.query(
         [{ kinds: [APP_REVIEW_KIND], '#l': [REVIEW_LABEL], limit: 1000 }],
@@ -51,7 +51,7 @@ export function useAppReviews(appAddress: string | undefined) {
   const { nostr } = useNostr();
 
   return useQuery<ReviewReport[]>({
-    queryKey: ['app-reviews', appAddress ?? ''],
+    queryKey: ['nostr', 'app-reviews', appAddress ?? ''],
     queryFn: async ({ signal }) => {
       const events = await nostr.query(
         [{ kinds: [APP_REVIEW_KIND], '#l': [REVIEW_LABEL], '#a': [appAddress!], limit: 500 }],

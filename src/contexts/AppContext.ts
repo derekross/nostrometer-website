@@ -30,6 +30,12 @@ export interface AppConfig {
    * are used.
    */
   useAppBlossomServers: boolean;
+  /**
+   * Show only what the configured relays return, dropping the crawl snapshot
+   * that otherwise acts as a floor under the ratings. Set from the relay
+   * picker so that changing relays visibly changes what is on screen.
+   */
+  liveOnly: boolean;
 }
 
 export interface AppContextType {

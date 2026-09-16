@@ -30,6 +30,7 @@ export function useMatrix() {
     isLoading: reviews.isLoading,
     isError: reviews.isError,
     liveFailed: reviews.liveFailed,
+    liveOnly: reviews.liveOnly,
     isLive: reviews.isLive || apps.isFetching,
     liveCount: reviews.liveCount,
     snapshotCount: reviews.snapshotCount,

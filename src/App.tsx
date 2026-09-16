@@ -43,6 +43,7 @@ const defaultConfig: AppConfig = {
     updatedAt: 0,
   },
   useAppBlossomServers: true,
+  liveOnly: false,
 };
 
 export function App() {

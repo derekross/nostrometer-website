@@ -16,7 +16,7 @@ export function useRatedApps(reviews: ReviewReport[] | undefined) {
   const addresses = Array.from(new Set((reviews ?? []).map((r) => r.appAddress))).sort();
 
   return useQuery<AppInfo[]>({
-    queryKey: ['rated-apps', addresses],
+    queryKey: ['nostr', 'rated-apps', addresses],
     queryFn: async ({ signal }) => {
       const byPubkey = new Map<string, Set<string>>();
       for (const address of addresses) {
@@ -54,7 +54,7 @@ export function useApp(pubkey: string | undefined, identifier: string | undefine
   const { nostr } = useNostr();
 
   return useQuery<AppInfo | null>({
-    queryKey: ['app', pubkey ?? '', identifier ?? ''],
+    queryKey: ['nostr', 'app', pubkey ?? '', identifier ?? ''],
     queryFn: async ({ signal }) => {
       const events = await nostr.query(
         [{ kinds: [APP_HANDLER_KIND], authors: [pubkey!], '#d': [identifier!], limit: 5 }],

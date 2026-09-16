@@ -29,6 +29,14 @@
 >   scale, tier letters on the rim and a glowing needle that sweeps from zero on load (CSS
 >   keyframe, off under prefers-reduced-motion); LED readouts; live-relay badge in the header;
 >   numbered violet "Readout · 0N" eyebrows; violet under-glow on the matrix.
+> - **Relay picker (2026-09-16):** the header badge opens a "Reading from" dialog
+>   (`src/components/RelayDialog.tsx`) listing the configured relays, each probed on open for the
+>   ratings it holds and its round trip (`src/hooks/useRelayProbe.ts`); add by `wss://` URL,
+>   one-click suggestions from `src/lib/relays.ts` (known-good only: nostr.band is dead and
+>   purplepag.es is profile/NIP-65 only), reset to defaults, and a **live only** switch
+>   (`config.liveOnly`) that drops the crawl-snapshot floor so relay changes are visible.
+>   Required fix: relay-backed query keys moved under the `nostr` prefix, because
+>   `NostrProvider` only invalidates that prefix and nothing was refetching on a relay change.
 > - Remaining (manual, section 8): create GitHub repo `derekross/nostrometer-website` with
 >   Derek's go-ahead, add the `PROD_*` secrets, then DNS + `setup-site.sh` + certbot on nostr01
 >   via the `deploy-nostr01` skill; post-deploy checks in 9.6.

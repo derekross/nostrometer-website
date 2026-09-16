@@ -35,7 +35,7 @@ export function useUpdates() {
   const { nostr } = useNostr();
 
   return useQuery<NostrEvent[]>({
-    queryKey: ['updates', UPDATES_TAG],
+    queryKey: ['nostr', 'updates', UPDATES_TAG],
     queryFn: async ({ signal }) => {
       const events = await nostr.query(
         [{ kinds: [ARTICLE_KIND], authors: [DEREK_PUBKEY_HEX], '#t': [UPDATES_TAG], limit: 50 }],
@@ -53,7 +53,7 @@ export function useUpdate(identifier: string | undefined) {
   const { nostr } = useNostr();
 
   return useQuery<NostrEvent | null>({
-    queryKey: ['update', identifier ?? ''],
+    queryKey: ['nostr', 'update', identifier ?? ''],
     queryFn: async ({ signal }) => {
       const events = await nostr.query(
         [{ kinds: [ARTICLE_KIND], authors: [DEREK_PUBKEY_HEX], '#d': [identifier!], limit: 5 }],

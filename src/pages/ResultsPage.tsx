@@ -155,9 +155,21 @@ export default function ResultsPage() {
         </div>
 
         <p className="mt-4 text-sm text-muted-foreground">
-          {provenance} Ratings: crawl snapshot of {matrix.snapshotCount}
-          {matrix.snapshotDate ? ` (${formatUtc(matrix.snapshotDate)})` : ''} merged with a live relay read
-          {matrix.isLive ? ' (still reading…)' : ` (${matrix.liveCount} returned)`}; newest revision per rater, app and NIP wins.
+          {provenance}{' '}
+          {matrix.liveOnly ? (
+            <>
+              Ratings: live relay read only
+              {matrix.isLive ? ' (still reading…)' : ` (${matrix.liveCount} returned)`}; the crawl snapshot of{' '}
+              {matrix.snapshotCount} is switched off in the relay panel.
+            </>
+          ) : (
+            <>
+              Ratings: crawl snapshot of {matrix.snapshotCount}
+              {matrix.snapshotDate ? ` (${formatUtc(matrix.snapshotDate)})` : ''} merged with a live relay read
+              {matrix.isLive ? ' (still reading…)' : ` (${matrix.liveCount} returned)`}; newest revision per rater, app
+              and NIP wins.
+            </>
+          )}{' '}
           Click a column header to open its detail. Raw files:{' '}
           <a href="/data/ratings.json" className="font-mono underline underline-offset-2">ratings.json</a>,{' '}
           <a href="/data/metrics.json" className="font-mono underline underline-offset-2">metrics.json</a>,{' '}

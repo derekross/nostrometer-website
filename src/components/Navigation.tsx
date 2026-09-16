@@ -4,7 +4,7 @@ import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { GitHubIcon } from '@/components/GitHubIcon';
-import { LiveBadge } from '@/components/LiveBadge';
+import { RelayBadge } from '@/components/RelayBadge';
 import { Wordmark } from '@/components/MeterMark';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { NAV_LINKS } from '@/lib/nav';
@@ -39,7 +39,7 @@ export function Navigation() {
               {l.label}
             </NavLink>
           ))}
-          <LiveBadge className="ml-2" />
+          <RelayBadge className="ml-2" />
           <Button asChild variant="ghost" size="icon" className="ml-1">
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer" aria-label="Nostrometer on GitHub">
               <GitHubIcon />
@@ -83,6 +83,9 @@ export function Navigation() {
                 >
                   <GitHubIcon /> GitHub
                 </a>
+                <div className="mt-4 border-t px-3 pt-4">
+                  <RelayBadge />
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
