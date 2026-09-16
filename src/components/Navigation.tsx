@@ -33,7 +33,7 @@ export function Navigation() {
           <Wordmark />
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           {NAV_LINKS.map((l) => (
             <NavLink key={l.to} to={l.to} className={navClass}>
               {l.label}
@@ -48,7 +48,7 @@ export function Navigation() {
           <ThemeToggle />
         </nav>
 
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-1 lg:hidden">
           <ThemeToggle />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
