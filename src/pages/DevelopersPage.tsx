@@ -14,16 +14,19 @@ const LISTING_EXAMPLE = `{
     ["k", "1"], ["k", "30023"],
     ["web", "https://yourapp.example/<bech32>", "nevent"],
     ["android", "yourapp://<bech32>"],
-    ["i", "nip-01", "nip"], ["i", "nip-17", "nip"], ["i", "nip-57", "nip"]
+    ["i", "nip-01", "nip"], ["i", "nip-17", "nip"], ["i", "nip-57", "nip"],
+    ["a", "30617:<your-pubkey>:your-app", "wss://relay.ditto.pub", "repo"]
   ]
 }`;
+
+const NGIT_INIT = `ngit init`;
 
 const NAK_ONE_LINER = `nak event --sec <nsec|ncryptsec|bunker://…> < listing.json \\
   wss://relay.ditto.pub wss://nos.lol wss://nostr.mom`;
 
-function Step({ n, title, children }: { n: string; title: React.ReactNode; children: React.ReactNode }) {
+function Step({ n, title, children, id }: { n: string; title: React.ReactNode; children: React.ReactNode; id?: string }) {
   return (
-    <div className="grid gap-4 md:grid-cols-[4rem_1fr]">
+    <div id={id} className="grid scroll-mt-24 gap-4 md:grid-cols-[4rem_1fr]">
       <span className="font-mono text-2xl font-semibold text-muted-foreground tabular-nums">{n}</span>
       <div className="max-w-[65ch]">
         <h2 className="t-h3">{title}</h2>
@@ -90,6 +93,10 @@ export default function DevelopersPage() {
             </li>
             <li>
               <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">i</code> tags naming the NIPs you implement
+            </li>
+            <li>
+              an <code className="rounded bg-muted px-1.5 py-0.5 text-[0.9em]">a</code> tag pointing at your NIP-34 repository
+              announcement (<a href="#ngit" className="text-primary underline underline-offset-2">step 06</a>)
             </li>
           </ul>
           <Code>{LISTING_EXAMPLE}</Code>
@@ -178,6 +185,32 @@ export default function DevelopersPage() {
               Derek on Nostr
             </a>
             .
+          </p>
+        </Step>
+
+        <TickRuler />
+
+        <Step n="06" id="ngit" title="Put the source on Nostr too">
+          <p>
+            Your listing can point at your repository by Nostr address, the same way ratings point at your listing. That
+            needs the repository announced on Nostr as a NIP-34 event, which is one command with{' '}
+            <a href="https://gitworkshop.dev/ngit" {...ext} className="text-primary underline underline-offset-2">
+              ngit
+            </a>
+            :
+          </p>
+          <Code>{NGIT_INIT}</Code>
+          <p>
+            Run it in the repo, answer the prompts, and it publishes a kind 30617 announcement under your key with your
+            existing clone URLs. Nothing moves. GitHub, GitLab or your own server stays where it is; the announcement just
+            makes the repo addressable from Nostr, so the listing, the review and the ratings all resolve to the same code
+            without leaving the protocol.
+          </p>
+          <p>
+            We ask every app in the review queue to do this. Issues we file for Borked or Isolated cells can then land as
+            NIP-34 issues on the repo itself, next to the ratings, where the whole history is signed and readable by any
+            client. An ecosystem that measures interoperability should keep its source where anyone can verify it the same
+            way.
           </p>
         </Step>
       </Section>

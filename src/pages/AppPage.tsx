@@ -13,6 +13,7 @@ import { useAuthor } from '@/hooks/useAuthor';
 import { useReviewsForApp } from '@/hooks/useReviews';
 import { useApp } from '@/hooks/useRatedApps';
 import { useClaimed, useMetrics } from '@/hooks/useStaticData';
+import { GIT_REPO_KIND, repoLabel } from '@/lib/repos';
 import { APP_HANDLER_KIND } from '@/lib/apps';
 import { TIERS, aggregateReviews } from '@/lib/appReviews';
 import { sanitizeUrl } from '@/lib/sanitizeUrl';
@@ -63,6 +64,7 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
   const overall = useMemo(() => (reviews.reviews ? aggregateReviews(reviews.reviews).overall : null), [reviews.reviews]);
   const publisherName = publisher.data?.metadata?.name ?? publisher.data?.metadata?.display_name;
   const website = sanitizeUrl(app.data?.website);
+  const repo = repoLabel(app.data?.repoRefs ?? [], claimed.data?.byAddress[address]?.repo ?? null);
 
   const description = `NIP-by-NIP interoperability ratings for ${name} on Nostrometer.`;
   useSeoMeta({
@@ -169,6 +171,35 @@ function AppReport({ pubkey, identifier }: { pubkey: string; identifier: string 
                     </a>
                   ) : (
                     '—'
+                  )
+                }
+              />
+              <Fact
+                label="Repository"
+                value={
+                  repo.kind === 'nostr' ? (
+                    <a
+                      href={`https://njump.me/${nip19.naddrEncode({ kind: GIT_REPO_KIND, pubkey: repo.ref.pubkey, identifier: repo.ref.identifier })}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline underline-offset-2"
+                    >
+                      On Nostr
+                    </a>
+                  ) : repo.kind === 'web' ? (
+                    <span>
+                      <a href={repo.url} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2">
+                        {repo.host}
+                      </a>
+                      <span className="text-muted-foreground"> · </span>
+                      <Link to="/developers#ngit" className="text-muted-foreground underline underline-offset-2">
+                        not on Nostr yet
+                      </Link>
+                    </span>
+                  ) : (
+                    <Link to="/developers#ngit" className="text-muted-foreground underline underline-offset-2">
+                      not announced
+                    </Link>
                   )
                 }
               />
