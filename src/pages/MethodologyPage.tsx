@@ -152,9 +152,9 @@ export default function MethodologyPage() {
             </li>
           </ul>
           <p>
-            All crawling is read-only and the crawlers never sign or publish events. The scripts live at{' '}
+            All crawling is read-only and the crawlers never sign or publish events. Review{' '}
             <a href={REPO_URL} {...ext} className="text-primary underline underline-offset-2">
-              github.com/derekross/nostrometer
+              the code
             </a>
             .
           </p>

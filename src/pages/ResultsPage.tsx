@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
+import { Provenance } from '@/components/Provenance';
 import { MatrixLegend } from '@/components/matrix/MatrixLegend';
 import { MatrixSkeleton, MatrixTable } from '@/components/matrix/MatrixTable';
 import { NipDetailPanel } from '@/components/matrix/NipDetailPanel';
@@ -14,7 +15,7 @@ import { useMatrix } from '@/hooks/useMatrix';
 import { TRACKED_NIPS } from '@/lib/appReviews';
 import { TRACKED_NIP_IDS, rowHasData, sortRows, type MatrixSort } from '@/lib/matrix';
 import { DEFAULT_OG_IMAGE, NOSTRHUB_APPS_URL, REPO_URL } from '@/lib/site';
-import { formatDay, formatUtc } from '@/lib/staticData';
+import { formatUtc } from '@/lib/staticData';
 
 const SORTS: { value: MatrixSort; label: string }[] = [
   { value: 'usage', label: 'By usage' },
@@ -46,11 +47,6 @@ export default function ResultsPage() {
     if (hideEmpty) list = list.filter(rowHasData);
     return sortRows(list, sort);
   }, [matrix.rows, search, hideEmpty, sort]);
-
-  const m = matrix.metrics;
-  const provenance = m?.crawled_at
-    ? `Usage: ${m.metric ?? 'distinct authors'} on ${m.relay ?? 'the relay'}, ${formatDay(m.since)} to ${formatDay(m.until)}, crawled ${formatUtc(m.crawled_at)}.`
-    : 'Usage data is not available for this build.';
 
   return (
     <>
@@ -154,31 +150,19 @@ export default function ResultsPage() {
           )}
         </div>
 
-        <p className="mt-4 text-sm text-muted-foreground">
-          {provenance}{' '}
-          {matrix.liveOnly ? (
-            <>
-              Ratings: live relay read only
-              {matrix.isLive ? ' (still reading…)' : ` (${matrix.liveCount} returned)`}; the crawl snapshot of{' '}
-              {matrix.snapshotCount} is switched off in the relay panel.
-            </>
-          ) : (
-            <>
-              Ratings: crawl snapshot of {matrix.snapshotCount}
-              {matrix.snapshotDate ? ` (${formatUtc(matrix.snapshotDate)})` : ''} merged with a live relay read
-              {matrix.isLive ? ' (still reading…)' : ` (${matrix.liveCount} returned)`}; newest revision per rater, app
-              and NIP wins.
-            </>
-          )}{' '}
-          Click a column header to open its detail. Raw files:{' '}
-          <a href="/data/ratings.json" className="font-mono underline underline-offset-2">ratings.json</a>,{' '}
-          <a href="/data/metrics.json" className="font-mono underline underline-offset-2">metrics.json</a>,{' '}
-          <a href="/data/claimed.json" className="font-mono underline underline-offset-2">claimed.json</a>,{' '}
-          <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
-            registry and ratings on GitHub
-          </a>
-          .
-        </p>
+        <Provenance
+          hint={
+            rows.length > 0 && !selectedNip ? (
+              <p className="text-sm text-muted-foreground">Click a NIP column to open its detail.</p>
+            ) : null
+          }
+          metrics={matrix.metrics}
+          snapshotCount={matrix.snapshotCount}
+          snapshotDate={matrix.snapshotDate}
+          liveCount={matrix.liveCount}
+          isLive={matrix.isLive}
+          liveOnly={matrix.liveOnly}
+        />
       </Section>
     </>
   );
