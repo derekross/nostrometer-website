@@ -6,8 +6,8 @@ import { HowItWorks } from '@/components/sections/HowItWorks';
 import { LatestUpdates } from '@/components/sections/LatestUpdates';
 import { MatrixPreview } from '@/components/sections/MatrixPreview';
 import { Mission } from '@/components/sections/Mission';
-import { StatTiles } from '@/components/sections/StatTiles';
 import { useMatrix } from '@/hooks/useMatrix';
+import { ecosystemReading } from '@/lib/matrix';
 import { DEFAULT_OG_IMAGE, TAGLINE } from '@/lib/site';
 
 const Index = () => {
@@ -24,15 +24,13 @@ const Index = () => {
 
   return (
     <>
-      <Hero />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <StatTiles
-          metrics={matrix.metrics}
-          ratings={matrix.reviews?.length}
-          ratedApps={matrix.rows?.length}
-          loading={matrix.isLoading}
-        />
-      </div>
+      <Hero
+        reading={matrix.rows ? ecosystemReading(matrix.rows) : undefined}
+        apps={matrix.metrics?.apps}
+        ratings={matrix.reviews?.length}
+        loading={matrix.isLoading}
+      />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6"><TickRuler /></div>
       <Section>
         <MatrixPreview rows={matrix.rows} isLoading={matrix.isLoading} isError={matrix.isError} />
       </Section>

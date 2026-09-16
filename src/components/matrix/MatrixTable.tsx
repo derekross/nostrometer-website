@@ -2,23 +2,46 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { NipHeader } from '@/components/matrix/NipHeader';
 import { TierCell } from '@/components/matrix/TierCell';
-import { TIER_LETTER } from '@/lib/tiers';
-import type { MatrixRow } from '@/lib/matrix';
+import { TIER_ORDER } from '@/lib/appReviews';
+import { columnCoverage, type MatrixRow } from '@/lib/matrix';
 import { formatMau } from '@/lib/staticData';
+import { TIER_LETTER } from '@/lib/tiers';
 import { cn } from '@/lib/utils';
 
 interface MatrixTableProps {
   rows: MatrixRow[];
   nips: string[];
-  /** Cap the table height so the header and first column can stick. */
   className?: string;
   caption?: string;
+  /** Show the per-NIP tier split under the headers. */
+  coverage?: boolean;
+  /** Smaller chips so all 30 columns fit at desktop width. */
+  compact?: boolean;
+  /** Column headers become buttons; the selected column is highlighted. */
+  selectedNip?: string | null;
+  onSelectNip?: (nip: string) => void;
 }
 
 const stickyCol = 'sticky left-0 z-10 bg-card group-hover/row:bg-muted';
 
-export function MatrixTable({ rows, nips, className, caption }: MatrixTableProps) {
+function CoverageBar({ rows, nip }: { rows: MatrixRow[]; nip: string }) {
+  const c = columnCoverage(rows, nip);
+  const label = `${c.rated} rated: ${TIER_ORDER.map((t) => `${c.counts[t]} ${t}`).join(', ')}; ${c.claimed} claimed; ${c.none} no data`;
+  return (
+    <div className="px-0.5" title={label}>
+      <div className="flex h-1.5 gap-px overflow-hidden rounded-[2px] bg-muted" role="img" aria-label={label}>
+        {TIER_ORDER.map((t) =>
+          c.counts[t] > 0 ? <span key={t} style={{ flex: `${c.counts[t]} 0 0`, background: `var(--tier-${t})` }} /> : null,
+        )}
+      </div>
+      <div className="mt-1 text-center font-mono text-[10px] text-muted-foreground tabular-nums">{c.rated}</div>
+    </div>
+  );
+}
+
+export function MatrixTable({ rows, nips, className, caption, coverage, compact, selectedNip, onSelectNip }: MatrixTableProps) {
   const navigate = useNavigate();
+  const pad = compact ? 'px-px py-1' : 'px-1 py-2';
 
   return (
     <div className={cn('rounded-md border bg-card', className)}>
@@ -27,7 +50,7 @@ export function MatrixTable({ rows, nips, className, caption }: MatrixTableProps
           {caption && <caption className="sr-only">{caption}</caption>}
           <TableHeader className="sticky top-0 z-20 bg-card">
             <TableRow className="hover:bg-card">
-              <TableHead scope="col" className={cn(stickyCol, 'z-30 min-w-44 border-r pl-4')}>
+              <TableHead scope="col" className={cn(stickyCol, 'z-30 border-r pl-4', compact ? 'min-w-36' : 'min-w-44')}>
                 App
               </TableHead>
               <TableHead scope="col" className="text-right font-mono text-xs">
@@ -37,11 +60,41 @@ export function MatrixTable({ rows, nips, className, caption }: MatrixTableProps
                 Overall
               </TableHead>
               {nips.map((id) => (
-                <TableHead key={id} scope="col" className="w-10 min-w-10 px-1 text-center">
-                  <NipHeader id={id} />
+                <TableHead
+                  key={id}
+                  scope="col"
+                  aria-sort={undefined}
+                  className={cn('px-0.5 text-center', compact ? 'w-[34px] min-w-[34px]' : 'w-10 min-w-10', selectedNip === id && 'bg-accent')}
+                >
+                  {onSelectNip ? (
+                    <button
+                      type="button"
+                      onClick={() => onSelectNip(id)}
+                      aria-pressed={selectedNip === id}
+                      className="rounded-sm px-1 py-0.5 hover:bg-muted focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                    >
+                      <NipHeader id={id} />
+                    </button>
+                  ) : (
+                    <NipHeader id={id} />
+                  )}
                 </TableHead>
               ))}
             </TableRow>
+            {coverage && (
+              <TableRow className="hover:bg-card">
+                <TableHead scope="row" className={cn(stickyCol, 'eyebrow z-30 h-auto border-r pb-2 pl-4 text-[11px]')}>
+                  Coverage
+                </TableHead>
+                <TableHead className="h-auto" />
+                <TableHead className="h-auto" />
+                {nips.map((id) => (
+                  <TableHead key={id} className={cn('h-auto px-0.5 pb-2 align-bottom', selectedNip === id && 'bg-accent')}>
+                    <CoverageBar rows={rows} nip={id} />
+                  </TableHead>
+                ))}
+              </TableRow>
+            )}
           </TableHeader>
           <TableBody>
             {rows.map((row) => (
@@ -49,14 +102,14 @@ export function MatrixTable({ rows, nips, className, caption }: MatrixTableProps
                 key={row.address}
                 className="group/row cursor-pointer hover:bg-muted"
                 onClick={(e) => {
-                  if ((e.target as HTMLElement).closest('a, [tabindex]')) return;
+                  if ((e.target as HTMLElement).closest('a, [tabindex], button')) return;
                   navigate(`/app/${row.naddr}`);
                 }}
               >
-                <TableCell className={cn(stickyCol, 'border-r pl-4')}>
+                <TableCell className={cn(stickyCol, 'border-r pl-4', compact && 'py-1')}>
                   <Link
                     to={`/app/${row.naddr}`}
-                    className="font-semibold text-foreground hover:text-primary hover:underline focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 rounded-sm"
+                    className="rounded-sm font-semibold text-foreground hover:text-primary hover:underline focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
                   >
                     {row.name}
                   </Link>
@@ -68,12 +121,12 @@ export function MatrixTable({ rows, nips, className, caption }: MatrixTableProps
                     </span>
                   )}
                 </TableCell>
-                <TableCell className="text-right font-mono tabular-nums">{formatMau(row.mau)}</TableCell>
-                <TableCell className="text-center">
+                <TableCell className={cn('text-right font-mono tabular-nums', compact && 'py-1')}>{formatMau(row.mau)}</TableCell>
+                <TableCell className={cn('text-center', compact && 'py-1')}>
                   {row.overall ? (
                     <span
                       data-tier={row.overall.tier}
-                      className="tier-chip inline-flex h-6 w-8 items-center justify-center rounded-[4px] text-sm leading-none"
+                      className={cn('tier-chip inline-flex items-center justify-center rounded-[4px] leading-none', compact ? 'h-[22px] w-7 text-[13px]' : 'h-6 w-8 text-sm')}
                       aria-label={`Overall ${row.overall.tier}`}
                     >
                       {TIER_LETTER[row.overall.tier]}
@@ -83,8 +136,8 @@ export function MatrixTable({ rows, nips, className, caption }: MatrixTableProps
                   )}
                 </TableCell>
                 {nips.map((id) => (
-                  <TableCell key={id} className="px-1 text-center">
-                    <TierCell cell={row.cells.get(id)} claimed={row.claimed.has(id)} nipId={id} appName={row.name} />
+                  <TableCell key={id} className={cn(pad, 'text-center', selectedNip === id && 'bg-accent/60')}>
+                    <TierCell cell={row.cells.get(id)} claimed={row.claimed.has(id)} nipId={id} appName={row.name} compact={compact} />
                   </TableCell>
                 ))}
               </TableRow>

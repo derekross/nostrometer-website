@@ -18,6 +18,11 @@
 >   `font-src 'self'` blocks.
 > - Constants shared between components live in `src/lib/{nav,tiers,nips,updates}.ts`
 >   (react-refresh lint rule).
+> - **Direction A implemented (2026-09-15):** violet-ramp `Gauge` in the home hero reading the
+>   mean of all rated cells; coverage row on both matrices; results page with segmented sort,
+>   compact 30-column table and a click-to-open column detail panel; app report rebuilt as a
+>   score card (readouts, 30-chip strip, collapsible per-NIP rows with filter, sticky rail).
+>   Design canvas: https://claude.ai/artifact/GMLszeSAPVpaTN7H64uNPw
 > - Remaining (manual, section 8): create GitHub repo `derekross/nostrometer-website` with
 >   Derek's go-ahead, add the `PROD_*` secrets, then DNS + `setup-site.sh` + certbot on nostr01
 >   via the `deploy-nostr01` skill; post-deploy checks in 9.6.

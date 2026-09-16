@@ -146,3 +146,47 @@ describe('buildMatrix', () => {
     expect(rows[0].name).toBe('myapp');
   });
 });
+
+describe('columnCoverage / ecosystemReading / sortRows', () => {
+  const rows = buildMatrix(
+    [
+      review(RATER, `31990:${DEV}:one`, 'nip-01', 1.0),
+      review(RATER, `31990:${DEV}:one`, 'nip-02', 0.6),
+      review(RATER, `31990:${DEV}:two`, 'nip-01', 0.3),
+    ],
+    [],
+    {
+      ...metrics,
+      byAddress: {
+        [`31990:${DEV}:one`]: { id: 'one', name: 'One', mau: 1 },
+        [`31990:${DEV}:two`]: { id: 'two', name: 'Two', mau: 9 },
+      },
+    },
+    { generated_at: '', byAddress: { [`31990:${DEV}:two`]: { repo: null, nips: ['nip-02'] } } },
+  );
+
+  it('tallies a column into rated, claimed and none', async () => {
+    const { columnCoverage } = await import('./matrix');
+    const c = columnCoverage(rows, 'nip-02');
+    expect(c.counts.incomplete).toBe(1);
+    expect(c.rated).toBe(1);
+    expect(c.claimed).toBe(1);
+    expect(c.none).toBe(0);
+  });
+
+  it('reads the ecosystem as the mean of rated cells', async () => {
+    const { ecosystemReading } = await import('./matrix');
+    const r = ecosystemReading(rows);
+    expect(r?.cells).toBe(3);
+    expect(r?.value).toBeCloseTo((1.0 + 0.6 + 0.3) / 3);
+    expect(r?.tier).toBe('incomplete');
+    expect(ecosystemReading([])).toBeNull();
+  });
+
+  it('sorts by overall and by coverage', async () => {
+    const { sortRows } = await import('./matrix');
+    expect(rows.map((r) => r.name)).toEqual(['Two', 'One']);
+    expect(sortRows(rows, 'overall').map((r) => r.name)).toEqual(['One', 'Two']);
+    expect(sortRows(rows, 'coverage').map((r) => r.name)).toEqual(['One', 'Two']);
+  });
+});

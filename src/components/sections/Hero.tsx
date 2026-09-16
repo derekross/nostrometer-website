@@ -1,20 +1,32 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { MeterMark } from '@/components/MeterMark';
+import { Gauge } from '@/components/Gauge';
+import { TIERS, TRACKED_NIPS } from '@/lib/appReviews';
+import type { EcosystemReading } from '@/lib/matrix';
 import { TAGLINE } from '@/lib/site';
 
-const POINTS = [
-  { k: 'Discovered', v: 'Every kind 31990 listing, crawled from public relays and signature-verified.' },
-  { k: 'Ranked', v: 'By distinct monthly authors on the relay, not by downloads or follower counts.' },
-  { k: 'Rated', v: 'One chip per NIP. The community median wins; self-ratings are marked.' },
-  { k: 'Open', v: 'Ratings are kind 31986 events anyone can publish. The tooling is on GitHub.' },
-];
+interface HeroProps {
+  reading: EcosystemReading | null | undefined;
+  apps: number | undefined;
+  ratings: number | undefined;
+  loading: boolean;
+}
 
-export function Hero() {
+function Counter({ value, label }: { value: string; label: string }) {
+  return (
+    <div>
+      <div className="font-mono text-2xl font-semibold leading-7 tabular-nums">{value}</div>
+      <div className="eyebrow text-[11px]">{label}</div>
+    </div>
+  );
+}
+
+export function Hero({ reading, apps, ratings, loading }: HeroProps) {
+  const dash = loading ? '…' : '—';
   return (
     <section className="mx-auto max-w-6xl px-4 pt-16 pb-12 sm:px-6 md:pt-24 md:pb-16">
-      <div className="grid gap-10 lg:grid-cols-[3fr_2fr] lg:items-start">
+      <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
         <div>
           <p className="eyebrow mb-4">Nostr interoperability, measured</p>
           <h1 className="t-h1 max-w-[18ch]">
@@ -33,19 +45,20 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="rounded-md border bg-card p-6">
-          <div className="mb-5 flex items-center justify-between border-b pb-4">
-            <span className="eyebrow">What the meter reads</span>
-            <MeterMark size={28} className="text-muted-foreground" />
+        <div className="flex flex-col items-center rounded-md border bg-card p-6 pb-4">
+          <p className="eyebrow self-start">Ecosystem reading</p>
+          <Gauge
+            value={reading?.value ?? 0}
+            label={reading ? TIERS[reading.tier].label : loading ? 'Reading…' : 'No data'}
+            sub={reading ? `Mean of ${reading.cells} rated cells · ${reading.apps} apps` : undefined}
+            size={320}
+            className="my-2 max-w-full"
+          />
+          <div className="mt-2 grid w-full grid-cols-3 gap-3 border-t pt-4">
+            <Counter value={apps ? apps.toLocaleString('en-US') : dash} label="Apps" />
+            <Counter value={ratings === undefined ? dash : ratings.toLocaleString('en-US')} label="Ratings" />
+            <Counter value={String(TRACKED_NIPS.length)} label="NIPs" />
           </div>
-          <ul className="space-y-5">
-            {POINTS.map((p) => (
-              <li key={p.k} className="grid grid-cols-[7.5rem_1fr] gap-3">
-                <span className="eyebrow pt-1">{p.k}</span>
-                <span className="text-base leading-6">{p.v}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

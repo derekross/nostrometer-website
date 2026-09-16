@@ -129,3 +129,64 @@ export function buildMatrix(
 export function rowHasData(row: MatrixRow): boolean {
   return row.cells.size > 0 || row.claimed.size > 0;
 }
+
+/** Per-NIP tally across a set of rows: tier counts, claimed-only, and nothing known. */
+export interface ColumnCoverage {
+  counts: Record<CompatTier, number>;
+  rated: number;
+  claimed: number;
+  none: number;
+}
+
+export function columnCoverage(rows: MatrixRow[], nip: string): ColumnCoverage {
+  const counts: Record<CompatTier, number> = { flawless: 0, incomplete: 0, isolated: 0, borked: 0 };
+  let rated = 0;
+  let claimed = 0;
+  for (const row of rows) {
+    const cell = row.cells.get(nip);
+    if (cell) {
+      counts[cell.tier] += 1;
+      rated += 1;
+    } else if (row.claimed.has(nip)) {
+      claimed += 1;
+    }
+  }
+  return { counts, rated, claimed, none: rows.length - rated - claimed };
+}
+
+/** The ecosystem reading on the home page: the mean of every rated cell's median. */
+export interface EcosystemReading {
+  /** 0..1 */
+  value: number;
+  tier: CompatTier;
+  cells: number;
+  apps: number;
+}
+
+export function ecosystemReading(rows: MatrixRow[]): EcosystemReading | null {
+  let sum = 0;
+  let cells = 0;
+  for (const row of rows) {
+    for (const cell of row.cells.values()) {
+      sum += cell.rating;
+      cells += 1;
+    }
+  }
+  if (cells === 0) return null;
+  const value = sum / cells;
+  return { value, tier: ratingToTier(value), cells, apps: rows.length };
+}
+
+export type MatrixSort = 'usage' | 'overall' | 'coverage';
+
+/** Rows come out of buildMatrix sorted by usage; re-sort for the other views. */
+export function sortRows(rows: MatrixRow[], sort: MatrixSort): MatrixRow[] {
+  if (sort === 'usage') return rows;
+  const byName = (a: MatrixRow, b: MatrixRow) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' });
+  if (sort === 'overall') {
+    return [...rows].sort(
+      (a, b) => (b.overall?.rating ?? -1) - (a.overall?.rating ?? -1) || (b.mau ?? 0) - (a.mau ?? 0) || byName(a, b),
+    );
+  }
+  return [...rows].sort((a, b) => b.cells.size - a.cells.size || (b.mau ?? 0) - (a.mau ?? 0) || byName(a, b));
+}

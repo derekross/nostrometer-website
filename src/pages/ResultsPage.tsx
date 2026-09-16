@@ -2,20 +2,25 @@ import { useMemo, useState } from 'react';
 import { useSeoMeta } from '@unhead/react';
 import { RefreshCw } from 'lucide-react';
 import { PageHeader, Section } from '@/components/Layout';
+import { Segmented } from '@/components/Segmented';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { MatrixLegend } from '@/components/matrix/MatrixLegend';
 import { MatrixSkeleton, MatrixTable } from '@/components/matrix/MatrixTable';
+import { NipDetailPanel } from '@/components/matrix/NipDetailPanel';
 import { useMatrix } from '@/hooks/useMatrix';
 import { TRACKED_NIPS } from '@/lib/appReviews';
-import { TRACKED_NIP_IDS, rowHasData } from '@/lib/matrix';
+import { TRACKED_NIP_IDS, rowHasData, sortRows, type MatrixSort } from '@/lib/matrix';
 import { DEFAULT_OG_IMAGE, NOSTRHUB_APPS_URL, REPO_URL } from '@/lib/site';
 import { formatDay, formatUtc } from '@/lib/staticData';
 
-const ALL = 'all';
+const SORTS: { value: MatrixSort; label: string }[] = [
+  { value: 'usage', label: 'By usage' },
+  { value: 'overall', label: 'By overall' },
+  { value: 'coverage', label: 'By coverage' },
+];
 
 export default function ResultsPage() {
   const description = 'Apps by real usage, NIPs across the top, one chip per cell. The live Nostr interoperability matrix.';
@@ -31,18 +36,17 @@ export default function ResultsPage() {
   const matrix = useMatrix();
   const [search, setSearch] = useState('');
   const [hideEmpty, setHideEmpty] = useState(false);
-  const [nip, setNip] = useState<string>(ALL);
+  const [sort, setSort] = useState<MatrixSort>('usage');
+  const [selectedNip, setSelectedNip] = useState<string | null>(null);
 
   const rows = useMemo(() => {
     let list = matrix.rows ?? [];
     const q = search.trim().toLowerCase();
     if (q) list = list.filter((r) => r.name.toLowerCase().includes(q) || r.identifier.toLowerCase().includes(q));
     if (hideEmpty) list = list.filter(rowHasData);
-    if (nip !== ALL) list = list.filter((r) => r.cells.has(nip) || r.claimed.has(nip));
-    return list;
-  }, [matrix.rows, search, hideEmpty, nip]);
+    return sortRows(list, sort);
+  }, [matrix.rows, search, hideEmpty, sort]);
 
-  const nips = nip === ALL ? TRACKED_NIP_IDS : [nip];
   const m = matrix.metrics;
   const provenance = m?.crawled_at
     ? `Usage: ${m.metric ?? 'distinct authors'} on ${m.relay ?? 'the relay'}, ${formatDay(m.since)} to ${formatDay(m.until)}, crawled ${formatUtc(m.crawled_at)}.`
@@ -65,37 +69,19 @@ export default function ResultsPage() {
       </PageHeader>
 
       <Section className="pt-0 md:pt-0">
-        <MatrixLegend />
-
-        <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-end">
-          <div className="flex-1">
-            <Label htmlFor="search" className="eyebrow mb-2 block">
-              Search
-            </Label>
-            <Input id="search" type="search" placeholder="App name" value={search} onChange={(e) => setSearch(e.target.value)} className="h-10 max-w-sm" />
-          </div>
+        <div className="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:items-center">
+          <Segmented value={sort} onChange={setSort} options={SORTS} label="Sort rows" />
           <div>
-            <Label htmlFor="nip" className="eyebrow mb-2 block">
-              NIP
+            <Label htmlFor="search" className="sr-only">
+              Search apps
             </Label>
-            <Select value={nip} onValueChange={setNip}>
-              <SelectTrigger id="nip" className="h-10 w-56">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value={ALL}>All tracked NIPs</SelectItem>
-                {TRACKED_NIPS.map((n) => (
-                  <SelectItem key={n.id} value={n.id}>
-                    <span className="font-mono">{n.id.toUpperCase()}</span> · {n.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <Input id="search" type="search" placeholder="App name" value={search} onChange={(e) => setSearch(e.target.value)} className="h-10 w-64 max-w-full" />
           </div>
           <div className="flex h-10 items-center gap-3">
             <Switch id="hide-empty" checked={hideEmpty} onCheckedChange={setHideEmpty} />
             <Label htmlFor="hide-empty">Hide apps with no data</Label>
           </div>
+          <MatrixLegend className="lg:ml-auto" />
         </div>
 
         <div className="mt-6">
@@ -146,14 +132,33 @@ export default function ResultsPage() {
             </div>
           )}
 
-          {rows.length > 0 && <MatrixTable rows={rows} nips={nips} caption="Client × NIP interoperability matrix" />}
+          {rows.length > 0 && (
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
+              <div className="min-w-0 flex-1">
+                <MatrixTable
+                  rows={rows}
+                  nips={TRACKED_NIP_IDS}
+                  coverage
+                  compact
+                  selectedNip={selectedNip}
+                  onSelectNip={(nip) => setSelectedNip((cur) => (cur === nip ? null : nip))}
+                  caption="Client × NIP interoperability matrix"
+                />
+              </div>
+              {selectedNip && (
+                <div className="w-full lg:w-[300px] lg:shrink-0">
+                  <NipDetailPanel nip={selectedNip} rows={rows} reviews={matrix.reviews} onClose={() => setSelectedNip(null)} />
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         <p className="mt-4 text-sm text-muted-foreground">
           {provenance} Ratings: crawl snapshot of {matrix.snapshotCount}
           {matrix.snapshotDate ? ` (${formatUtc(matrix.snapshotDate)})` : ''} merged with a live relay read
           {matrix.isLive ? ' (still reading…)' : ` (${matrix.liveCount} returned)`}; newest revision per rater, app and NIP wins.
-          Raw files:{' '}
+          Click a column header to open its detail. Raw files:{' '}
           <a href="/data/ratings.json" className="font-mono underline underline-offset-2">ratings.json</a>,{' '}
           <a href="/data/metrics.json" className="font-mono underline underline-offset-2">metrics.json</a>,{' '}
           <a href="/data/claimed.json" className="font-mono underline underline-offset-2">claimed.json</a>,{' '}

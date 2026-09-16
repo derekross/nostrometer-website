@@ -37,6 +37,9 @@ export function MatrixPreview({ rows, isLoading, isError }: MatrixPreviewProps) 
       <MatrixLegend className="mt-8" />
 
       <div className="mt-4">
+        {top.length > 0 && (
+          <p className="mb-2 font-mono text-xs text-muted-foreground">Coverage row: share of rated apps at each tier, per NIP.</p>
+        )}
         {isLoading && <MatrixSkeleton rows={6} cols={PREVIEW_NIPS.length} />}
         {isError && (
           <div className="rounded-md border border-dashed bg-card px-8 py-12 text-center text-muted-foreground">
@@ -48,7 +51,7 @@ export function MatrixPreview({ rows, isLoading, isError }: MatrixPreviewProps) 
             No ratings found on the configured relays yet.
           </div>
         )}
-        {top.length > 0 && <MatrixTable rows={top} nips={PREVIEW_NIPS} caption="Top ten rated apps by monthly authors" />}
+        {top.length > 0 && <MatrixTable rows={top} nips={PREVIEW_NIPS} coverage caption="Top ten rated apps by monthly authors" />}
       </div>
     </div>
   );
