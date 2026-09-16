@@ -2,9 +2,11 @@ import { useSeoMeta } from '@unhead/react';
 import { Link } from 'react-router-dom';
 import { PageHeader, Section } from '@/components/Layout';
 import { TickRuler } from '@/components/TickRuler';
-import { DEFAULT_OG_IMAGE, DEREK_NPUB, NOSTRHUB_APPS_URL, REPO_URL } from '@/lib/site';
+import { DEFAULT_OG_IMAGE, DEREK_NPUB, NOSTRHUB_APPS_URL, REPO_URL, SITE_URL } from '@/lib/site';
 
 const ext = { target: '_blank', rel: 'noopener noreferrer' } as const;
+
+const AGENT_PROMPT = 'Read https://nostrometer.com/SKILL.md and use it to submit this app to the Nostr app directories.';
 
 const LISTING_EXAMPLE = `{
   "kind": 31990,
@@ -21,14 +23,14 @@ const LISTING_EXAMPLE = `{
 
 const NGIT_INIT = `ngit init`;
 
-const NAK_ONE_LINER = `nak event --sec <nsec|ncryptsec|bunker://…> < listing.json \\
-  wss://relay.ditto.pub wss://nos.lol wss://nostr.mom`;
+const NAK_ONE_LINER = `nak event --prompt-sec < listing.json \\
+  wss://relay.ditto.pub wss://nos.lol wss://relay.damus.io wss://nostr.mom`;
 
 function Step({ n, title, children, id }: { n: string; title: React.ReactNode; children: React.ReactNode; id?: string }) {
   return (
     <div id={id} className="grid scroll-mt-24 gap-4 md:grid-cols-[4rem_1fr]">
       <span className="font-mono text-2xl font-semibold text-muted-foreground tabular-nums">{n}</span>
-      <div className="max-w-[65ch]">
+      <div className="min-w-0 max-w-[65ch]">
         <h2 className="t-h3">{title}</h2>
         <div className="mt-4 space-y-4 text-lg leading-7">{children}</div>
       </div>
@@ -38,7 +40,7 @@ function Step({ n, title, children, id }: { n: string; title: React.ReactNode; c
 
 function Code({ children }: { children: string }) {
   return (
-    <pre className="overflow-x-auto rounded-md border bg-muted p-4 text-sm leading-6">
+    <pre className="max-w-full overflow-x-auto rounded-md border bg-muted p-4 text-sm leading-6">
       <code>{children}</code>
     </pre>
   );
@@ -68,6 +70,23 @@ export default function DevelopersPage() {
       />
 
       <Section className="space-y-16 pt-0 md:pt-0">
+        <div className="rounded-md border border-primary/40 bg-card p-6">
+          <p className="eyebrow-readout mb-3">Using a coding agent?</p>
+          <p className="max-w-[65ch] text-lg leading-7">
+            Everything below is written up as a procedure an agent can follow inside your own repository. Open your
+            terminal there and give it this:
+          </p>
+          <Code>{AGENT_PROMPT}</Code>
+          <p className="max-w-[65ch] text-base leading-6 text-muted-foreground">
+            It reads your project for the name, description, icon, platforms and the NIPs you actually implement, builds
+            the event, and hands it back for you to check and sign. It never handles your key.{' '}
+            <a href={`${SITE_URL}/SKILL.md`} className="text-primary underline underline-offset-2">
+              Read the file first
+            </a>{' '}
+            if you would rather see what it says.
+          </p>
+        </div>
+
         <Step n="01" title="Publish a kind 31990 listing">
           <p>
             The matrix keys everything on your NIP-89 handler event. Without one, there is nothing to rate. A complete listing
