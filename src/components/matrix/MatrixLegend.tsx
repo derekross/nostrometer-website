@@ -1,5 +1,5 @@
 import { TIER_ORDER, TIERS } from '@/lib/appReviews';
-import { TIER_LETTER } from '@/lib/tiers';
+import { TIER_LETTER, formatScore } from '@/lib/tiers';
 import { cn } from '@/lib/utils';
 
 function Chip({ children, ...attrs }: React.ComponentProps<'span'>) {
@@ -25,7 +25,7 @@ export function MatrixLegend({ className }: { className?: string }) {
           </dt>
           <dd>
             {TIERS[tier].label}
-            <span className="ml-1 font-mono text-xs text-muted-foreground">{TIERS[tier].ratingValue.toFixed(1)}</span>
+            <span className="ml-1 font-mono text-xs text-muted-foreground">{formatScore(TIERS[tier].ratingValue)}</span>
           </dd>
         </div>
       ))}

@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { TIER_ORDER } from '@/lib/appReviews';
-import { TIER_LETTER } from '@/lib/tiers';
+import { TIER_LETTER, formatScore } from '@/lib/tiers';
 import { cn } from '@/lib/utils';
 
 interface GaugeProps {
-  /** 0..1, where the tier thresholds sit at 0.25, 0.5 and 0.75. */
+  /** 0..1, where the tier thresholds sit at 0.25, 0.5 and 0.75. Shown as 0..100. */
   value: number;
   /** Tier name, shown after the numeral. */
   label: string;
@@ -37,11 +37,11 @@ function arc(cx: number, cy: number, r: number, v0: number, v1: number): string 
 
 const BANDS = ['var(--gauge-1)', 'var(--gauge-2)', 'var(--gauge-3)', 'var(--gauge-4)'];
 const SCALE = [
-  { at: 0, text: '0.0' },
-  { at: 0.25, text: '.25' },
-  { at: 0.5, text: '.50' },
-  { at: 0.75, text: '.75' },
-  { at: 1, text: '1.0' },
+  { at: 0, text: '0' },
+  { at: 0.25, text: '25' },
+  { at: 0.5, text: '50' },
+  { at: 0.75, text: '75' },
+  { at: 1, text: '100' },
 ];
 
 function prefersReducedMotion(): boolean {
@@ -105,7 +105,7 @@ export function Gauge({ value, label, caption, size = 320, className, animate = 
       className={cn('relative', className)}
       style={{ width: size, height: size, filter: 'drop-shadow(0 0 28px color-mix(in oklab, var(--primary) 30%, transparent))' }}
       role="img"
-      aria-label={`${value.toFixed(2)}, ${label}${caption ? `, ${caption}` : ''}`}
+      aria-label={`${formatScore(v)} out of 100, ${label}${caption ? `, ${caption}` : ''}`}
     >
       <svg viewBox={`0 0 ${size} ${size}`} width={size} height={size} aria-hidden="true">
         {[
@@ -170,7 +170,7 @@ export function Gauge({ value, label, caption, size = 320, className, animate = 
       </svg>
       <div className="absolute inset-x-0 text-center" style={{ bottom: size * 0.03 }}>
         <div className="font-mono font-semibold tracking-tight tabular-nums" style={{ fontSize: size * 0.085, lineHeight: 1 }}>
-          {shown.toFixed(2)}
+          {formatScore(shown)}
         </div>
         <div className="eyebrow-readout mt-2 text-[12px]">
           {label}

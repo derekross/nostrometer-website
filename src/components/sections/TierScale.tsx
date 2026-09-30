@@ -1,5 +1,5 @@
 import { TIER_ORDER, TIERS, type CompatTier } from '@/lib/appReviews';
-import { TIER_LETTER } from '@/lib/tiers';
+import { TIER_LETTER, formatScore } from '@/lib/tiers';
 
 /** What each tier means in practice, from the hands-on test rubric. */
 const TIER_DETAIL: Record<CompatTier, string> = {
@@ -23,7 +23,7 @@ export function TierScale() {
               </span>
               <div>
                 <p className="text-lg font-bold leading-6">{t.label}</p>
-                <p className="font-mono text-sm text-muted-foreground tabular-nums">{t.ratingValue.toFixed(1)}</p>
+                <p className="font-mono text-sm text-muted-foreground tabular-nums">{formatScore(t.ratingValue)}</p>
               </div>
             </div>
             <p className="mt-4 text-base leading-6 text-muted-foreground">{TIER_DETAIL[tier]}</p>

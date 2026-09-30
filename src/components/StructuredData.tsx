@@ -8,8 +8,8 @@ import { formatDay, type MetricsData } from '@/lib/staticData';
  * schema.org markup, emitted as JSON-LD.
  *
  * Deliberately excluded: anything that presents a tier as a star rating. The
- * scale here measures compliance with a specification from 0 to 1, and dressing
- * it up as `aggregateRating` would both misrepresent it and invite a search
+ * scale here measures compliance with a specification (0 to 100 on the page,
+ * 0 to 1 in the events), and dressing it up as `aggregateRating` would both misrepresent it and invite a search
  * policy problem.
  *
  * JSON-LD is a data block rather than executable script, so it is not affected

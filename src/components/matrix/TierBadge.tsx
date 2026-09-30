@@ -1,5 +1,5 @@
 import { TIERS, type CompatTier } from '@/lib/appReviews';
-import { TIER_LETTER } from '@/lib/tiers';
+import { TIER_LETTER, formatScore } from '@/lib/tiers';
 import { cn } from '@/lib/utils';
 
 interface TierBadgeProps {
@@ -24,7 +24,7 @@ export function TierBadge({ tier, value, size = 'md', className }: TierBadgeProp
     >
       <span aria-hidden="true">{TIER_LETTER[tier]}</span>
       <span className="font-sans font-semibold">{info.label}</span>
-      {value && <span className="opacity-80">{info.ratingValue.toFixed(1)}</span>}
+      {value && <span className="opacity-80">{formatScore(info.ratingValue)}</span>}
     </span>
   );
 }
